@@ -13,15 +13,16 @@ import { TypewriterEffectSmooths } from "~/components/typewriterEffectSmooth";
 import { WobbleCardShow } from "~/components/wobble";
 import { WordReveal } from "~/components/word-reveal";
 import type { Locale } from "~/config/i18n-config";
+import * as constp from "~/constants";
 import { getDictionary } from "~/lib/get-dictionary";
 import type { Meteor } from "~/types/meteors";
 
 const meteors_data: Meteor = {
   name: "Join our Discord",
   description:
-    "Join our Discord server to chat with other developers and get help.",
+    "Join our Discord server to chat with a member of our support team and get help.",
   button_content: "Chat with us",
-  url: "https://discord.gg/8SwSX43wnD",
+  url: constp.DISCORD_SERVER,
 };
 
 export default async function IndexPage({
@@ -39,11 +40,9 @@ export default async function IndexPage({
         <div className="grid grid-cols-1 gap-10 pb-10 md:pb-40 xl:grid-cols-2">
           <div className="flex flex-col items-start">
             <div className="flex flex-col pt-4 md:pt-28 lg:pt-28 xl:pt-28">
-
-                <DocumentGuide>
-                  {dict.marketing.introducing || "Introducing Substantifik"}
-                </DocumentGuide>
-
+              <DocumentGuide>
+                {dict.marketing.introducing || "Introducing Substantifik"}
+              </DocumentGuide>
 
               <div className="mt-6">
                 <h1 className="relative mb-6 max-w-4xl text-left text-4xl font-bold dark:text-zinc-100 sm:text-7xl md:text-7xl xl:text-7xl">
@@ -68,17 +67,26 @@ export default async function IndexPage({
                     </span>
                   </ShimmerButton>
                 </Link>
-
               </div>
             </div>
           </div>
 
-          <div className="hidden h-full w-full xl:block">
-            <div className="flex flex-col pt-28">
+          {/* Discord link */}
+
+          <div
+            className="h-full w-full xl:block"
+          >
+            <div
+            className={`${constp.HIDE_DISCORD_LINK ? "hidden" : ""} flex flex-col pt-28`}
+            >
               <Meteorss meteor={meteors_data} />
-              <div className="mt-4 flex w-full justify-between">
+              <div
+              className={`${constp.HIDE_BLOG_HOMEPAGE ? "hidden" : ""} mt-4 flex w-full justify-between`}
+              >
                 <XBlogArticle />
-                <div className="ml-4">
+                <div
+                className={`${constp.HIDE_FEATURECARD_HOMEPAGE ? "hidden" : ""} ml-4`}
+                >
                   <FeaturesCard />
                 </div>
               </div>
@@ -87,31 +95,42 @@ export default async function IndexPage({
         </div>
       </section>
 
-      <section className="hidden h-[100vh] w-full xl:block">
-        <div className="flex h-full w-full justify-between px-[220px]">
-          <div className="flex w-[60%] flex-col pr-4 pt-40">
+
+      <section
+            className={`${constp.HIDE_WORD_SECTION ? "hidden" : ""} h-[50vh] w-full xl:block`}
+          >
+        <div className="flex h-full w-full justify-between px-[200px]">
+          <div className="flex w-[75%] flex-col pr-4 pt-40">
             <WobbleCardShow />
           </div>
-          <div className="h-full w-[40%]">
-            <div className="flex flex-col pl-[120px]">
+          <div className={`${constp.HIDE_WORD_REVEAL ? "hidden" : ""} h-[50vh] w-[25%]`}
+          >
+            <div className="flex flex-col pl-[100px]">
               <WordReveal />
             </div>
           </div>
         </div>
       </section>
 
-      <section className="hidden h-[100vh] w-full xl:block">
+      <section
+            className={`h-[100vh] w-full xl:block`}
+          >
         <div className="flex h-full w-full justify-between px-[220px]">
           <div className="flex w-[60%] flex-col pr-4 pt-40">
             <div className="px-[120px]">
+            {!constp.HIDE_QUESTIONS_SECTION &&
               <Questions />
+            }
             </div>
           </div>
         </div>
       </section>
 
-      <section className="w-full px-8 xl:hidden">
-        <Questions />
+      <section className={`w-full px-8 xl:hidden`}
+      >
+            {!constp.HIDE_QUESTIONS_SECTION &&
+              <Questions />
+            }
       </section>
 
       <section className="w-full px-8 pt-10 sm:px-0 sm:pt-0 md:px-0 md:pt-0 xl:px-0 xl:pt-0">

@@ -46,9 +46,12 @@ const blogContent = {
   title: "Making Sense of the complexity",
   description:
     "Get the best from humans and AI!",
-//  image:
+  image:
+  "https://upload.wikimedia.org/wikipedia/commons/d/d4/Digital_Humanities_AI_generated_art.jpg",
+//   "/images/avatars/michel-substantifik.jpeg",
 //    "https://cdn.sanity.io/images/tpb4obti/production/50c13f886c039225be4e7e99023b8f1e2b4161b9-1792x1024.png",
-//  authorAvatar:
+  authorAvatar:
+    "/images/avatars/michel-substantifik.jpeg"
 //    "https://pbs.twimg.com/profile_images/1766283284370305025/QKXW5W3M_400x400.jpg",
 };
 

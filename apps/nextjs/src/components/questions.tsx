@@ -11,17 +11,13 @@ export function Questions() {
       <AccordionItem value="item-1">
         <AccordionTrigger>About Substantifik</AccordionTrigger>
         <AccordionContent>
-          Substantifik’s team of experienced developers has invested years
-          into refining our software development methodologies. We’re proud to
-          present our starter kit, a culmination of best practices and proven
-          tools extracted from countless successful projects. This extensively
-          tested kit is more than just code, it’s a cornerstone of our daily
-          operations, consistently helping us deliver exceptional results for
-          our clients. While informed by our unique experiences, the kit’s
-          solutions are meticulously chosen to address common challenges and fit
-          a wide range of scenarios. We believe it offers a streamlined and
-          efficient framework for building SaaS products, empowering you to
-          achieve your project goals.
+          {`
+We are excited to unveil our AI product, a reflection of our team's extensive expertise, which includes business leaders with an average of twenty years dedicated to perfecting their skills across key sectors such as Sales, Finance, Operations, and IT. Our shared experiences have not only sharpened our technical abilities but also enriched our understanding of complex business ecosystems and their associated challenges.
+
+Our path has been defined by a steadfast commitment to excellence, leading to the development of our AI platform. This platform is a confluence of industry best practices and established methodologies, refined through numerous successful initiatives. It is more than a mere collection of tools; it is the cornerstone of our operations, a dynamic force driving us to achieve exceptional results for our clients. The solutions we offer have been meticulously developed to address common industry challenges and are flexible enough to accommodate a wide range of business contexts.
+
+We believe it will provide you with a strong and adaptable foundation for your AI endeavors. Crafted to optimize your processes, boost productivity, and aid in the fulfillment of your project goals, our dedication to your success is steadfast. We eagerly anticipate building a partnership centered on shared innovation, excellence, and collective advancement.
+`}
         </AccordionContent>
       </AccordionItem>
 
