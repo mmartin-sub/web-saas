@@ -5,6 +5,8 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
+      disallow: '/private/', //This folder doesn't exist, by design
     },
+    // sitemap: 'https://acme.com/sitemap.xml',
   };
 }

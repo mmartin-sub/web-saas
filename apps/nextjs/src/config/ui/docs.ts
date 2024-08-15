@@ -30,24 +30,9 @@ export const getDocsConfig = (_lang: string): DocsConfig => {
           {
             title: "Introduction",
             href: `/docs/documentation`,
-          },
-          {
-            title: "Contentlayer",
-            href: `/docs/in-progress`,
             disabled: true,
           },
-          {
-            title: "Components",
-            href: `/docs/documentation/components`,
-          },
-          {
-            title: "Code Blocks",
-            href: `/docs/documentation/code-blocks`,
-          },
-          {
-            title: "Style Guide",
-            href: `/docs/documentation/style-guide`,
-          },
+
         ],
       },
       {
@@ -70,31 +55,7 @@ export const getDocsConfig = (_lang: string): DocsConfig => {
             href: "/docs/in-progress",
             disabled: true,
           },
-          {
-            title: "Layouts",
-            href: "/docs/in-progress",
-            disabled: true,
-          },
-          {
-            title: "Server Components",
-            href: "/docs/in-progress",
-            disabled: true,
-          },
-          {
-            title: "Authentication",
-            href: "/docs/in-progress",
-            disabled: true,
-          },
-          {
-            title: "Database with Prisma",
-            href: "/docs/in-progress",
-            disabled: true,
-          },
-          {
-            title: "API Routes",
-            href: "/docs/in-progress",
-            disabled: true,
-          },
+
         ],
       },
     ],

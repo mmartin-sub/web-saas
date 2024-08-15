@@ -44,7 +44,10 @@ export default async function RegisterPage({
               Enter your email below to create your account
             </p>
           </div>
-          <UserAuthForm lang={lang} dict={dict.login} />
+           {/*
+        Disabled=true in upstream
+         */}
+          <UserAuthForm lang={lang} dict={dict.login} disabled={false} />
           <p className="px-8 text-center text-sm text-muted-foreground">
             By clicking continue, you agree to our{" "}
             <Link

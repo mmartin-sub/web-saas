@@ -59,7 +59,7 @@ export const MagicLinkEmail = ({
             </Text>
           ) : null}
           <Hr className="my-4 border-t-2 border-gray-300" />
-          <Text className="text-sm text-gray-600">saasfly.io</Text>
+          <Text className="text-sm text-gray-600">Substantifik</Text>
         </Container>
       </Body>
     </Tailwind>

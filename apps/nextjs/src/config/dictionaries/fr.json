@@ -1,0 +1,90 @@
+{
+  "price": {
+    "title": "Des prix abordables et transparents !",
+    "pricing": "Tarification",
+    "slogan": "Commencez à pleine vitesse !",
+    "monthly_bill": "Facturation mensuelle",
+    "annual_bill": "Facturation annuelle",
+    "annual_info": "sera facturé chaque année",
+    "monthly_info": "quand facturé mensuellement",
+    "mo": "/mo",
+    "contact": "to contact our support team.",
+    "contact_2": "We propose a special price during the trial period because we are convinced that trying it will convince you.",
+    "faq": "Foire aux questions",
+    "faq_detail": "Check our comprehensive FAQs for answers on how our AI solutions can benefit your enterprise. Learn how we improve transparency and collaboration between departments.",
+    "signup": "S'inscrire",
+    "upgrade": "Mise à jour",
+    "manage_subscription": "Gérer l'abonnement",
+    "go_to_dashboard": "Aller au tableau de bord",
+    "": ""
+  },
+  "marketing": {
+    "introducing": "Introduction de Substantifik",
+    "title": "Substantifik: How can human better work together?",
+    "sub_title": "Substantifik: Boost Cross-Department Transparency and Collaboration with AI Solutions to Achieve Seamless Enterprise Integration.",
+    "get_started": "Commencer",
+    "view_on_github": "Voir sur GitHub",
+    "explore_product": "Explorer le produit",
+    "features": "Fonctionnalités",
+    "sub_features": "Nuage natif : Simplification de la technologie et réduction des coûts pour les startups.",
+    "k8s_features": "Développement rapide et simple",
+    "devops_features": "Déploiement facile des applications",
+    "price_features": "Économiquement efficace pour les environnements de production.",
+    "main_nav_features": "Fonctionnalités",
+    "main_nav_pricing": "Tarification",
+    "main_nav_products": "Produits",
+    "main_nav_blog": "Blogue",
+    "main_nav_documentation": "Documentation",
+    "login": "Se connecter",
+    "signup": "S'inscrire",
+    "": ""
+  },
+  "login": {
+    "back": "Précédent",
+    "welcome_back": "Bienvenue de retour",
+    "signin_title": "Entrez votre adresse e-mail pour vous connecter à votre compte",
+    "singup_title": "Vous n'avez pas de compte ? Inscrivez-vous maintenant.",
+    "signin_email": "Se connecter avec un e-mail",
+    "signin_others": "Ou continuer avec",
+    "signup": "S'inscrire",
+    "privacy": "seulement votre e-mail et votre photo de profil seront stockés.",
+    "signup_github": "S'inscrire avec Github",
+    "": ""
+  },
+  "common": {
+    "copyright": "Copyright © ${currentYear} Substantifik. All rights reserved.",
+    "dashboard": {
+      "main_nav_documentation": "Documentation",
+      "main_nav_support": "Soutien",
+      "sidebar_nav_clusters": "Clusters",
+      "sidebar_nav_billing": "Facturation",
+      "sidebar_nav_settings": "Réglages",
+      "title_text": "Créer et gérer des grappes."
+    },
+    "": ""
+  },
+  "business": {
+    "k8s": {
+      "new_cluster": "Nouveau cluster",
+      "no_cluster_title": "Aucun cluster créé",
+      "no_cluster_content": "You don't have any clusters yet. Start creating cluster. ",
+      "": ""
+    },
+    "billing": {
+      "billing": "Facturation",
+      "content": "Gérer vos informations d'abonnement et de facturation",
+      "noSubscription": "Vous n'êtes abonné à aucun forfait. ",
+      "subscriptionInfo": "Vous êtes actuellement sur le plan <strong>{plan}</strong> . Votre abonnement sera renouvelé sur <strong>{date}</strong>.",
+      "manage_subscription": "Gérer l'abonnement",
+      "upgrade": "mise à jour",
+      "": ""
+    }
+  },
+  "dropdown": {
+    "dashboard": "Tableau de bord",
+    "billing": "Facturation",
+    "settings": "Réglages",
+    "sign_out": "Se déconnecter",
+    "": ""
+  }
+}

@@ -1,0 +1,67 @@
+#
+# Your Crowdin credentials
+#
+
+"project_id_env": "CROWDIN_PROJECT_ID"
+"api_token_env": "CROWDIN_PERSONAL_TOKEN"
+"base_path": "."
+"base_url": "https://api.crowdin.com"
+
+#
+# Choose file structure in Crowdin
+# e.g. true or false
+#
+"preserve_hierarchy": true
+
+#
+# Files configuration
+#
+files: [
+  {
+   # JSON translation files
+    #
+    # Source files filter
+    # e.g. "/resources/en/*.json"
+    #
+    "source": "/apps/nextjs/src/config/dictionaries/en.json",
+
+    #
+    # Where translations will be placed
+    # e.g. "/resources/%two_letters_code%/%original_file_name%"
+    #
+    "translation": "/apps/nextjs/src/config/dictionaries/%two_letters_code%.json",
+
+    #
+    # Files or directories for ignore
+    # e.g. ["/**/?.txt", "/**/[0-9].txt", "/**/*\?*.txt"]
+    #
+    # "ignore": [],
+
+  },
+
+    {
+     # Content Markdown files Blog
+        "source": "/apps/nextjs/src/content/blog/**/*",
+         "translation": "/i18n/blog/**/%two_letters_code%/%original_file_name%",
+      },
+
+    {
+     # Content Markdown files Docs
+        "source": "/apps/nextjs/src/content/docs/**/*",
+         "translation": "/i18n/docs/**/%two_letters_code%/%original_file_name%",
+      },
+
+
+    {
+     # Content Markdown files authors
+        "source": "/apps/nextjs/src/content/authors/**/*",
+         "translation": "/i18n/authors/**/%two_letters_code%/%original_file_name%",
+      },
+
+    {
+     # Content Pages files authors
+        "source": "/apps/nextjs/src/content/pages/**/*",
+         "translation": "/i18n/pages/**/%two_letters_code%/%original_file_name%",
+      },
+
+]

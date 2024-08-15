@@ -1,0 +1,62 @@
+---
+title: Dokumentation
+description: Dokumentation zum Einsatz von KI in Ihren Geschäftsproblemen
+---
+
+Taxonomie enthält eine Dokumentationsseite, die mit [Contentlayer](https://contentlayer.dev) und [MDX](http://mdxjs.com) erstellt wurde.
+
+## Eigenschaften
+
+Es kommt mit den folgenden Funktionen aus dem System:
+
+1. Inhalt mit MDX schreiben.
+2. Inhalte mit Contentlayer transformieren und validieren.
+3. MDX-Komponenten wie z.B. `<Callout />` und `<Card />`.
+4. Unterstützung für Inhaltsverzeichnis.
+5. Benutzerdefinierte Navigation mit prev und dem nächsten Pager.
+6. Schöne Code-Blöcke mit `rehype-pretty-code`.
+7. Syntaxhervorhebung mit `shiki`.
+8. Integrierte Suche (_in Fortschritt_).
+9. Dunkler Modus (_im Gange_).
+
+## Wie wird es gebaut
+
+Klicken Sie auf einen Abschnitt unten, um zu erfahren, wie die Dokumentations-Site gebaut wurde.
+
+<div className="grid gap-4 mt-6">
+
+```
+<Card href="/docs/documentation">
+
+    ### Contentlayer
+
+    Lernen Sie, wie Sie MDX mit Contentlayer verwenden.
+
+</Card>
+
+<Card href="/docs/documentation/components">
+
+    ### Komponenten
+
+    Verwendung von React-Komponenten in Mardown.
+
+</Card>
+
+<Card href="/docs/documentation/components">
+
+    ### Code blockiert
+
+    Schöne Codeblöcke mit Syntaxhervorhebung.
+
+</Card>
+
+<Card href="/docs/documentation/components">
+
+    ### Style Guide
+
+    Eine Beispielseite mit allen Stilen anzeigen.
+
+</Card>
+```
+
+</div>

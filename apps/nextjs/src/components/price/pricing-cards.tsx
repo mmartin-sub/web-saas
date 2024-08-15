@@ -184,9 +184,9 @@ export function PricingCards({
           Email{" "}
           <a
             className="font-medium text-primary hover:underline"
-            href="mailto:support@saasfly.io"
+            href="mailto:support@substantifik.com"
           >
-            support@saasfly.io
+            support@substantifik.com
           </a>{" "}
           {dict.contact}
           <br />

@@ -1,14 +1,23 @@
+//Define list of locales
 export const i18n = {
-  defaultLocale: "zh",
-  locales: ["en", "zh", "ko", "ja"],
+  defaultLocale: "en",
+  locales: ["en", "de", "es", "fr", "it",
+    // "zh", "ko", "ja"
+    ],
 } as const;
 
 export type Locale = (typeof i18n)["locales"][number];
 
-// 新增的映射对象
+//Define list of proposed languages
 export const localeMap = {
   en: "English",
+  de: "Deutsch",
+  es: "Español",
+  fr: "Français",
+  it: "Italiano",
+  /*
   zh: "中文",
   ko: "한국어",
   ja: "日本語",
+  */
 } as const;

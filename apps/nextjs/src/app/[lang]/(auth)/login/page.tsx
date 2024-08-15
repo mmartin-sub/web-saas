@@ -41,11 +41,11 @@ export default async function LoginPage({
       <div className="mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[350px]">
         <div className="flex flex-col space-y-2 text-center">
           <Image
-            src="/images/avatars/saasfly-logo.svg"
-            className="mx-auto"
+            src="/images/avatars/sub-logo.svg"
+            className="dark:invert mx-auto"
             width="64"
             height="64"
-            alt=""
+            alt="logo"
           />
           <h1 className="text-2xl font-semibold tracking-tight">
             {dict.login.welcome_back}
@@ -55,6 +55,9 @@ export default async function LoginPage({
           </p>
         </div>
         <UserAuthForm lang={lang} dict={dict.login} />
+        {/*
+        Disabled section in upstream
+         */}
         <p className="px-8 text-center text-sm text-muted-foreground">
           <Link
             href={`/${lang}/register`}
