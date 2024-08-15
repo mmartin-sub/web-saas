@@ -20,7 +20,7 @@ export const HIDE_WORD_SECTION = false
  * If the section that is showing the Questions section should be hidden
  * @constant
  */
-export const HIDE_QUESTIONS_SECTION = false
+export const HIDE_QUESTIONS_SECTION = true
 
 /**
  * Hide the sentence next to the WORDS section with a special effect if we scroll down
