@@ -72,16 +72,18 @@ export function NavBar({
               dict={dropdown}
             />
           ) : (
+            <Link href={`${lang}/register`}>
             <Button
               className="px-3"
               variant="default"
               size="sm"
-              onClick={signInModal.onOpen}
+              //    onClick={signInModal.onOpen}
             >
               {typeof marketing.signup === "string"
                 ? marketing.signup
-                : "Default Signup Text"}
+                : "signup"}
             </Button>
+            </Link>
           )}
         </div>
       </div>

@@ -55,7 +55,7 @@ export default async function IndexPage({
               <div>
                 <span className="text-zinc-500 sm:text-xl">
                   {dict.marketing.sub_title ||
-                    "Substantifik: Boost Cross-Department Transparency and Collaboration with AI Solutions to Achieve Seamless Enterprise Integration."}
+                    "Unleash the power of unified AI to revolutionize cross-departmental transparency and collaboration."}
                 </span>
                 <TypewriterEffectSmooths />
               </div>
