@@ -47,6 +47,7 @@
   "packageManager": "bun@v1.1.10",
   "dependencies": {
     "@prisma/client": "^5.18.0",
+    "bun": "^1.1.24",
     "prisma": "^5.18.0"
   }
 }
