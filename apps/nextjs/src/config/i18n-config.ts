@@ -2,6 +2,7 @@
 export const i18n = {
   defaultLocale: "en",
   locales: ["en",
+    // This list should be the same as localeMap, or UI issue otherwise
     // "de", "es", "fr", "it",
     // "zh", "ko", "ja"
     ],
