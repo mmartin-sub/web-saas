@@ -44,5 +44,9 @@
     "packages/*",
     "tooling/*"
   ],
-  "packageManager": "bun@v1.1.10"
+  "packageManager": "bun@v1.1.10",
+  "dependencies": {
+    "@prisma/client": "^5.18.0",
+    "prisma": "^5.18.0"
+  }
 }
