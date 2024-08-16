@@ -9,6 +9,10 @@
     "clean": "git clean -xdf node_modules",
     "clean:workspaces": "turbo clean",
     "db:push": "cd ./packages/db/ && bun db:push",
+    "deps:update1": "npm-check-updates --interactive --format group",
+    "deps:update2": "npx npm-check-updates -ws --root --format group -i",
+    "deps:update3": "bunx npm-check-updates --root --format group -i",
+    "deps:update4": "bunx taze -I -r",
     "dev": "turbo dev --parallel",
     "dev:web": "turbo dev --parallel --filter !stripe",
     "export": "next export",
@@ -44,7 +48,7 @@
     "packages/*",
     "tooling/*"
   ],
-  "packageManager": "bun@v1.1.10",
+  "packageManager": "bun@v1.1.24",
   "dependencies": {
     "@prisma/client": "^5.18.0",
     "bun": "^1.1.24",
