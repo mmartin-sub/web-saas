@@ -13,7 +13,7 @@ import { TypewriterEffectSmooths } from "~/components/typewriterEffectSmooth";
 import { WobbleCardShow } from "~/components/wobble";
 import { WordReveal } from "~/components/word-reveal";
 import type { Locale } from "~/config/i18n-config";
-import * as constp from "~/constants";
+import * as constp from "~/lib/constants";
 import { getDictionary } from "~/lib/get-dictionary";
 import type { Meteor } from "~/types/meteors";
 
