@@ -54,3 +54,5 @@ bun.lockb
 
 # Part of the build process
 /i18n/
+# Local script for debugging
+/local-debug/
