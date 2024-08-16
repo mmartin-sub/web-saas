@@ -14,6 +14,7 @@ export interface SubscriptionPlan {
   description: string;
   benefits: string[];
   limitations: string[];
+  currencySign: string;
   prices: {
     monthly: number;
     yearly: number;
