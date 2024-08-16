@@ -38,6 +38,7 @@ On top of the fork:
 [X] Review the logos (apps/nextjs/src/app/layout.tsx) and svg to work in dark and light mode.
 [ ] Update the review from apps/nextjs/src/components/comments.tsx based on actual twitter and comments from database. Show the number of hashtags based on input
 [ ] Add errors, not-found, global-error and other specific pages related to [NextJS routing](https://nextjs.org/docs/app/building-your-application/routing)
+[ ] Improve dynamic routing for (pages)/external for terms and privacy so UI looks better with headers and footers
 
 ## Known issues
 [ ] Stripe webhooks should return 200 as fast as possible, leverage sub/pub approach to do DB work async
