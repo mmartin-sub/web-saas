@@ -93,6 +93,10 @@ export const Post = defineDocumentType(() => ({
       type: "string",
       required: false,
     },
+    alt_image: {
+      type: "string",
+      required: false,
+    },
     authors: {
       // Reference types are not embedded.
       // Until this is fixed, we can use a simple list.
