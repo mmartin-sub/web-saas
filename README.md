@@ -12,6 +12,7 @@ Fork from [SaasFly](https://github.com/saasfly/saasfly)
 
 On top of the fork:
 - Crowdin support including github action.
+- add @neondatabase/serverless driver
 
 ## Recommendations
 - Install [Stripe Cli client](https://docs.stripe.com/stripe-cli) and [completion](https://docs.stripe.com/stripe-cli/autocomplete)
@@ -39,6 +40,7 @@ On top of the fork:
 [ ] Update the review from apps/nextjs/src/components/comments.tsx based on actual twitter and comments from database. Show the number of hashtags based on input
 [ ] Add errors, not-found, global-error and other specific pages related to [NextJS routing](https://nextjs.org/docs/app/building-your-application/routing)
 [ ] Improve dynamic routing for (pages)/external for terms and privacy so UI looks better with headers and footers
+[ ] Add apply job, use cases sections (Uses cases per industry)
 
 ## Known issues
 [ ] Stripe webhooks should return 200 as fast as possible, leverage sub/pub approach to do DB work async
