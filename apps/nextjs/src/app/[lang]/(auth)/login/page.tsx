@@ -65,7 +65,7 @@ export default async function LoginPage({
           >
             {dict.login.singup_title}
           </Link>
-        </p>
+        </p> */}
       </div>
     </div>
   );
