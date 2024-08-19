@@ -39,3 +39,25 @@ export const HIDE_BLOG_HOMEPAGE = false
 * @constant
  */
 export const HIDE_FEATURECARD_HOMEPAGE = false
+
+/**
+ * define the default theme within next template
+ * Should be a theme defined as per https://nextui.org/docs/customization/dark-mode
+ * but not the case today?
+* @constant
+ */
+export const DEFAULT_THEME_LAYOUT = 'dark'
+
+/**
+ * define the keywords for the website
+* @constant
+ */
+export const SITECONFIG_KEYWORDS = [
+    "ai",
+    "swiss",
+    "switzerland",
+    "safe",
+    "trust",
+    "privacy",
+    "productivity",
+  ];

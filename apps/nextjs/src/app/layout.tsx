@@ -15,6 +15,8 @@ import { ThemeProvider } from "~/components/theme-provider";
 import { i18n } from "~/config/i18n-config";
 import { siteConfig } from "~/config/site";
 
+import * as constp from "~/lib/constants";
+
 // import { Suspense } from "react";
 // import { PostHogPageview } from "~/config/providers";
 
@@ -39,15 +41,7 @@ export const metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
-  keywords: [
-    "Next.js",
-    "Shadcn ui",
-    "Sass",
-    "Fast ",
-    "Simple ",
-    "Easy",
-    "Cloud Native",
-  ],
+  keywords: constp.SITECONFIG_KEYWORDS,
   authors: [
     {
       name: "Substantifik",
@@ -91,7 +85,7 @@ export default function RootLayout({
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
+          defaultTheme={constp.DEFAULT_THEME_LAYOUT}
           enableSystem={false}
         >
           <NextDevtoolsProvider>{children}</NextDevtoolsProvider>
