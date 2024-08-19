@@ -4,6 +4,8 @@
   "scripts": {
     "build": "turbo build ",
     "crowdin": "crowdin ",
+    "crowdin:upload": "crowdin upload",
+    "crowdin:download": "crowdin download",
     "crowdin:sync": "i18next-scanner --config tooling/i18next-scanner.config.js && crowdin upload && crowdin download",
     "18next:scanner": "i18next-scanner --config tooling/i18next-scanner.config.js",
     "clean": "git clean -xdf node_modules",
@@ -50,6 +52,7 @@
   ],
   "packageManager": "bun@v1.1.24",
   "dependencies": {
+    "@neondatabase/serverless": "^0.9.4",
     "@prisma/client": "^5.18.0",
     "bun": "^1.1.24",
     "prisma": "^5.18.0"
