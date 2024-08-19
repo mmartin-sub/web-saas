@@ -88,6 +88,7 @@ export function UserAuthForm({
               autoCapitalize="none"
               autoComplete="email"
               autoCorrect="off"
+               //  from upstream, but not sure what disabled is doing
               disabled={isLoading || isGitHubLoading || disabled}
               {...register("email")}
             />

@@ -3,11 +3,21 @@
   "private": true,
   "scripts": {
     "build": "turbo build ",
+    "crowdin": "crowdin ",
+    "crowdin:upload": "crowdin upload",
+    "crowdin:download": "crowdin download",
+    "crowdin:sync": "i18next-scanner --config tooling/i18next-scanner.config.js && crowdin upload && crowdin download",
+    "18next:scanner": "i18next-scanner --config tooling/i18next-scanner.config.js",
     "clean": "git clean -xdf node_modules",
     "clean:workspaces": "turbo clean",
     "db:push": "cd ./packages/db/ && bun db:push",
+    "deps:update1": "npm-check-updates --interactive --format group",
+    "deps:update2": "npx npm-check-updates -ws --root --format group -i",
+    "deps:update3": "bunx npm-check-updates --root --format group -i",
+    "deps:update4": "bunx taze -I -r",
     "dev": "turbo dev --parallel",
     "dev:web": "turbo dev --parallel --filter !stripe",
+    "export": "next export",
     "format": "turbo format --continue -- --cache --cache-location='node_modules/.cache/.prettiercache' --ignore-path='../../.gitignore'",
     "format:fix": "turbo format --continue -- --write --cache --cache-location='node_modules/.cache/.prettiercache' --ignore-path='../../.gitignore'",
     "lint": "turbo lint -- --quiet -- --cache --cache-location 'node_modules/.cache/.eslintcache' && manypkg check",
@@ -18,12 +28,16 @@
     "gen": "turbo gen --config 'turbo/generators/config.ts'"
   },
   "devDependencies": {
-    "@turbo/gen": "1.13.3",
+    "@crowdin/cli": "^4.1.1",
+    "@turbo/gen": "1.13.4",
     "check-dependency-version-consistency": "4.1.0",
-    "prettier": "3.2.5",
+    "i18next-scanner": "^4.5.0",
+    "i18next-scanner-typescript": "^1.2.1",
+    "next-sitemap": "^4.2.3",
+    "prettier": "3.3.3",
     "tailwind-config-viewer": "^2.0.4",
-    "turbo": "1.13.3",
-    "typescript": "5.4.5"
+    "turbo": "1.13.4",
+    "typescript": "5.5.4"
   },
   "engines": {
     "node": ">=18"
@@ -34,5 +48,11 @@
     "packages/*",
     "tooling/*"
   ],
-  "packageManager": "bun@v1.1.10"
+  "packageManager": "bun@v1.1.24",
+  "dependencies": {
+    "@neondatabase/serverless": "^0.9.4",
+    "@prisma/client": "^5.18.0",
+    "bun": "^1.1.24",
+    "prisma": "^5.18.0"
+  }
 }

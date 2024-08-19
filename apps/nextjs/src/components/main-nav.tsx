@@ -33,13 +33,13 @@ export function MainNav({ items, children, params: { lang } }: MainNavProps) {
       <Link href={`/${lang}`} className="hidden items-center space-x-2 md:flex">
         <div>
           <Image
-            src="/images/avatars/saasfly-logo.svg"
+            src="/images/avatars/sub-logo.svg"
             width="36"
             height="36"
             alt=""
           />
         </div>
-        <div className="text-2xl font-semibold">Saasfly</div>
+        <div className="text-2xl font-semibold">Substantifik</div>
       </Link>
       {items?.length ? (
         <nav className="hidden gap-6 md:flex">

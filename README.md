@@ -1,123 +1,50 @@
 
 <div align="center" width="100%">
-    <img src="./saasfly-logo.svg" width="128" alt="" />
+    <img src="./sub-logo.svg" width="128" alt="" />
 </div>
 
-# Saasfly </br>
-<a href="https://trendshift.io/repositories/8929" target="_blank"><img src="https://trendshift.io/api/badge/repositories/8929" alt="saasfly%2Fsaasfly | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
-
-[![GitHub Actions Workflow Status][check-workflow-badge]][check-workflow-badge-link] [![GitHub License][github-license-badge]][github-license-badge-link]  [![Discord][discord-badge]][discord-badge-link] [![Saasfly][made-by-nextify-badge]][made-by-nextify-badge-link]
-[![Chinese](https://img.shields.io/badge/-Chinese-red.svg)](README_zh.md)
-[![German](https://img.shields.io/badge/-German-yellow.svg)](README_de.md)
-[![Vietnamese](https://img.shields.io/badge/-Vietnamese-yellow.svg)](README_vi.md) </br>
-![COMMIT_ACTIVITY](https://img.shields.io/github/commit-activity/m/saasfly/saasfly?style=for-the-badge">)
-[![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2Fsaasfly%2Fsaasfly&labelColor=%23f47373&countColor=%23263759)](https://visitorbadge.io/status?path=https%3A%2F%2Fgithub.com%2Fsaasfly%2Fsaasfly)
+# Substantifik </br>
 
 An easy-to-use and enterprise-grade Next.js boilerplate.
-
-You don't need to buy templates anymore; Saasfly provides a complete, open-source solution for building SaaS applications quickly and easily.
-
-> **[Nextify](https://nextify.ltd)** provides a complete Enterprise SaaS solution. Contact us at [contact@nextify.ltd](mailto:contact@nextify.ltd) if you're interested in discussing your project, or if you'd simply like to have a conversation with us, please feel free to reach out.
-
-> ❤️ We provide **free technical support and deployment services to non-profit organizations**.
->
-> 🙌 All profits obtained from our open source projects will be **entirely dedicated to supporting open source initiatives and charitable causes**.
-
-## ⚡ Live Demo
-
-Try it out for yourself!
-
-Demo Server (Location: Washington - USA): <https://show.saasfly.io>
-
-See more documentation at <https://document.saasfly.io>
-
-## 🌟 Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=saasfly/saasfly&type=Timeline)](https://star-history.com/#saasfly/saasfly&Timeline)
-
-## 🚀 Getting Started
-
-### 🖱 One Click Template
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fsaasfly%2Fsaasfly&env=NEXT_PUBLIC_APP_URL,NEXTAUTH_URL,NEXTAUTH_SECRET,STRIPE_API_KEY,STRIPE_WEBHOOK_SECRET,POSTGRES_URL,GITHUB_CLIENT_ID,GITHUB_CLIENT_SECRET,RESEND_API_KEY,RESEND_FROM&install-command=bun%20install&build-command=bun%20run%20build&root-directory=apps%2Fnextjs)
-
-### 📋 Prerequisites
-
-Before you start, make sure you have the following installed:
-
-1. [Bun](https://bun.sh/) & [Node.js](https://nodejs.org/) & [Git](https://git-scm.com/)
-
-   1. Linux
-
-    ```bash
-      curl -sL https://gist.github.com/tianzx/874662fb204d32390bc2f2e9e4d2df0a/raw -o ~/downloaded_script.sh && chmod +x ~/downloaded_script.sh && source ~/downloaded_script.sh
-    ```
-
-   2. MacOS
-
-    ```bash
-      /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-      brew install git
-      brew install oven-sh/bun/bun
-      brew install nvm
-    ```
-
-2. [PostgreSQL](https://www.postgresql.org/)
-   1. You can use Vercel Postgres or a local PostgreSQL server(add POSTGRES_URL env in .env.local)
-      ```bash
-         POSTGRES_URL = ''
-      ```
-
-### Installation
-
-To get started with this boilerplate, we offer two options:
-
-1. Use the `bun create` command(🌟Strongly recommend🌟):
-
-```bash
-bun create saasfly 
-```
-
-2. Manually clone the repository:
-
-```bash
-git clone https://github.com/saasfly/saasfly.git
-cd saasfly
-bun install
-```
-
-### Setup
-
-Follow these steps to set up your project:
-
-1. Set up the environment variables:
-
-```bash
-cp .env.example .env.local
-// (you must have a database prepared before running this command)
-bun db:push
-```
-
-2. Run the development server:
-
-```bash
-bun run dev:web
-```
-
-3. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
-
-4. (Optional alpha)`bun run tailwind-config-viewer` Open [http://localhost:3333](http://localhost:3333) in your browser to see your Tailwind CSS configuration
-
-
-## 🥺 Project Roadmap
-
-1. Admin Dashboard Page (in alpha !!!)
-   2. only provide static page now and we plan to integrate with headless arch
-   3. You can provide your admin account and change **ADMIN_EMAIL="admin@saasfly.io,root@saasfly.io"** in .env.local and access host:port/admin/dashboard
-   4. Based on security concerns, we will not provide online demos for the time being.
-2. Consider integrating Payload CMS.
+Fork from [SaasFly](https://github.com/saasfly/saasfly)
 
 ## ⭐ Features
+
+On top of the fork:
+- Crowdin support including github action.
+- add @neondatabase/serverless driver
+
+## Recommendations
+- Install [Stripe Cli client](https://docs.stripe.com/stripe-cli) and [completion](https://docs.stripe.com/stripe-cli/autocomplete)
+- in github, setup some secret (see workflows)
+- install i18next-scanner/i18next-scanner-typescript (i.e. `bun run 18next:scanner`)
+
+## Setup
+- i18n [config](apps/nextjs/src/config/i18n-config.ts)
+- Crowdin steps, see [documentation](https://docusaurus.io/docs/i18n/crowdin)
+- update FAQ from [price-faq-data.ts]£(apps/nextjs/src/config/price/price-faq-data.ts)
+
+## Todo
+[ ] Need to support i18n for the .md or.mdx files for Contentlayer
+[ ] Integrate Cloudinary/Imgix or other image optimizer
+[ ] `bun run crowdin` not using the .env.local data while it seems there. at least crowdin is confused; maybe it is an EXPORT issue?
+[ ] Automate and optimize the translation process (using i18next-scanner or [i18n-js](https://github.com/fnando/i18n-js))
+[ ] Script to deploy dev, stage and prod with proper stripe coonnexion
+[ ] Setup name of the company, website and email from dict so it is easier to deploy to multiple domains (i.e. using more siteConfig.url)
+[ ] Review cors setup
+[ ] Remove k8s references
+[ ] Create a sitemap for robots.ts
+[ ] Load the price from stripe dynamically at build time so it stays cached versus static one and support multiple currencies
+[ ] Make apps/nextjs/src/components/typewriterEffectSmooth.tsx working with a long string versus manual split.
+[X] Review the logos (apps/nextjs/src/app/layout.tsx) and svg to work in dark and light mode.
+[ ] Update the review from apps/nextjs/src/components/comments.tsx based on actual twitter and comments from database. Show the number of hashtags based on input
+[ ] Add errors, not-found, global-error and other specific pages related to [NextJS routing](https://nextjs.org/docs/app/building-your-application/routing)
+[ ] Improve dynamic routing for (pages)/external for terms and privacy so UI looks better with headers and footers
+[ ] Add apply job, use cases sections (Uses cases per industry)
+
+## Known issues
+[ ] Stripe webhooks should return 200 as fast as possible, leverage sub/pub approach to do DB work async
+[ ] If Resend is sending an error, it is not catched
 
 ### 🐭 Frameworks
 
@@ -186,25 +113,4 @@ bun run dev:web
 This project is licensed under the MIT License. For more information, see the [LICENSE](./LICENSE) file.
 
 ## 🙏 Credits
-
-This project was inspired by shadcn's [Taxonomy](https://github.com/shadcn-ui/taxonomy) and t3-oss's [create-t3-turbo](https://github.com/t3-oss/create-t3-turbo).
-
-## 👨‍💻 Contributors
-
-<a href="https://github.com/saasfly/saasfly/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=saasfly/saasfly" />
-</a>
-
-Made with [contrib.rocks](https://contrib.rocks).
-
-<!-- Badges and links -->
-
-[check-workflow-badge]: https://img.shields.io/github/actions/workflow/status/saasfly/saasfly/ci.yml?label=ci
-[github-license-badge]: https://img.shields.io/badge/License-MIT-green.svg
-[discord-badge]: https://img.shields.io/discord/1204690198382911488?color=7b8dcd&link=https%3A%2F%2Fsaasfly.io%2Fdiscord
-[made-by-nextify-badge]: https://img.shields.io/badge/made_by-nextify-blue?color=FF782B&link=https://nextify.ltd/
-
-[check-workflow-badge-link]: https://github.com/saasfly/saasfly/actions/workflows/check.yml
-[github-license-badge-link]: https://github.com/saasfly/saasfly/blob/main/LICENSE
-[discord-badge-link]: https://discord.gg/8SwSX43wnD
-[made-by-nextify-badge-link]: https://nextify.ltd
+This project is a fork from [SaasFly](https://github.com/saasfly/saasfly)

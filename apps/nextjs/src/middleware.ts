@@ -11,11 +11,15 @@ const noNeedProcessRoute = [".*\\.png", ".*\\.jpg", ".*\\.opengraph-image.png"];
 
 const noRedirectRoute = ["/api(.*)", "/trpc(.*)", "/admin"];
 
+// Only publicRoute are excluded from authentification
 const publicRoute = [
   "/(\\w{2}/)?signin(.*)",
+  //Was missing, not sure why?
+  "/(\\w{2}/)?register(.*)",
   "/(\\w{2}/)?terms(.*)",
   "/(\\w{2}/)?privacy(.*)",
   "/(\\w{2}/)?docs(.*)",
+  "/(\\w{2}/)?external(.*)",
   "/(\\w{2}/)?blog(.*)",
   "/(\\w{2}/)?pricing(.*)",
   "^/\\w{2}$", // root with locale

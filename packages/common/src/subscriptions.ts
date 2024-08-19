@@ -5,6 +5,7 @@ export interface SubscriptionPlan {
   description: string;
   benefits: string[];
   limitations: string[];
+  currencySign: string;
   prices: {
     monthly: number;
     yearly: number;
@@ -30,13 +31,14 @@ export const pricingData: SubscriptionPlan[] = [
       "No custom branding",
       "Limited access to business resources.",
     ],
+    currencySign: "$",
     prices: {
       monthly: 0,
       yearly: 0,
     },
     stripeIds: {
-      monthly: null,
-      yearly: null,
+      monthly: env.NEXT_PUBLIC_STRIPE_STD_MONTHLY_PRICE_ID!,
+      yearly: env.NEXT_PUBLIC_STRIPE_STD_YEARLY_PRICE_ID!,
     },
   },
   {
@@ -53,15 +55,14 @@ export const pricingData: SubscriptionPlan[] = [
       "No custom branding",
       "Limited access to business resources.",
     ],
+    currencySign: "$",
     prices: {
       monthly: 15,
       yearly: 144,
     },
     stripeIds: {
-      // @ts-ignore
-      monthly: env.NEXT_PUBLIC_STRIPE_PRO_MONTHLY_PRICE_ID,
-      // @ts-ignore
-      yearly: env.NEXT_PUBLIC_STRIPE_BUSINESS_MONTHLY_PRICE_ID,
+      monthly: env.NEXT_PUBLIC_STRIPE_PRO_MONTHLY_PRICE_ID!,
+      yearly: env.NEXT_PUBLIC_STRIPE_BUSINESS_MONTHLY_PRICE_ID!,
     },
   },
   {
@@ -75,15 +76,14 @@ export const pricingData: SubscriptionPlan[] = [
       "Personalized onboarding and account management.",
     ],
     limitations: [],
+    currencySign: "$",
     prices: {
       monthly: 30,
       yearly: 300,
     },
     stripeIds: {
-      // @ts-ignore
-      monthly: env.NEXT_PUBLIC_STRIPE_PRO_YEARLY_PRICE_ID,
-      // @ts-ignore
-      yearly: env.NEXT_PUBLIC_STRIPE_BUSINESS_YEARLY_PRICE_ID,
+      monthly: env.NEXT_PUBLIC_STRIPE_PRO_YEARLY_PRICE_ID!,
+      yearly: env.NEXT_PUBLIC_STRIPE_BUSINESS_YEARLY_PRICE_ID!,
     },
   },
 ];

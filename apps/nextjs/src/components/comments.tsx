@@ -3,40 +3,71 @@ import Marquee from "@saasfly/ui/marquee";
 
 const reviews = [
   {
-    name: "Jack",
+    name: "Seamless Collaboration Achieved!",
     username: "@jack",
-    body: "I've never seen anything like this before. It's amazing. I love it.",
+    body: "This AI solution has truly bridged the gap between our silos, making collaboration across our enterprise effortless. Unified knowledge sharing has never been easier!",
     img: "https://avatar.vercel.sh/jack",
+    hashtag: ["EnterpriseAI", "Collaboration",]
   },
   {
-    name: "Alex",
+    name: "op-Notch Employee Support",
     username: "@alex",
-    body: "This tool has revolutionized the way our team works.",
-    img: "https://avatar.vercel.sh/jill",
+    body: "The level of support and guidance our team receives is outstanding. This AI solution has significantly boosted our performance. Highly recommend!",
+    img: "https://avatar.vercel.sh/alex",
+    hashtag: ["EmployeeSupport", "AIExcellence",]
   },
   {
-    name: "Shamoki",
-    username: "@shamoki",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/john",
+    name: "No More Information Silos!",
+    username: "@bob",
+    body: "Thanks to this AI solution, we’ve broken down barriers and streamlined communication. The integration of human best practices ensures high-quality answers every time.",
+    img: "https://avatar.vercel.sh/bob",
+    hashtag: ["Innovation", "AIIntegration",]
   },
   {
-    name: "王伟",
-    username: "@wangwei",
-    body: "这款 SaaS 服务简直是办公利器！我的工作效率提高了很多。",
-    img: "https://avatar.vercel.sh/jane",
+    name: "Guided by Expertise",
+    username: "@richard",
+    body: "The human expertise embedded in this AI solution has enhanced the quality of our answers. Our employees feel empowered and guided to excel.",
+    img: "https://avatar.vercel.sh/richard",
+    hashtag: ["HumanTouch", "AIAdvantage",]
   },
   {
-    name: "김민수",
-    username: "@kios",
-    body: "저는 이 SaaS 서비스에 매우 만족하고 있습니다.",
-    img: "https://avatar.vercel.sh/jenny",
+    name: "Improved Knowledge Sharing",
+    username: "@robert",
+    body: "This AI solution has bridged the gap between departments, leading to better answer quality and a more connected enterprise.",
+    img: "https://avatar.vercel.sh/robert",
+    hashtag: ["KnowledgeSharing", "AIinBusiness",]
   },
   {
-    name: "山田太郎",
-    username: "@samtimkun",
-    body: "このSaaSサービスには本当に感謝しています。",
-    img: "https://avatar.vercel.sh/james",
+    name: "Continuous Support at Every Step",
+    username: "@mike",
+    body: "Our workflow has become more efficient with the continuous support and guidance provided by this AI solution. Better answers, smoother processes!",
+    img: "https://avatar.vercel.sh/mike",
+    hashtag: ["ContinuousSupport", "AIWorkflow",]
+  },
+
+  {
+    name: "Unified and Cohesive Team",
+    username: "@francois",
+    body: "This AI solution has unified our enterprise, breaking down silos and improving answer quality. Our team is more cohesive than ever.",
+    img: "https://avatar.vercel.sh/francois",
+    hashtag: ["UnifiedEnterprise", "AIforBusiness",]
+  },
+
+  {
+    name: "Expert Guidance for Superior Answers",
+    username: "@michael",
+    body: "Combining advanced technology with human best practices, this AI solution provides superior answers. Our team feels empowered with expert guidance.",
+    img: "https://avatar.vercel.sh/michael",
+    hashtag: ["ExpertGuidance", "AIInnovation",]
+  },
+
+
+  {
+    name: "Empowered Employees",
+    username: "@@christophe",
+    body: "This AI solution has empowered our employees by bridging silos and providing high-quality answers through human best practices. A must-have for any enterprise!",
+    img: "https://avatar.vercel.sh/christophe",
+    hashtag: ["EmployeeEmpowerment", "AIinEnterprise",]
   },
 ];
 
@@ -48,11 +79,13 @@ const ReviewCard = ({
   name,
   username,
   body,
+  hashtag,
 }: {
   img: string;
   name: string;
   username: string;
   body: string;
+  hashtag: string[];
 }) => {
   return (
     <figure
@@ -73,7 +106,16 @@ const ReviewCard = ({
           <p className="text-xs font-medium dark:text-white/40">{username}</p>
         </div>
       </div>
-      <blockquote className="mt-2 text-sm">{body}</blockquote>
+      <blockquote className="mt-2 text-sm">{body}
+      <div className="flex justify-center gap-2 flex-wrap p-4">
+        <span className="bg-gray-100 rounded-full px-3 py-1 text-sm font-semibold text-gray-600">
+          #{hashtag[0]}
+          </span>
+          <span className="bg-gray-100 rounded-full px-3 py-1 text-sm font-semibold text-gray-600">
+          #{hashtag[1]}
+          </span>
+      </div>
+      </blockquote>
     </figure>
   );
 };

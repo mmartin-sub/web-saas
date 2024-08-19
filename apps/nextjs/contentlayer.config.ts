@@ -22,7 +22,8 @@ const defaultComputedFields: ComputedFields = {
 
 export const Doc = defineDocumentType(() => ({
   name: "Doc",
-  filePathPattern: `docs/**/*.mdx`,
+  // Exclusion using ...!!**/i18n/** not working (or other issue)
+  filePathPattern: `content/docs/**/*.mdx`,
   contentType: "mdx",
   fields: {
     title: {
@@ -42,7 +43,7 @@ export const Doc = defineDocumentType(() => ({
 
 export const Guide = defineDocumentType(() => ({
   name: "Guide",
-  filePathPattern: `guides/**/*.mdx`,
+  filePathPattern: `content/guides/**/*.mdx`,
   contentType: "mdx",
   fields: {
     title: {
@@ -70,7 +71,7 @@ export const Guide = defineDocumentType(() => ({
 
 export const Post = defineDocumentType(() => ({
   name: "Post",
-  filePathPattern: `blog/**/*.mdx`,
+  filePathPattern: `content/blog/**/*.mdx`,
   contentType: "mdx",
   fields: {
     title: {
@@ -90,7 +91,11 @@ export const Post = defineDocumentType(() => ({
     },
     image: {
       type: "string",
-      required: true,
+      required: false,
+    },
+    alt_image: {
+      type: "string",
+      required: false,
     },
     authors: {
       // Reference types are not embedded.
@@ -107,7 +112,8 @@ export const Post = defineDocumentType(() => ({
 
 export const Author = defineDocumentType(() => ({
   name: "Author",
-  filePathPattern: `authors/**/*.mdx`,
+  // We need to exclude the i18n folder, otherwise issue with the build process Please either define a filePathPattern for the given document type definition or provide a valid value for the type field (i.e. the field "type" needs to be one of the following document type names: Page, Doc, Guide, Post, Author).
+  filePathPattern: `content/authors/**/*.mdx`,
   contentType: "mdx",
   fields: {
     title: {
@@ -123,7 +129,7 @@ export const Author = defineDocumentType(() => ({
     },
     twitter: {
       type: "string",
-      required: true,
+      required: false,
     },
   },
   computedFields: defaultComputedFields,
@@ -131,7 +137,7 @@ export const Author = defineDocumentType(() => ({
 
 export const Page = defineDocumentType(() => ({
   name: "Page",
-  filePathPattern: `pages/**/*.mdx`,
+  filePathPattern: `content/pages/**/*.mdx`,
   contentType: "mdx",
   fields: {
     title: {

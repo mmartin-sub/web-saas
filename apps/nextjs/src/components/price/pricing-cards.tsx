@@ -91,6 +91,7 @@ export function PricingCards({
             };
             benefits: any[];
             limitations: any[];
+            currencySign: string;
             id: string;
           }) => (
             <div
@@ -108,12 +109,12 @@ export function PricingCards({
                       {isYearly && offer?.prices?.monthly > 0 ? (
                         <>
                           <span className="mr-2 text-muted-foreground line-through">
-                            ${offer?.prices?.monthly}
+                          {offer?.currencySign}{offer?.prices?.monthly}
                           </span>
-                          <span>${offer?.prices?.yearly / 12}</span>
+                          <span>{offer?.currencySign}{offer?.prices?.yearly / 12}</span>
                         </>
                       ) : (
-                        `$${offer?.prices?.monthly}`
+                        `${offer?.currencySign}${offer?.prices?.monthly}`
                       )}
                     </div>
                     <div className="-mb-1 ml-2 text-left text-sm font-medium">
@@ -124,7 +125,7 @@ export function PricingCards({
                 {offer.prices.monthly > 0 ? (
                   <div className="text-left text-sm text-muted-foreground">
                     {isYearly
-                      ? `$${offer?.prices?.yearly} ${dict.annual_info}`
+                      ? `${offer?.currencySign}${offer?.prices?.yearly} ${dict.annual_info}`
                       : `${dict.monthly_info}`}
                   </div>
                 ) : null}
@@ -184,9 +185,9 @@ export function PricingCards({
           Email{" "}
           <a
             className="font-medium text-primary hover:underline"
-            href="mailto:support@saasfly.io"
+            href="mailto:support@substantifik.com"
           >
-            support@saasfly.io
+            support@substantifik.com
           </a>{" "}
           {dict.contact}
           <br />

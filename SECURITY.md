@@ -4,7 +4,7 @@
 
 We greatly value the security community's efforts in helping keep our project safe. If you've discovered a security vulnerability, your responsible disclosure is crucial to us. Here's how you can report it:
 
-1. **Contact Method**: Please send an email to [contact@nextify.ltd](mailto:contact@nextify.ltd).
+1. **Contact Method**: Please send an email to [contact@substantifik.com](mailto:contact@substantifik.com).
 2. **Email Subject**: Please use a concise yet descriptive subject, such as "Security Vulnerability Discovered".
 3. **Vulnerability Details**: Provide a comprehensive description of the vulnerability. Include reproduction steps and any other information that might help us effectively understand and resolve the issue.
 4. **Proof of Concept**: If possible, please attach any proof of concept or sample code. Please ensure that your research does not involve destructive testing or violate any laws.

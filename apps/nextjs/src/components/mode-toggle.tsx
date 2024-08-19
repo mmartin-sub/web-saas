@@ -13,7 +13,8 @@ import {
 import * as Icons from "@saasfly/ui/icons";
 
 export function ModeToggle() {
-  const { setTheme } = useTheme();
+  // theme contains the actual theme
+  const { theme, setTheme } = useTheme();
 
   return (
     <DropdownMenu>
@@ -27,11 +28,11 @@ export function ModeToggle() {
       <DropdownMenuContent align="end">
         <DropdownMenuItem onClick={() => setTheme("light")}>
           <Icons.Sun className="mr-2 h-4 w-4" />
-          <span>Light</span>
+          <span>Light {theme === 'light' ? '✔️' : ''}</span>
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("dark")}>
           <Icons.Moon className="mr-2 h-4 w-4" />
-          <span>Dark</span>
+          <span>Dark {theme === 'dark' ? '✔️' : ''}</span>
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("system")}>
           <Icons.Laptop className="mr-2 h-4 w-4" />
