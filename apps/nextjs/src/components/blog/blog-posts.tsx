@@ -11,6 +11,7 @@ interface Post {
   date: string;
   published: boolean;
   image: string;
+  alt_image: string;
   authors: string[];
   slug: string;
 }
@@ -33,6 +34,7 @@ export function BlogPosts({ posts }: BlogPostsProps) {
                 height={452}
                 src={posts[0].image}
                 width={804}
+                alt={posts[0].alt_image ? posts[0].alt_image : undefined}
               />
             )}
           </div>
