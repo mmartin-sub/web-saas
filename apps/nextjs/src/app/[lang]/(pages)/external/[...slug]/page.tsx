@@ -3,11 +3,12 @@
 import { notFound } from "next/navigation";
 
 import { Mdx } from "~/components/content/mdx-components";
-import { DashboardTableOfContents } from "~/components/content/toc";
+
 import { DocsPageHeader } from "~/components/docs/page-header";
-import { DocsPager } from "~/components/docs/pager";
-import { getTableOfContents } from "~/lib/toc";
+import { PagesPager } from "~/components/pages/pager";
+
 import { allPages } from ".contentlayer/generated";
+import { SiteFooter } from "~/components/site-footer";
 
 import "~/styles/mdx.css";
 
@@ -16,13 +17,15 @@ import type { Metadata } from "next";
 import { env } from "~/env.mjs";
 import { absoluteUrl } from "~/lib/utils";
 
-interface DocPageProps {
+import { getDictionary } from "~/lib/get-dictionary";
+
+interface PagePageProps {
   params: {
     slug: string[];
   };
 }
 
-function getDocFromParams(params: { slug: any }) {
+function getPageFromParams(params: { slug: any }) {
   const slug = params.slug?.join("/") || "";
   const doc = allPages.find((doc) => doc.slugAsParams === slug);
   if (!doc) {
@@ -32,8 +35,8 @@ function getDocFromParams(params: { slug: any }) {
   return doc;
 }
 
-export function generateMetadata({ params }: DocPageProps): Metadata {
-  const doc = getDocFromParams(params);
+export function generateMetadata({ params }: PagePageProps): Metadata {
+  const doc = getPageFromParams(params);
 
   if (!doc) {
     return {};
@@ -63,12 +66,7 @@ export function generateMetadata({ params }: DocPageProps): Metadata {
         },
       ],
     },
-    twitter: {
-      card: "summary_large_image",
-      title: doc.title,
-      description: doc.description,
-      images: [ogUrl.toString()],
-    },
+
   };
 }
 
@@ -80,28 +78,32 @@ export function generateStaticParams(): {
   }));
 }
 
-export default async function DocPage({ params }: DocPageProps) {
-  const doc = getDocFromParams(params);
+export default async function PagePage({ params }: PagePageProps) {
+  const doc = getPageFromParams(params);
 
   if (!doc) {
     notFound();
   }
-
-  const toc = await getTableOfContents(doc.body.raw);
+  const lang = 'en';
+  const dict = await getDictionary(lang);
 
   return (
+    <div className="flex min-h-screen flex-col space-y-6">
     <main className="relative py-6 lg:gap-10 lg:py-10 xl:grid xl:grid-cols-[1fr_300px]">
       <div className="mx-auto w-full min-w-0">
         <DocsPageHeader heading={doc.title} text={doc.description} />
         <Mdx code={doc.body.code} />
         <hr className="my-4 md:my-6" />
-        <DocsPager doc={doc} />
+        <PagesPager doc={doc} />
       </div>
-      <div className="hidden text-sm xl:block">
-        <div className="sticky top-16 -mt-10 max-h-[calc(var(--vh)-4rem)] overflow-y-auto pt-10">
-          <DashboardTableOfContents toc={toc} />
-        </div>
-      </div>
-    </main>
+
+      </main>
+      <SiteFooter
+        className="border-t"
+        params={{ lang: `${lang}` }}
+        dict={dict.common}
+      />
+         </div>
+
   );
 }
