@@ -1,5 +1,6 @@
 export const SubscriptionPlan = {
   FREE: "FREE",
+  STD: "STD",
   PRO: "PRO",
   BUSINESS: "BUSINESS",
 } as const;
