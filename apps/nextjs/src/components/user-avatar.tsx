@@ -5,7 +5,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@saasfly/ui/avatar";
 import * as Icons from "@saasfly/ui/icons";
 
 interface UserAvatarProps extends AvatarProps {
-  user: Pick<User, "image" | "name">;
+  user: Pick;
 }
 
 export function UserAvatar({ user, ...props }: UserAvatarProps) {

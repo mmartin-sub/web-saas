@@ -1,7 +1,8 @@
 {
   "$schema": "https://turborepo.org/schema.json",
   "globalDependencies": [
-    "**/.env"
+    "**/.env",
+    "tsconfig.json"
   ],
   "pipeline": {
     "topo": {
@@ -12,6 +13,23 @@
     "build": {
       "dependsOn": [
         "^build"
+      ],
+       "env": [
+        "NEXTAUTH_SECRET",
+        "GITHUB_CLIENT_ID",
+        "GITHUB_CLIENT_SECRET",
+        "RESEND_API_KEY",
+        "STRIPE_API_KEY",
+        "STRIPE_WEBHOOK_SECRET",
+        "IS_DEBUG"
+      ],
+      "inputs": [
+        "$TURBO_DEFAULT$",
+        ".env.production.local",
+        ".env.development.local",
+        ".env.local",
+        ".env.production",
+        ".env"
       ],
       "outputs": [
         ".next/**",
@@ -48,5 +66,8 @@
     "clean": {
       "cache": false
     }
+  },
+  "remoteCache": {
+    "signature": false
   }
 }

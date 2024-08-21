@@ -42,7 +42,7 @@ export default async function LoginPage({
         <div className="flex flex-col space-y-2 text-center">
           <Image
             src="/images/avatars/sub-logo.svg"
-            className="dark:invert mx-auto"
+            className="mx-auto dark:invert"
             width="64"
             height="64"
             alt="logo"
@@ -65,7 +65,7 @@ export default async function LoginPage({
           >
             {dict.login.singup_title}
           </Link>
-        </p> */}
+        </p>
       </div>
     </div>
   );

@@ -1,14 +1,21 @@
 import { createEnv } from "@t3-oss/env-nextjs";
 import { z } from "zod";
 
+/*
+we support this is not needed https://github.com/vercel/next.js/discussions/16429
+since we have @t3-oss/env-nextjs
+const dotenvExpand = require("dotenv-expand");
+dotenvExpand.expand({ parsed: { ...process.env } });
+*/
+
 export const env = createEnv({
   server: {
     // This is optional because it's only used in development.
     // See https://next-auth.js.org/deployment.
     NEXTAUTH_URL: z.string().url().optional(),
     NEXTAUTH_SECRET: z.string().min(1),
-    GITHUB_CLIENT_ID: z.string().min(1),
-    GITHUB_CLIENT_SECRET: z.string().min(1),
+    GITHUB_CLIENT_ID: z.string().min(1).optional(),
+    GITHUB_CLIENT_SECRET: z.string().min(1).optional(),
     STRIPE_API_KEY: z.string().min(1),
     STRIPE_WEBHOOK_SECRET: z.string().min(1),
   },
@@ -40,11 +47,11 @@ export const env = createEnv({
     NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL,
 
     NEXT_PUBLIC_STRIPE_STD_PRODUCT_ID:
-    process.env.NEXT_PUBLIC_STRIPE_STD_PRODUCT_ID,
-  NEXT_PUBLIC_STRIPE_STD_MONTHLY_PRICE_ID:
-    process.env.NEXT_PUBLIC_STRIPE_STD_MONTHLY_PRICE_ID,
-  NEXT_PUBLIC_STRIPE_STD_YEARLY_PRICE_ID:
-    process.env.NEXT_PUBLIC_STRIPE_STD_YEARLY_PRICE_ID,
+      process.env.NEXT_PUBLIC_STRIPE_STD_PRODUCT_ID,
+    NEXT_PUBLIC_STRIPE_STD_MONTHLY_PRICE_ID:
+      process.env.NEXT_PUBLIC_STRIPE_STD_MONTHLY_PRICE_ID,
+    NEXT_PUBLIC_STRIPE_STD_YEARLY_PRICE_ID:
+      process.env.NEXT_PUBLIC_STRIPE_STD_YEARLY_PRICE_ID,
 
     NEXT_PUBLIC_STRIPE_PRO_PRODUCT_ID:
       process.env.NEXT_PUBLIC_STRIPE_PRO_PRODUCT_ID,

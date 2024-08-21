@@ -28,11 +28,11 @@ export function ModeToggle() {
       <DropdownMenuContent align="end">
         <DropdownMenuItem onClick={() => setTheme("light")}>
           <Icons.Sun className="mr-2 h-4 w-4" />
-          <span>Light {theme === 'light' ? '✔️' : ''}</span>
+          <span>Light {theme === "light" ? "✔️" : ""}</span>
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("dark")}>
           <Icons.Moon className="mr-2 h-4 w-4" />
-          <span>Dark {theme === 'dark' ? '✔️' : ''}</span>
+          <span>Dark {theme === "dark" ? "✔️" : ""}</span>
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("system")}>
           <Icons.Laptop className="mr-2 h-4 w-4" />

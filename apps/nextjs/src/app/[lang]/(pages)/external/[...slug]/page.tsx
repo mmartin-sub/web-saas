@@ -3,21 +3,18 @@
 import { notFound } from "next/navigation";
 
 import { Mdx } from "~/components/content/mdx-components";
-
 import { DocsPageHeader } from "~/components/docs/page-header";
 import { PagesPager } from "~/components/pages/pager";
-
-import { allPages } from ".contentlayer/generated";
 import { SiteFooter } from "~/components/site-footer";
+import { allPages } from ".contentlayer/generated";
 
 import "~/styles/mdx.css";
 
 import type { Metadata } from "next";
 
 import { env } from "~/env.mjs";
-import { absoluteUrl } from "~/lib/utils";
-
 import { getDictionary } from "~/lib/get-dictionary";
+import { absoluteUrl } from "~/lib/utils";
 
 interface PagePageProps {
   params: {
@@ -66,7 +63,6 @@ export function generateMetadata({ params }: PagePageProps): Metadata {
         },
       ],
     },
-
   };
 }
 
@@ -84,26 +80,24 @@ export default async function PagePage({ params }: PagePageProps) {
   if (!doc) {
     notFound();
   }
-  const lang = 'en';
+  const lang = "en";
   const dict = await getDictionary(lang);
 
   return (
     <div className="flex min-h-screen flex-col space-y-6">
-    <main className="relative py-6 lg:gap-10 lg:py-10 xl:grid xl:grid-cols-[1fr_300px]">
-      <div className="mx-auto w-full min-w-0">
-        <DocsPageHeader heading={doc.title} text={doc.description} />
-        <Mdx code={doc.body.code} />
-        <hr className="my-4 md:my-6" />
-        <PagesPager doc={doc} />
-      </div>
-
+      <main className="relative py-6 lg:gap-10 lg:py-10 xl:grid xl:grid-cols-[1fr_300px]">
+        <div className="mx-auto w-full min-w-0">
+          <DocsPageHeader heading={doc.title} text={doc.description} />
+          <Mdx code={doc.body.code} />
+          <hr className="my-4 md:my-6" />
+          <PagesPager doc={doc} />
+        </div>
       </main>
       <SiteFooter
         className="border-t"
         params={{ lang: `${lang}` }}
         dict={dict.common}
       />
-         </div>
-
+    </div>
   );
 }

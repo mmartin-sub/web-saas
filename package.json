@@ -4,9 +4,9 @@
   "scripts": {
     "build": "turbo build ",
     "crowdin": "crowdin ",
-    "crowdin:upload": "crowdin upload",
-    "crowdin:download": "crowdin download",
-    "crowdin:sync": "i18next-scanner --config tooling/i18next-scanner.config.js && crowdin upload && crowdin download",
+    "crowdin:upload": "set -a && soure .env.local && set +a &&  crowdin upload",
+    "crowdin:download": "set -a && soure .env.local && set +a && crowdin download",
+    "crowdin:sync": "i18next-scanner --config tooling/i18next-scanner.config.js && set -a && soure .env.local && crowdin upload && crowdin download",
     "18next:scanner": "i18next-scanner --config tooling/i18next-scanner.config.js",
     "clean": "git clean -xdf node_modules",
     "clean:workspaces": "turbo clean",
@@ -15,32 +15,54 @@
     "deps:update2": "npx npm-check-updates -ws --root --format group -i",
     "deps:update3": "bunx npm-check-updates --root --format group -i",
     "deps:update4": "bunx taze -I -r",
-    "dev": "turbo dev --parallel",
+    "vercel:pull": "bun run vercel pull",
+    "vercel:build": "bun run vercel build --debug",
+    "vercel:deploy_prebuilt": "bun run vercel deploy --prebuilt",
+    "dev": "PORT=3000 turbo dev --parallel",
     "dev:web": "turbo dev --parallel --filter !stripe",
     "export": "next export",
     "format": "turbo format --continue -- --cache --cache-location='node_modules/.cache/.prettiercache' --ignore-path='../../.gitignore'",
     "format:fix": "turbo format --continue -- --write --cache --cache-location='node_modules/.cache/.prettiercache' --ignore-path='../../.gitignore'",
+    "format:check": "npx prettier -c .",
+    "format:prettier": "npx prettier --write .",
     "lint": "turbo lint -- --quiet -- --cache --cache-location 'node_modules/.cache/.eslintcache' && manypkg check",
     "lint:fix": "turbo lint --continue -- --fix --cache --cache-location 'node_modules/.cache/.eslintcache' ",
     "typecheck": "turbo typecheck",
+    "kysely": "kysely ",
+    "ntl": "ntl ",
+    "netlify:dev": "netlify dev --filter @saasfly/nextjs ",
+    "ntl:open": "bun run netlify open --filter @saasfly/nextjs ",
+    "ntl:build": "bun run ntl build --filter @saasfly/nextjs ",
+    "ntl:deploy": "bun run ntl deploy --filter @saasfly/nextjs",
+    "ntl:std": "bun run ntl deploy --build --filter @saasfly/nextjs ",
+    "ntl:prod": "bun run ntl deploy --prod --build --filter @saasfly/nextjs ",
     "postinstall": "bun run check-deps",
     "check-deps": "check-dependency-version-consistency .",
-    "gen": "turbo gen --config 'turbo/generators/config.ts'"
+    "check-deps:find": "ncu -ws",
+    "gen": "turbo gen --config 'turbo/generators/config.ts'",
+    "update": "bun run update"
   },
   "devDependencies": {
     "@crowdin/cli": "^4.1.1",
+    "@netlify/plugin-lighthouse": "^6.0.0",
+    "@netlify/plugin-nextjs": "^5.6.0",
+    "@tanstack/eslint-plugin-query": "^5.51.15",
     "@turbo/gen": "1.13.4",
     "check-dependency-version-consistency": "4.1.0",
+    "eslint-config-turbo": "^2.0.14",
     "i18next-scanner": "^4.5.0",
     "i18next-scanner-typescript": "^1.2.1",
+    "kysely-ctl": "^0.9.0",
+    "netlify-cli": "^17.34.2",
     "next-sitemap": "^4.2.3",
     "prettier": "3.3.3",
     "tailwind-config-viewer": "^2.0.4",
     "turbo": "1.13.4",
-    "typescript": "5.5.4"
+    "typescript": "5.5.4",
+    "vercel": "^36.0.0"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=20.0.0"
   },
   "prettier": "@saasfly/prettier-config",
   "workspaces": [
@@ -54,5 +76,13 @@
     "@prisma/client": "^5.18.0",
     "bun": "^1.1.24",
     "prisma": "^5.18.0"
-  }
+  },
+  "trustedDependencies": [
+    "@prisma/client",
+    "@prisma/engines",
+    "@vercel/speed-insights",
+    "contentlayer2",
+    "prisma",
+    "protobufjs"
+  ]
 }

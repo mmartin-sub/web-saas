@@ -8,6 +8,8 @@ import { getSubscriptionPlan } from "./plans";
 export async function handleEvent(event: Stripe.DiscriminatedEvent) {
   const session = event.data.object as Stripe.Checkout.Session;
   if (event.type === "checkout.session.completed") {
+    // It is better to capture checkout.session.completed rather than PaymentIntent events
+    // because no cost orders
     const subscription = await stripe.subscriptions.retrieve(
       session.subscription as string,
     );

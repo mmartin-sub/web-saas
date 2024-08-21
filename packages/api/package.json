@@ -29,7 +29,7 @@
     "@saasfly/db": "workspace:*",
     "@trpc/client": "10.45.2",
     "@trpc/server": "10.45.2",
-    "@t3-oss/env-nextjs": "0.8.0",
+    "@t3-oss/env-nextjs": "0.11.0",
     "superjson": "2.2.1",
     "dinero.js": "2.0.0-alpha.14",
     "@dinero.js/currencies": "2.0.0-alpha.14",
@@ -40,7 +40,7 @@
     "@saasfly/eslint-config": "workspace:*",
     "@saasfly/prettier-config": "workspace:*",
     "@saasfly/typescript-config": "workspace:*",
-    "eslint": "8.57.0",
+    "eslint": "9.9.0",
     "prettier": "3.3.3",
     "typescript": "5.5.4"
   },

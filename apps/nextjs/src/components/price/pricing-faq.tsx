@@ -17,7 +17,7 @@ export function PricingFaq({
   params: {
     lang: Locale;
   };
-  dict: Record<string, string>;
+  dict: Record;
 }) {
   const pricingFaqData = priceFaqDataMap[lang];
   return (

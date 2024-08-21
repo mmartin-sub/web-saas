@@ -1,0 +1,6 @@
+# the file should be at the root
+apps/nextjs/.next/
+apps/nextjs/.contentlayer/
+
+#Specific files, mix between yaml and json; not understood well by prettier
+/crowdin.yml

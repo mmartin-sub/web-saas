@@ -25,11 +25,11 @@ import { toast } from "@saasfly/ui/use-toast";
 import { userNameSchema } from "~/lib/validations/user";
 import { trpc } from "~/trpc/client";
 
-interface UserNameFormProps extends React.HTMLAttributes<HTMLFormElement> {
-  user: Pick<User, "id" | "name">;
+interface UserNameFormProps extends React.HTMLAttributes {
+  user: Pick;
 }
 
-type FormData = z.infer<typeof userNameSchema>;
+type FormData = z.infer;
 
 export function UserNameForm({ user, className, ...props }: UserNameFormProps) {
   const router = useRouter();

@@ -50,9 +50,35 @@ bun.lockb
 
 .idea/
 
-.env
+# Local and build overwide env
+.env.development.local
+.env.production.local
 
 # Part of the build process
 /i18n/
 # Local script for debugging
 /local-debug/
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+# Local Netlify folder
+.netlify
+reports/
+
+# Netifly
+.netlify/
+apps/nextjs/netlify/
+

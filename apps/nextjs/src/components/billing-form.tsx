@@ -18,7 +18,7 @@ import { toast } from "@saasfly/ui/use-toast";
 import { formatDate } from "~/lib/utils";
 import { UserSubscriptionPlan } from "~/types";
 
-interface BillingFormProps extends React.HTMLAttributes<HTMLFormElement> {
+interface BillingFormProps extends React.HTMLAttributes {
   subscriptionPlan: UserSubscriptionPlan & {
     isCanceled: boolean;
   };

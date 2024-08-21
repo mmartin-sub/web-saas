@@ -2,9 +2,9 @@ name: CI
 
 on:
   pull_request:
-    branches: [ "*" ]
+    branches: ["*"]
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   merge_group:
 
 # You can leverage Vercel Remote Caching with Turbo to speed up your builds
@@ -57,7 +57,6 @@ jobs:
           POSTGRES_PASSWORD: default
           POSTGRES_DB: verceldb
           POSTGRES_URL: postgres://default:default@localhost:5432/verceldb
-
 
       - name: lint and type-check
         run: bun run build lint format typecheck

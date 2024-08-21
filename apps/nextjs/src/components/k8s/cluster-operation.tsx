@@ -42,7 +42,7 @@ async function deleteCluster(clusterId: number) {
 }
 
 interface ClusterOperationsProps {
-  cluster: Pick<Cluster, "id" | "name">;
+  cluster: Pick;
 }
 
 export function ClusterOperations({ cluster }: ClusterOperationsProps) {

@@ -13,10 +13,10 @@ import type { MainNavItem } from "~/types";
 import { MainNav } from "./main-nav";
 import { UserAccountNav } from "./user-account-nav";
 
-type Dictionary = Record<string, string>;
+type Dictionary = Record;
 
 interface NavBarProps {
-  user: Pick<User, "name" | "image" | "email"> | undefined;
+  user: Pick | undefined;
   items?: MainNavItem[];
   children?: React.ReactNode;
   rightElements?: React.ReactNode;
@@ -25,7 +25,7 @@ interface NavBarProps {
     lang: string;
   };
   marketing: Dictionary;
-  dropdown: Record<string, string>;
+  dropdown: Record;
 }
 
 export function NavBar({
@@ -73,16 +73,16 @@ export function NavBar({
             />
           ) : (
             <Link href={`${lang}/register`}>
-            <Button
-              className="px-3"
-              variant="default"
-              size="sm"
-              //    onClick={signInModal.onOpen}
-            >
-              {typeof marketing.signup === "string"
-                ? marketing.signup
-                : "signup"}
-            </Button>
+              <Button
+                className="px-3"
+                variant="default"
+                size="sm"
+                //    onClick={signInModal.onOpen}
+              >
+                {typeof marketing.signup === "string"
+                  ? marketing.signup
+                  : "signup"}
+              </Button>
             </Link>
           )}
         </div>

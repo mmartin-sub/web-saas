@@ -32,7 +32,6 @@ export const getDocsConfig = (_lang: string): DocsConfig => {
             href: `/docs/documentation`,
             disabled: true,
           },
-
         ],
       },
       {
@@ -55,7 +54,6 @@ export const getDocsConfig = (_lang: string): DocsConfig => {
             href: "/docs/in-progress",
             disabled: true,
           },
-
         ],
       },
     ],

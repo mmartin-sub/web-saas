@@ -76,10 +76,7 @@ export interface SubscriptionPlan {
 }
 
 export type UserSubscriptionPlan = SubscriptionPlan &
-  Pick<
-    Customer,
-    "stripeCustomerId" | "stripeSubscriptionId" | "stripePriceId"
-  > & {
+  Pick & {
     stripeCurrentPeriodEnd: number;
     isPaid: boolean | "" | null;
     interval: string | null;

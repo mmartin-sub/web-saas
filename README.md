@@ -1,4 +1,3 @@
-
 <div align="center" width="100%">
     <img src="./sub-logo.svg" width="128" alt="" />
 </div>
@@ -11,38 +10,43 @@ Fork from [SaasFly](https://github.com/saasfly/saasfly)
 ## ⭐ Features
 
 On top of the fork:
+
 - Crowdin support including github action.
 - add @neondatabase/serverless driver
 
 ## Recommendations
+
 - Install [Stripe Cli client](https://docs.stripe.com/stripe-cli) and [completion](https://docs.stripe.com/stripe-cli/autocomplete)
 - in github, setup some secret (see workflows)
 - install i18next-scanner/i18next-scanner-typescript (i.e. `bun run 18next:scanner`)
 
 ## Setup
+
 - i18n [config](apps/nextjs/src/config/i18n-config.ts)
 - Crowdin steps, see [documentation](https://docusaurus.io/docs/i18n/crowdin)
 - update FAQ from [price-faq-data.ts]£(apps/nextjs/src/config/price/price-faq-data.ts)
 
 ## Todo
-[ ] Need to support i18n for the .md or.mdx files for Contentlayer
-[ ] Integrate Cloudinary/Imgix or other image optimizer
-[ ] `bun run crowdin` not using the .env.local data while it seems there. at least crowdin is confused; maybe it is an EXPORT issue?
-[ ] Automate and optimize the translation process (using i18next-scanner or [i18n-js](https://github.com/fnando/i18n-js))
-[ ] Script to deploy dev, stage and prod with proper stripe coonnexion
-[ ] Setup name of the company, website and email from dict so it is easier to deploy to multiple domains (i.e. using more siteConfig.url)
-[ ] Review cors setup
-[ ] Remove k8s references
-[ ] Create a sitemap for robots.ts
-[ ] Load the price from stripe dynamically at build time so it stays cached versus static one and support multiple currencies
-[ ] Make apps/nextjs/src/components/typewriterEffectSmooth.tsx working with a long string versus manual split.
-[X] Review the logos (apps/nextjs/src/app/layout.tsx) and svg to work in dark and light mode.
-[ ] Update the review from apps/nextjs/src/components/comments.tsx based on actual twitter and comments from database. Show the number of hashtags based on input
-[ ] Add errors, not-found, global-error and other specific pages related to [NextJS routing](https://nextjs.org/docs/app/building-your-application/routing)
-[ ] Improve dynamic routing for (pages)/external for terms and privacy so UI looks better with headers and footers
-[ ] Add apply job, use cases sections (Uses cases per industry)
 
+- [ ] Need to support i18n for the .md or.mdx files for Contentlayer
+- [ ] Integrate Cloudinary/Imgix or other image optimizer
+- [ ] `bun run crowdin` not using the .env.local data while it seems there. at least crowdin is confused; maybe it is an EXPORT issue?
+- [ ] Automate and optimize the translation process (using i18next-scanner or [i18n-js](https://github.com/fnando/i18n-js))
+- [ ] Script to deploy dev, stage and prod with proper stripe coonnexion
+- [ ] Setup name of the company, website and email from dict so it is easier to deploy to multiple domains (i.e. using more siteConfig.url)
+- [ ] Review cors setup
+- [ ] Remove k8s references
+- [ ] Create a sitemap for robots.ts
+- [ ] Load the price from stripe dynamically at build time so it stays cached versus static one and support multiple currencies
+- [ ] Make apps/nextjs/src/components/typewriterEffectSmooth.tsx working with a long string versus manual split.
+- [X] Review the logos (apps/nextjs/src/app/layout.tsx) and svg to work in dark and light mode.
+- [ ] Update the review from apps/nextjs/src/components/comments.tsx based on actual twitter and comments from database. Show the number of hashtags based on input
+- [ ] Add errors, not-found, global-error and other specific pages related to [NextJS routing](https://nextjs.org/docs/app/building-your-application/routing)
+- [ ] Improve dynamic routing for (pages)/external for terms and privacy so UI looks better with headers and footers
+- [ ] Add apply job, use cases sections (Uses cases per industry)
+- [ ] Many lint issue about any to clean-up from upstream
 ## Known issues
+
 [ ] Stripe webhooks should return 200 as fast as possible, leverage sub/pub approach to do DB work async
 [ ] If Resend is sending an error, it is not catched
 
@@ -113,4 +117,5 @@ On top of the fork:
 This project is licensed under the MIT License. For more information, see the [LICENSE](./LICENSE) file.
 
 ## 🙏 Credits
+
 This project is a fork from [SaasFly](https://github.com/saasfly/saasfly)

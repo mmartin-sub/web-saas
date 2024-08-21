@@ -15,11 +15,11 @@
   },
   "dependencies": {
     "@next/eslint-plugin-next": "14.2.5",
-    "@types/eslint": "8.56.7",
-    "@typescript-eslint/eslint-plugin": "7.5.0",
-    "@typescript-eslint/parser": "7.5.0",
+    "@types/eslint": "9.6.0",
+    "@typescript-eslint/eslint-plugin": "8.2.0",
+    "@typescript-eslint/parser": "8.2.0",
     "eslint-config-prettier": "9.1.0",
-    "eslint-config-turbo": "1.13.2",
+    "eslint-config-turbo": "^2.0.14",
     "eslint-plugin-import": "2.29.1",
     "eslint-plugin-jsx-a11y": "6.9.0",
     "eslint-plugin-react": "7.35.0",
@@ -28,7 +28,7 @@
   "devDependencies": {
     "@saasfly/prettier-config": "workspace:*",
     "@saasfly/typescript-config": "workspace:*",
-    "eslint": "8.57.0",
+    "eslint": "9.9.0",
     "typescript": "5.5.4"
   },
   "eslintConfig": {

@@ -28,32 +28,33 @@ const config = {
   images: {
     domains: [
       // "substantifik.com",
+    ],
 
-      ],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "avatars.githubusercontent.com",
+        pathname: "/**",
+      },
 
-      remotePatterns: [
-        {
-          protocol: 'https',
-          hostname: 'images.unsplash.com',
-          pathname: '/**',
-        },
-        {
-          protocol: 'https',
-          hostname: 'avatars.githubusercontent.com',
-          pathname: '/**',
-        },
-
-         // Not used for now
-        {
-          protocol: 'https',
-          hostname: 'res.cloudinary.com',
-          pathname: '/**',
-        },
-      ],
+      // Not used for now
+      {
+        protocol: "https",
+        hostname: "res.cloudinary.com",
+        pathname: "/**",
+      },
+    ],
   },
   /** We already do linting and typechecking as separate tasks in CI */
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
+  // not sure yet how to enable it
+//  swcMinify: true,
   output: "standalone",
 };
 

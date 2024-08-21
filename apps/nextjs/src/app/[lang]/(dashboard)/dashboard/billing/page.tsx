@@ -44,7 +44,7 @@ export default async function BillingPage({
 }
 
 function generateSubscriptionMessage(
-  dict: Record<string, string>,
+  dict: Record,
   subscription: Subscription,
 ): string {
   const content = String(dict.subscriptionInfo);
@@ -56,7 +56,7 @@ function generateSubscriptionMessage(
   return "";
 }
 
-async function SubscriptionCard({ dict }: { dict: Record<string, string> }) {
+async function SubscriptionCard({ dict }: { dict: Record }) {
   const subscription = (await trpc.auth.mySubscription.query()) as Subscription;
   const content = generateSubscriptionMessage(dict, subscription);
   return (

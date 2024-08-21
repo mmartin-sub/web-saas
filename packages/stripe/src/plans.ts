@@ -6,10 +6,10 @@ export const PLANS: Record<
   string,
   (typeof SubscriptionPlan)[keyof typeof SubscriptionPlan]
 > = {
-    // @ts-ignore
-    [env.NEXT_PUBLIC_STRIPE_STD_MONTHLY_PRICE_ID]: SubscriptionPlan.STD,
-    // @ts-ignore
-    [env.NEXT_PUBLIC_STRIPE_STD_YEARLY_PRICE_ID]: SubscriptionPlan.STD,
+  // @ts-ignore
+  [env.NEXT_PUBLIC_STRIPE_STD_MONTHLY_PRICE_ID]: SubscriptionPlan.STD,
+  // @ts-ignore
+  [env.NEXT_PUBLIC_STRIPE_STD_YEARLY_PRICE_ID]: SubscriptionPlan.STD,
 
   // @ts-ignore
   [env.NEXT_PUBLIC_STRIPE_PRO_MONTHLY_PRICE_ID]: SubscriptionPlan.PRO,

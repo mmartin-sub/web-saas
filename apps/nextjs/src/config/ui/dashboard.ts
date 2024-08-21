@@ -8,7 +8,7 @@ export const getDashboardConfig = async ({
   params: {
     lang: Locale;
   };
-}): Promise<DashboardConfig> => {
+}): Promise => {
   const dict = await getDictionary(lang);
 
   return {

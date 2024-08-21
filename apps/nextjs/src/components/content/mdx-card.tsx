@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import { cn } from "@saasfly/ui";
 
-interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
+interface CardProps extends React.HTMLAttributes {
   href?: string;
   disabled?: boolean;
 }

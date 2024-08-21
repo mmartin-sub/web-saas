@@ -14,9 +14,9 @@ import { Input } from "@saasfly/ui/input";
 import { Label } from "@saasfly/ui/label";
 import { toast } from "@saasfly/ui/use-toast";
 
-type Dictionary = Record<string, string>;
+type Dictionary = Record;
 
-interface UserAuthFormProps extends React.HTMLAttributes<HTMLDivElement> {
+interface UserAuthFormProps extends React.HTMLAttributes {
   lang: string;
   dict: Dictionary;
   disabled?: boolean;
@@ -26,7 +26,7 @@ const userAuthSchema = z.object({
   email: z.string().email(),
 });
 
-type FormData = z.infer<typeof userAuthSchema>;
+type FormData = z.infer;
 
 export function UserAuthForm({
   className,
@@ -88,7 +88,7 @@ export function UserAuthForm({
               autoCapitalize="none"
               autoComplete="email"
               autoCorrect="off"
-               //  from upstream, but not sure what disabled is doing
+              //  from upstream, but not sure what disabled is doing
               disabled={isLoading || isGitHubLoading || disabled}
               {...register("email")}
             />

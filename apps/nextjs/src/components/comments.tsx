@@ -7,42 +7,42 @@ const reviews = [
     username: "@jack",
     body: "This AI solution has truly bridged the gap between our silos, making collaboration across our enterprise effortless. Unified knowledge sharing has never been easier!",
     img: "https://avatar.vercel.sh/jack",
-    hashtag: ["EnterpriseAI", "Collaboration",]
+    hashtag: ["EnterpriseAI", "Collaboration"],
   },
   {
     name: "op-Notch Employee Support",
     username: "@alex",
     body: "The level of support and guidance our team receives is outstanding. This AI solution has significantly boosted our performance. Highly recommend!",
     img: "https://avatar.vercel.sh/alex",
-    hashtag: ["EmployeeSupport", "AIExcellence",]
+    hashtag: ["EmployeeSupport", "AIExcellence"],
   },
   {
     name: "No More Information Silos!",
     username: "@bob",
     body: "Thanks to this AI solution, we’ve broken down barriers and streamlined communication. The integration of human best practices ensures high-quality answers every time.",
     img: "https://avatar.vercel.sh/bob",
-    hashtag: ["Innovation", "AIIntegration",]
+    hashtag: ["Innovation", "AIIntegration"],
   },
   {
     name: "Guided by Expertise",
     username: "@richard",
     body: "The human expertise embedded in this AI solution has enhanced the quality of our answers. Our employees feel empowered and guided to excel.",
     img: "https://avatar.vercel.sh/richard",
-    hashtag: ["HumanTouch", "AIAdvantage",]
+    hashtag: ["HumanTouch", "AIAdvantage"],
   },
   {
     name: "Improved Knowledge Sharing",
     username: "@robert",
     body: "This AI solution has bridged the gap between departments, leading to better answer quality and a more connected enterprise.",
     img: "https://avatar.vercel.sh/robert",
-    hashtag: ["KnowledgeSharing", "AIinBusiness",]
+    hashtag: ["KnowledgeSharing", "AIinBusiness"],
   },
   {
     name: "Continuous Support at Every Step",
     username: "@mike",
     body: "Our workflow has become more efficient with the continuous support and guidance provided by this AI solution. Better answers, smoother processes!",
     img: "https://avatar.vercel.sh/mike",
-    hashtag: ["ContinuousSupport", "AIWorkflow",]
+    hashtag: ["ContinuousSupport", "AIWorkflow"],
   },
 
   {
@@ -50,7 +50,7 @@ const reviews = [
     username: "@francois",
     body: "This AI solution has unified our enterprise, breaking down silos and improving answer quality. Our team is more cohesive than ever.",
     img: "https://avatar.vercel.sh/francois",
-    hashtag: ["UnifiedEnterprise", "AIforBusiness",]
+    hashtag: ["UnifiedEnterprise", "AIforBusiness"],
   },
 
   {
@@ -58,16 +58,15 @@ const reviews = [
     username: "@michael",
     body: "Combining advanced technology with human best practices, this AI solution provides superior answers. Our team feels empowered with expert guidance.",
     img: "https://avatar.vercel.sh/michael",
-    hashtag: ["ExpertGuidance", "AIInnovation",]
+    hashtag: ["ExpertGuidance", "AIInnovation"],
   },
-
 
   {
     name: "Empowered Employees",
     username: "@@christophe",
     body: "This AI solution has empowered our employees by bridging silos and providing high-quality answers through human best practices. A must-have for any enterprise!",
     img: "https://avatar.vercel.sh/christophe",
-    hashtag: ["EmployeeEmpowerment", "AIinEnterprise",]
+    hashtag: ["EmployeeEmpowerment", "AIinEnterprise"],
   },
 ];
 
@@ -106,15 +105,16 @@ const ReviewCard = ({
           <p className="text-xs font-medium dark:text-white/40">{username}</p>
         </div>
       </div>
-      <blockquote className="mt-2 text-sm">{body}
-      <div className="flex justify-center gap-2 flex-wrap p-4">
-        <span className="bg-gray-100 rounded-full px-3 py-1 text-sm font-semibold text-gray-600">
-          #{hashtag[0]}
+      <blockquote className="mt-2 text-sm">
+        {body}
+        <div className="flex flex-wrap justify-center gap-2 p-4">
+          <span className="rounded-full bg-gray-100 px-3 py-1 text-sm font-semibold text-gray-600">
+            #{hashtag[0]}
           </span>
-          <span className="bg-gray-100 rounded-full px-3 py-1 text-sm font-semibold text-gray-600">
-          #{hashtag[1]}
+          <span className="rounded-full bg-gray-100 px-3 py-1 text-sm font-semibold text-gray-600">
+            #{hashtag[1]}
           </span>
-      </div>
+        </div>
       </blockquote>
     </figure>
   );

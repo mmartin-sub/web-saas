@@ -1,11 +1,12 @@
 //Define list of locales
 export const i18n = {
   defaultLocale: "en",
-  locales: ["en",
+  locales: [
+    "en",
     // This list should be the same as localeMap, or UI issue otherwise
     // "de", "es", "fr", "it",
     // "zh", "ko", "ja"
-    ],
+  ],
 } as const;
 
 export type Locale = (typeof i18n)["locales"][number];
@@ -14,7 +15,7 @@ export type Locale = (typeof i18n)["locales"][number];
 export const localeMap = {
   en: "English",
 
-/*
+  /*
   de: "Deutsch",
   es: "Español",
   fr: "Français",

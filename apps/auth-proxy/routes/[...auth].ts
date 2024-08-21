@@ -9,8 +9,8 @@ export default eventHandler(async (event) =>
     redirectProxyUrl: process.env.AUTH_REDIRECT_PROXY_URL,
     providers: [
       GitHub({
-        clientId: process.env.GITHUB_CLIENT_ID,
-        clientSecret: process.env.GITHUB_CLIENT_SECRET,
+        clientId: process.env.GITHUB_CLIENT_ID!,
+        clientSecret: process.env.GITHUB_CLIENT_SECRET!,
       }),
     ],
   }),

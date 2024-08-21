@@ -43,7 +43,7 @@ import { trpc } from "~/trpc/client";
 import type { Cluster } from "~/types/k8s";
 
 interface ClusterProps {
-  cluster: Pick<Cluster, "id" | "name" | "location">;
+  cluster: Pick;
   params: {
     lang: string;
   };
@@ -67,7 +67,7 @@ const isValidLocation = (
 };
 
 export function ClusterConfig({ cluster, params: { lang } }: ClusterProps) {
-  const form = useForm<z.infer<typeof FormSchema>>({
+  const form = useForm<z.infer>({
     defaultValues: {
       name: cluster.name, // default value
       location: isValidLocation(cluster.location)
@@ -79,7 +79,7 @@ export function ClusterConfig({ cluster, params: { lang } }: ClusterProps) {
   const router = useRouter();
   const [_isSaving, setIsSaving] = useState<boolean>(false);
 
-  async function onSubmit(data: z.infer<typeof FormSchema>) {
+  async function onSubmit(data: z.infer) {
     setIsSaving(true);
     const response = await trpc.k8s.updateCluster.mutate({
       id: cluster.id,

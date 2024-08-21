@@ -17,15 +17,15 @@
     "with-env": "dotenv -e ../../.env.local --"
   },
   "dependencies": {
-    "kysely": "0.27.3",
-    "@vercel/postgres-kysely": "0.8.0"
+    "kysely": "0.27.4",
+    "@vercel/postgres-kysely": "0.9.0"
   },
   "devDependencies": {
     "@saasfly/eslint-config": "workspace:*",
     "@saasfly/prettier-config": "workspace:*",
     "@saasfly/typescript-config": "workspace:*",
     "dotenv-cli": "7.4.2",
-    "eslint": "8.57.0",
+    "eslint": "9.9.0",
     "prettier": "3.3.3",
     "prisma": "^5.18.0",
     "prisma-kysely": "1.8.0",

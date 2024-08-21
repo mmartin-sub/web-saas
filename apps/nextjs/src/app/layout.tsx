@@ -14,7 +14,6 @@ import { TailwindIndicator } from "~/components/tailwind-indicator";
 import { ThemeProvider } from "~/components/theme-provider";
 import { i18n } from "~/config/i18n-config";
 import { siteConfig } from "~/config/site";
-
 import * as constp from "~/lib/constants";
 
 // import { Suspense } from "react";
@@ -71,7 +70,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning >
+    <html lang="en" suppressHydrationWarning>
       <head />
       {/*<Suspense>*/}
       {/*  <PostHogPageview />*/}

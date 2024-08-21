@@ -17,22 +17,21 @@ interface SubscriptionPlanTranslation {
   };
 }
 
-export const priceDataMap: Record<string, SubscriptionPlanTranslation[]> = {
-
+export const priceDataMap: Record = {
   en: [
     {
       id: "starter",
       title: "Starter",
       description: "For Beginners",
       benefits: [
-        "Up to 1 cluster per month",
-        "Basic analytics and reporting",
-        "Access to basic features",
+        "Select automatically the best AI model",
+        "Privacy & Trust by default",
+        "Chat capability for the User Experience",
+        "Limit to 30 requests per day",
       ],
       limitations: [
         "No priority access to new features",
         "Limited customer support",
-        "No custom branding",
         "Limited access to business resources",
       ],
       currencySign: "$",
@@ -50,14 +49,16 @@ export const priceDataMap: Record<string, SubscriptionPlanTranslation[]> = {
       title: "Pro",
       description: "Unlock Advanced Features",
       benefits: [
-        "Up to 3 clusters per month",
+        "Select automatically the best AI model",
+        "Privacy & Trust by default",
+        "Chat capability for the User Experience",
+        "Limit to 100 requests per day",
         "Advanced analytics and reporting",
         "Access to business templates",
         "Priority customer support",
-        "Exclusive webinars and training",
       ],
       limitations: [
-        "No custom branding",
+        "Support Substantifik best practices workflow",
         "Limited access to business resources",
       ],
       currencySign: "$",
@@ -75,11 +76,17 @@ export const priceDataMap: Record<string, SubscriptionPlanTranslation[]> = {
       title: "Business",
       description: "For Power Users",
       benefits: [
-        "Up to 10 clusters per month",
-        "Real-time analytics and reporting",
+        "Select automatically the best AI model",
+        "Privacy & Trust by default",
+        "Chat capability for the User Experience",
+        "Limit to 500 requests per day",
         "Access to all templates, including custom branding",
-        "24/7 business customer support",
+        "Assigned account manager and business support team",
         "Personalized configuration and account management",
+        "Exclusive webinars and training",
+        "SSO and other enterprise audit capabilities",
+        "Cloud, private or hybrid hosting options",
+        "Support custom-made and private best practice's workflows",
       ],
       limitations: [],
       currencySign: "$",
@@ -93,5 +100,4 @@ export const priceDataMap: Record<string, SubscriptionPlanTranslation[]> = {
       },
     },
   ],
-
 };

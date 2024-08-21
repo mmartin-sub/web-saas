@@ -10,7 +10,7 @@ import type { Cluster } from "~/types/k8s";
 // import { formatDate } from "~/lib/utils";
 
 interface ClusterItemProps {
-  cluster: Pick<Cluster, "id" | "name" | "location" | "plan" | "updatedAt">;
+  cluster: Pick;
 }
 
 export function ClusterItem({ cluster }: ClusterItemProps) {

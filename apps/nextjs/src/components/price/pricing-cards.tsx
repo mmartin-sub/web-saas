@@ -25,7 +25,7 @@ import { UserSubscriptionPlan } from "~/types";
 interface PricingCardsProps {
   userId?: string;
   subscriptionPlan?: UserSubscriptionPlan;
-  dict: Record<string, string>;
+  dict: Record;
   params: {
     lang: string;
   };
@@ -72,8 +72,8 @@ export function PricingCards({
             title:
               | boolean
               | Key
-              | ReactElement<any, string | JSXElementConstructor<any>>
-              | Iterable<ReactNode>
+              | ReactElement
+              | Iterable
               | PromiseLikeOfReactNode
               | null
               | undefined;
@@ -82,8 +82,8 @@ export function PricingCards({
                 | string
                 | number
                 | boolean
-                | ReactElement<any, string | JSXElementConstructor<any>>
-                | Iterable<ReactNode>
+                | ReactElement
+                | Iterable
                 | PromiseLikeOfReactNode
                 | null
                 | undefined;
@@ -109,9 +109,13 @@ export function PricingCards({
                       {isYearly && offer?.prices?.monthly > 0 ? (
                         <>
                           <span className="mr-2 text-muted-foreground line-through">
-                          {offer?.currencySign}{offer?.prices?.monthly}
+                            {offer?.currencySign}
+                            {offer?.prices?.monthly}
                           </span>
-                          <span>{offer?.currencySign}{offer?.prices?.yearly / 12}</span>
+                          <span>
+                            {offer?.currencySign}
+                            {offer?.prices?.yearly / 12}
+                          </span>
                         </>
                       ) : (
                         `${offer?.currencySign}${offer?.prices?.monthly}`

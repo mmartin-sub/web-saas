@@ -25,7 +25,7 @@ export const endingLink = (opts?: {
   ((runtime) => {
     const sharedOpts = {
       headers: opts?.headers,
-    } satisfies Partial<HTTPBatchLinkOptions>;
+    } satisfies Partial;
 
     const edgeLink = httpBatchLink({
       ...sharedOpts,
@@ -46,4 +46,4 @@ export const endingLink = (opts?: {
       };
       return endpoint === "edge" ? edgeLink(newCtx) : lambdaLink(newCtx);
     };
-  }) satisfies TRPCLink<AppRouter>;
+  }) satisfies TRPCLink;
