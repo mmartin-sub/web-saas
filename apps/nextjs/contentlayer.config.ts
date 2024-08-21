@@ -154,6 +154,7 @@ export const Page = defineDocumentType(() => ({
 export default makeSource({
   contentDirPath: "./src/content",
   documentTypes: [Page, Doc, Guide, Post, Author],
+  onExtraFieldData: 'ignore', // for updatedAt
   mdx: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [

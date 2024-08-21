@@ -2,6 +2,7 @@
   "$schema": "https://turborepo.org/schema.json",
   "globalDependencies": [
     "**/.env",
+    "**/.env.*local",
     "tsconfig.json"
   ],
   "pipeline": {
@@ -15,21 +16,12 @@
         "^build"
       ],
        "env": [
-        "NEXTAUTH_SECRET",
-        "GITHUB_CLIENT_ID",
-        "GITHUB_CLIENT_SECRET",
+        "*",
         "RESEND_API_KEY",
-        "STRIPE_API_KEY",
-        "STRIPE_WEBHOOK_SECRET",
-        "IS_DEBUG"
-      ],
-      "inputs": [
-        "$TURBO_DEFAULT$",
-        ".env.production.local",
-        ".env.development.local",
-        ".env.local",
-        ".env.production",
-        ".env"
+        "!NEXT_PUBLIC_GIT_*",
+        "TINY_BIRD_API_KEY",
+        "NODE_ENV",
+        "VERCEL_URL"
       ],
       "outputs": [
         ".next/**",
