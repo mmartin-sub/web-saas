@@ -49,6 +49,7 @@ On top of the fork:
 
 [ ] Stripe webhooks should return 200 as fast as possible, leverage sub/pub approach to do DB work async
 [ ] If Resend is sending an error, it is not catched
+[ ] <p> cannot be a descendant of <p> from TypewriterEffectSmooths/TypewriterEffectImpl animation
 
 ### 🐭 Frameworks
 

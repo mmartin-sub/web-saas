@@ -4,8 +4,6 @@ import localFont from "next/font/local";
 import "~/styles/globals.css";
 
 import { NextDevtoolsProvider } from "@next-devtools/core";
-import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import { cn } from "@saasfly/ui";
 import { Toaster } from "@saasfly/ui/toaster";
@@ -88,8 +86,7 @@ export default function RootLayout({
           enableSystem={false}
         >
           <NextDevtoolsProvider>{children}</NextDevtoolsProvider>
-          <Analytics />
-          <SpeedInsights />
+
           <Toaster />
           <TailwindIndicator />
         </ThemeProvider>

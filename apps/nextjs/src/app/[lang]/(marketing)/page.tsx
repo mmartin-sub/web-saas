@@ -63,7 +63,7 @@ export default async function IndexPage({
               <div className="mb-4 mt-6 flex w-full flex-col justify-center space-y-4 sm:flex-row sm:justify-start sm:space-x-8 sm:space-y-0">
                 <Link href={`${lang}/login`}>
                   <ShimmerButton className="mx-auto flex justify-center">
-                    <span className="z-10 w-48 whitespace-pre bg-gradient-to-b from-black from-30% to-gray-300/80 bg-clip-text text-center text-sm font-semibold leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 dark:text-transparent">
+                    <span className="z-10 w-48 whitespace-pre bg-gradient-to-b from-black from-30% to-gray-300/80 bg-clip-text text-center text-sm font-semibold leading-none tracking-tight text-white dark:from-white dark:to-slate-900/10 dark:text-white">
                       {dict.marketing.get_started}
                     </span>
                   </ShimmerButton>
@@ -72,16 +72,21 @@ export default async function IndexPage({
             </div>
           </div>
 
-          {/* Discord link */}
-
-          <div className="h-full w-full xl:block">
-            <div
-             className={cn(
-              "flex flex-col pt-28",
-              constp.HIDE_DISCORD_LINK ? "hidden" : ""
+             {/* xl:block original value with discord */}
+          <div
+              className={cn(
+              "h-full w-full ", "m:block"
             )}
             >
-              <Meteorss meteor={meteors_data} />
+            <div
+             className={cn(
+              "flex flex-col pt-15",
+            )}
+            >
+              {/* Discord link */}
+               {constp.HIDE_DISCORD_LINK ? null : <Meteorss meteor={meteors_data} />
+               }
+
               <div
                 className={cn(
                 "mt-4 flex w-full justify-between",
