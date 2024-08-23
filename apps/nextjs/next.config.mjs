@@ -54,7 +54,7 @@ const config = {
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
   // not sure yet how to enable it
-//  swcMinify: true,
+  //  swcMinify: true,
   output: "standalone",
 };
 

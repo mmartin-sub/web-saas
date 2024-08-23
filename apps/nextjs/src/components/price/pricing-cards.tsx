@@ -25,7 +25,7 @@ import { UserSubscriptionPlan } from "~/types";
 interface PricingCardsProps {
   userId?: string;
   subscriptionPlan?: UserSubscriptionPlan;
-  dict: Record<string, string>;
+  dict: Record;
   params: {
     lang: string;
   };

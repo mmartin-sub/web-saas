@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { cn } from "@saasfly/ui";
 import * as Icons from "@saasfly/ui/icons";
 
 import { XBlogArticle } from "~/components/blog-card";
@@ -16,7 +17,6 @@ import type { Locale } from "~/config/i18n-config";
 import * as constp from "~/lib/constants";
 import { getDictionary } from "~/lib/get-dictionary";
 import type { Meteor } from "~/types/meteors";
-import { cn } from "@saasfly/ui";
 
 const meteors_data: Meteor = {
   name: "Join our Discord",
@@ -72,33 +72,28 @@ export default async function IndexPage({
             </div>
           </div>
 
-             {/* xl:block original value with discord */}
-          <div
-              className={cn(
-              "h-full w-full ", "l:block"
-            )}
-            >
-            <div
-             className={cn(
-              "flex flex-col pt-28",
-            )}
-            >
+          {/* xl:block original value with discord */}
+          <div className={cn("h-full w-full", "l:block")}>
+            <div className={cn("flex flex-col pt-28")}>
               {/* Discord link */}
-               {constp.HIDE_DISCORD_LINK ? <Meteorss meteor={null} /> : <Meteorss meteor={meteors_data} />
-               }
+              {constp.HIDE_DISCORD_LINK ? (
+                <Meteorss meteor={null} />
+              ) : (
+                <Meteorss meteor={meteors_data} />
+              )}
 
               <div
                 className={cn(
-                "mt-4 flex w-full justify-between",
-                constp.HIDE_BLOG_HOMEPAGE ? "hidden" : ""
-              )}
+                  "mt-4 flex w-full justify-between",
+                  constp.HIDE_BLOG_HOMEPAGE ? "hidden" : "",
+                )}
               >
                 <XBlogArticle />
                 <div
-                className={cn(
-                  "ml-4",
-                  constp.HIDE_FEATURECARD_HOMEPAGE ? "hidden" : ""
-                )}
+                  className={cn(
+                    "ml-4",
+                    constp.HIDE_FEATURECARD_HOMEPAGE ? "hidden" : "",
+                  )}
                 >
                   <FeaturesCard />
                 </div>
@@ -111,20 +106,19 @@ export default async function IndexPage({
       <section
         className={cn(
           "h-[50vh] w-full xl:block",
-          constp.HIDE_WORD_SECTION ? "hidden" : ""
+          constp.HIDE_WORD_SECTION ? "hidden" : "",
         )}
       >
         <div className="flex h-full w-full justify-between px-[200px]">
           <div className="flex w-[75%] flex-col pr-4 pt-40">
-                {/* Philosophy...  */}
-               {constp.HIDE_WORD_SECTION ? null : <WobbleCardShow />
-               }
+            {/* Philosophy...  */}
+            {constp.HIDE_WORD_SECTION ? null : <WobbleCardShow />}
           </div>
           <div
-          className={cn(
-            "h-[50vh] w-[25%]",
-            constp.HIDE_WORD_REVEAL ? "hidden" : ""
-          )}
+            className={cn(
+              "h-[50vh] w-[25%]",
+              constp.HIDE_WORD_REVEAL ? "hidden" : "",
+            )}
           >
             <div className="flex flex-col pl-[100px]">
               <WordReveal />

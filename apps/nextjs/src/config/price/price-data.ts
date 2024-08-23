@@ -17,7 +17,7 @@ interface SubscriptionPlanTranslation {
   };
 }
 
-export const priceDataMap: Record<string, SubscriptionPlanTranslation[]> = {
+export const priceDataMap: Record = {
   en: [
     {
       id: "starter",

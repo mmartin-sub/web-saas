@@ -5,7 +5,7 @@ import type { Meteor } from "~/types/meteors";
 /*
 Support null but we see some bars not nice on the screen, so not fully implemented
 */
-export function Meteorss({ meteor }: { meteor: Meteor  | null  }) {
+export function Meteorss({ meteor }: { meteor: Meteor | null }) {
   if (meteor) {
     return (
       <div className="w-full">
@@ -31,10 +31,7 @@ export function Meteorss({ meteor }: { meteor: Meteor  | null  }) {
         </div>
       </div>
     );
+  } else {
+    return <div className="w-full"></div>;
   }
-  else {
-    return (
-        <div className="w-full"></div>
-      );
-}
 }

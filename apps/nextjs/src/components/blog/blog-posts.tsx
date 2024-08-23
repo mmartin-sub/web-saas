@@ -29,7 +29,7 @@ export function BlogPosts({ posts }: BlogPostsProps) {
           <div>
             {posts[0]?.image && (
               <Image
-                alt={posts[0].alt_image ? posts[0].alt_image : posts[0].title }
+                alt={posts[0].alt_image ? posts[0].alt_image : posts[0].title}
                 className="w-full rounded-lg border object-cover object-center md:h-64 lg:h-72"
                 height={452}
                 src={posts[0].image}

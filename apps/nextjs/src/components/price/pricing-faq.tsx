@@ -17,7 +17,7 @@ export function PricingFaq({
   params: {
     lang: Locale;
   };
-  dict: Record<string, string>;
+  dict: Record;
 }) {
   const pricingFaqData = priceFaqDataMap[lang];
   return (
@@ -31,12 +31,14 @@ export function PricingFaq({
         </p>
       </div>
       <Accordion type="single" collapsible className="w-full">
-{pricingFaqData?.map((faqItem: { id: string; question: string; answer: string }) => (
-          <AccordionItem key={faqItem.id} value={faqItem.id}>
-            <AccordionTrigger>{faqItem.question}</AccordionTrigger>
-            <AccordionContent>{faqItem.answer}</AccordionContent>
-          </AccordionItem>
-        ))}
+        {pricingFaqData?.map(
+          (faqItem: { id: string; question: string; answer: string }) => (
+            <AccordionItem key={faqItem.id} value={faqItem.id}>
+              <AccordionTrigger>{faqItem.question}</AccordionTrigger>
+              <AccordionContent>{faqItem.answer}</AccordionContent>
+            </AccordionItem>
+          ),
+        )}
       </Accordion>
     </section>
   );

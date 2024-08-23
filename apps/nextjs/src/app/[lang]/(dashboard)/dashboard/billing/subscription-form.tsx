@@ -7,7 +7,7 @@ import { buttonVariants } from "@saasfly/ui/button";
 
 export function SubscriptionForm(props: {
   hasSubscription: boolean;
-  dict: Record<string, string>;
+  dict: Record;
 }) {
   return (
     <Link href="/pricing" className={cn(buttonVariants())}>

@@ -154,7 +154,7 @@ export const Page = defineDocumentType(() => ({
 export default makeSource({
   contentDirPath: "./src/content",
   documentTypes: [Page, Doc, Guide, Post, Author],
-  onExtraFieldData: 'ignore', // for updatedAt
+  onExtraFieldData: "ignore", // for updatedAt
   mdx: {
     remarkPlugins: [remarkGfm],
     rehypePlugins: [
@@ -167,7 +167,7 @@ export default makeSource({
             // Prevent lines from collapsing in `display: grid` mode, and allow empty
             // lines to be copy/pasted
             if (node.children.length === 0) {
-node.children = [" "];
+              node.children = [" "];
             }
           },
           onVisitHighlightedLine(node: {

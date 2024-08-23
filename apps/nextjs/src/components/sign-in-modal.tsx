@@ -11,7 +11,7 @@ import { Modal } from "~/components/modal";
 import { siteConfig } from "~/config/site";
 import { useSigninModal } from "~/hooks/use-signin-modal";
 
-export const SignInModal = ({ dict }: { dict: Record<string, string> }) => {
+export const SignInModal = ({ dict }: { dict: Record }) => {
   const signInModal = useSigninModal();
   const [signInClicked, setSignInClicked] = useState(false);
 

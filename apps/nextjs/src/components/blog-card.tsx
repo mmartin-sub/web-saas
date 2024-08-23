@@ -16,10 +16,10 @@ export function XBlogArticle() {
             <img
               src={blogContent.image}
               alt="thumbnail"
-              className={`transform object-cover transition duration-200 group-hover:scale-95 group-hover:rounded-2xl `}
+              className={`transform object-cover transition duration-200 group-hover:scale-95 group-hover:rounded-2xl`}
             />
           </div>
-          <div className=" p-4">
+          <div className="p-4">
             <h2 className="my-4 text-lg font-bold text-zinc-700">
               {blogContent.title}
             </h2>

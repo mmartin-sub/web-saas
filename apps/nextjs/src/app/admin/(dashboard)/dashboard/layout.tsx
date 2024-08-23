@@ -60,7 +60,7 @@ export default async function DashboardLayout({
       {/*        {children}*/}
       {/*    </main>*/}
       {/*</div>*/}
-      <div className="container grid flex-1 gap-12 ">
+      <div className="container grid flex-1 gap-12">
         <main className="flex w-full flex-1 flex-col overflow-hidden">
           {children}
         </main>

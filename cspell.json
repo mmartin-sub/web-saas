@@ -1,9 +1,9 @@
 {
-    "version": "0.2",
-    "ignorePaths": ["node_modules/**", "*.toml"],
-    "dictionaryDefinitions": [],
-    "dictionaries": [],
-    "words": [],
-    "ignoreWords": [],
-    "import": []
+  "version": "0.2",
+  "ignorePaths": ["node_modules/**", "*.toml"],
+  "dictionaryDefinitions": [],
+  "dictionaries": [],
+  "words": [],
+  "ignoreWords": [],
+  "import": []
 }
