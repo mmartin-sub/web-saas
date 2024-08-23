@@ -42,7 +42,7 @@ export default async function IndexPage({
           <div className="flex flex-col items-start">
             <div className="flex flex-col pt-4 md:pt-28 lg:pt-28 xl:pt-28">
               <DocumentGuide>
-                {dict.marketing.introducing || "Introducing Substantifik"}
+                {dict.marketing.introducing || "Reinventing Substantifik"}
               </DocumentGuide>
 
               <div className="mt-6">
