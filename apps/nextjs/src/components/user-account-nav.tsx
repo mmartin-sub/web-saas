@@ -14,12 +14,12 @@ import {
 
 import { UserAvatar } from "~/components/user-avatar";
 
-interface UserAccountNavProps extends React.HTMLAttributes {
-  user: Pick;
+interface UserAccountNavProps extends React.HTMLAttributes<HTMLDivElement> {
+  user: Pick<User, 'name' | 'email' | 'image'>;
   params: {
     lang: string;
   };
-  dict: Record;
+  dict: Record<string, string>;
 }
 export function UserAccountNav({
   user,
