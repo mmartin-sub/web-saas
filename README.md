@@ -1,6 +1,5 @@
-. The first is that we have a single interface for interacting with multiple large language model providers. This means that users can easily switch between different models without having to learn new APIs or authentication mechanisms.
-
-# Substantifik </br>
+# Substantifik
+The first is that we have a single interface for interacting with multiple large language model providers. This means that users can easily switch between different models without having to learn new APIs or authentication mechanisms.
 
 An easy-to-use and enterprise-grade Next.js boilerplate.
 Fork from [SaasFly](https://github.com/saasfly/saasfly)
@@ -48,7 +47,11 @@ On top of the fork:
 
 [ ] Stripe webhooks should return 200 as fast as possible, leverage sub/pub approach to do DB work async
 [ ] If Resend is sending an error, it is not catched
-[ ] <p> cannot be a descendant of <p> from TypewriterEffectSmooths/TypewriterEffectImpl animation
+[ ] <p> cannot be a descendant of <p> from TypewriterEffectSmooths/TypewriterEffectImpl animation; the code is different to the source code for this component.
+[ ] upgrade missing depedencies (see ncu -ws)
+
+## Extra Documentation
+- tooling/tailwind-config/index.ts: tailwind extra configuration
 
 ### 🐭 Frameworks
 

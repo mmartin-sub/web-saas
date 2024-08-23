@@ -2,6 +2,8 @@
 
 import { TextGenerateEffect } from "@saasfly/ui/typewriter-effect";
 
+// See: https://ui.aceternity.com/components/typewriter-effect
+// but code is quite different for the TypewriterEffectSmooths function
 export function TypewriterEffectSmooths() {
   const words = [
     {

@@ -6,6 +6,7 @@ import { motion, stagger, useAnimate, useInView } from "framer-motion";
 
 import { cn } from "./utils/cn";
 
+// Possible source: See: https://ui.aceternity.com/components/typewriter-effect
 export const TypewriterEffectImpl = ({
   words,
   className,
