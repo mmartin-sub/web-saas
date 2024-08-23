@@ -4,3 +4,5 @@ apps/nextjs/.contentlayer/
 
 #Specific files, mix between yaml and json; not understood well by prettier
 /crowdin.yml
+
+.history/

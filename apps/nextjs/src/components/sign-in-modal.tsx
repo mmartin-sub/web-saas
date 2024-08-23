@@ -11,7 +11,7 @@ import { Modal } from "~/components/modal";
 import { siteConfig } from "~/config/site";
 import { useSigninModal } from "~/hooks/use-signin-modal";
 
-export const SignInModal = ({ dict }: { dict: Record }) => {
+export const SignInModal = ({ dict }: { dict: Record<string, string> }) => {
   const signInModal = useSigninModal();
   const [signInClicked, setSignInClicked] = useState(false);
 
@@ -25,7 +25,7 @@ export const SignInModal = ({ dict }: { dict: Record }) => {
               className="mx-auto"
               width="64"
               height="64"
-              alt=""
+              alt="small-logo"
             />
           </a>
           <h3 className="font-urban text-2xl font-bold">{dict.signup}</h3>

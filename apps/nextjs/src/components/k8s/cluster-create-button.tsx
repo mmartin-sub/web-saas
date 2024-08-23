@@ -16,7 +16,7 @@ import { trpc } from "~/trpc/client";
 
 interface K8sCreateButtonProps extends ButtonProps {
   customProp?: string;
-  dict: Record;
+  dict: Record<string, string>;
 }
 
 export function K8sCreateButton({

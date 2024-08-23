@@ -63,7 +63,7 @@ export function generateMetadata({ params }: PostPageProps): Metadata {
           url: ogUrl.toString(),
           width: 1200,
           height: 630,
-          alt: post.title,
+          alt: post.title, // Used to replace the title of the image
         },
       ],
     },

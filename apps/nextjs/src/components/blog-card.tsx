@@ -42,7 +42,7 @@ export function XBlogArticle() {
 const blogContent = {
   slug: "Get the News",
   author: "Substantifik",
-  date: "26th May, 2024",
+  date: "21st March, 2024",
   title: "Making Sense of the complexity",
   description: "Get the best from humans and AI!",
   image:

@@ -12,7 +12,7 @@ interface BillingFormButtonProps {
   offer: SubscriptionPlan;
   subscriptionPlan: UserSubscriptionPlan;
   year: boolean;
-  dict: Record;
+  dict: Record<string, string>;
 }
 
 export function BillingFormButton({

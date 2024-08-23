@@ -7,11 +7,11 @@ export const AnimatedList = React.memo(
   ({
     className,
     children,
-    delay = 1000,
+    delay = 3000,
   }: {
     className?: string;
     children: React.ReactNode;
-    delay?: number;
+    delay: number;
   }) => {
     const [index, setIndex] = useState(0);
     const childrenArray = React.Children.toArray(children);

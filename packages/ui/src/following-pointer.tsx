@@ -132,7 +132,7 @@ export const FollowPointer = ({
           "min-w-max whitespace-nowrap rounded-full bg-neutral-200 px-2 py-2 text-xs text-white"
         }
       >
-        {title || `William Shakespeare`}
+        {title ?? `William Shakespeare`}
       </motion.div>
     </motion.div>
   );

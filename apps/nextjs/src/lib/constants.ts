@@ -12,6 +12,7 @@ export const HIDE_DISCORD_LINK = true;
 
 /**
  * If the section that is showing the WORD section should be hidden
+ * see: WobbleCardShow with Philosophy, ...
  * @constant
  */
 export const HIDE_WORD_SECTION = false;
@@ -20,7 +21,7 @@ export const HIDE_WORD_SECTION = false;
  * If the section that is showing the Questions section should be hidden
  * @constant
  */
-export const HIDE_QUESTIONS_SECTION = true;
+export const HIDE_QUESTIONS_SECTION = false;
 
 /**
  * Hide the sentence next to the WORDS section with a special effect if we scroll down
@@ -60,4 +61,15 @@ export const SITECONFIG_KEYWORDS = [
   "trust",
   "privacy",
   "productivity",
+  "quality",
+  "team",
+  "business",
 ];
+
+/**
+ * define the in ms the transition AnimatedList
+ * not used for now as the code to use it should be under:
+ * packages/ui/src/animated-list.tsx
+ * @constant
+ */
+export const DELAY_FEATURE = 3000;

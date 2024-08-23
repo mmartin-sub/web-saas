@@ -1,6 +1,4 @@
-<div align="center" width="100%">
-    <img src="./sub-logo.svg" width="128" alt="" />
-</div>
+. The first is that we have a single interface for interacting with multiple large language model providers. This means that users can easily switch between different models without having to learn new APIs or authentication mechanisms.
 
 # Substantifik </br>
 

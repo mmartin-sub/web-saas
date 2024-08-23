@@ -36,7 +36,7 @@ export function MainNav({ items, children, params: { lang } }: MainNavProps) {
             src="/images/avatars/sub-logo.svg"
             width="36"
             height="36"
-            alt=""
+            alt="small-logo"
           />
         </div>
         <div className="text-2xl font-semibold">Substantifik</div>

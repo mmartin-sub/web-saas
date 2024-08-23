@@ -75,16 +75,16 @@ export default async function IndexPage({
              {/* xl:block original value with discord */}
           <div
               className={cn(
-              "h-full w-full ", "m:block"
+              "h-full w-full ", "l:block"
             )}
             >
             <div
              className={cn(
-              "flex flex-col pt-15",
+              "flex flex-col pt-28",
             )}
             >
               {/* Discord link */}
-               {constp.HIDE_DISCORD_LINK ? null : <Meteorss meteor={meteors_data} />
+               {constp.HIDE_DISCORD_LINK ? <Meteorss meteor={null} /> : <Meteorss meteor={meteors_data} />
                }
 
               <div
@@ -116,7 +116,9 @@ export default async function IndexPage({
       >
         <div className="flex h-full w-full justify-between px-[200px]">
           <div className="flex w-[75%] flex-col pr-4 pt-40">
-            <WobbleCardShow />
+                {/* Philosophy...  */}
+               {constp.HIDE_WORD_SECTION ? null : <WobbleCardShow />
+               }
           </div>
           <div
           className={cn(

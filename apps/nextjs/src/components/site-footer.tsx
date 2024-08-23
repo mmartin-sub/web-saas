@@ -5,7 +5,7 @@ import { cn } from "@saasfly/ui";
 
 import { ModeToggle } from "~/components/mode-toggle";
 
-function getCopyrightText(dict: Record) {
+function getCopyrightText(dict: Record<string, Record<string,string>>) {
   const currentYear = new Date().getFullYear();
   const copyrightTemplate = String(dict.copyright);
   return copyrightTemplate?.replace("${currentYear}", String(currentYear));
@@ -20,7 +20,7 @@ export function SiteFooter({
     lang: string;
   };
 
-  dict: Record;
+  dict: Record<string, Record<string,string>>;
 }) {
   return (
     <footer className={cn(className)}>
@@ -30,7 +30,7 @@ export function SiteFooter({
             src="/images/avatars/sub-logo.svg"
             width="36"
             height="36"
-            alt=""
+            alt="small-logo"
           />
           <p className="text-center text-sm leading-loose md:text-left">
             {getCopyrightText(dict)}

@@ -1,5 +1,8 @@
 import type { DocsConfig } from "~/types";
 
+/**
+ * Returns the configuration for the documentation.
+ */
 export const getDocsConfig = (_lang: string): DocsConfig => {
   return {
     mainNav: [

@@ -82,3 +82,5 @@ reports/
 .netlify/
 apps/nextjs/netlify/
 
+# VS code history
+.history/
