@@ -53,6 +53,9 @@ On top of the fork:
 ## Extra Documentation
 - tooling/tailwind-config/index.ts: tailwind extra configuration
 
+## Production
+- bun install --production for proper install
+
 ### 🐭 Frameworks
 
 - **[Next.js](https://nextjs.org/)** - The React Framework for the Web (with **App Directory**)

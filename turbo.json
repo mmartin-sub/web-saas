@@ -1,6 +1,10 @@
 {
-  "$schema": "https://turborepo.org/schema.json",
+  "$schema": "https://turborepo.org/schema1.json",
   "globalDependencies": ["**/.env", "**/.env.*local", "tsconfig.json"],
+  "globalEnv": ["PACKAGE_VERSION", "NODE_ENV"],
+  "globalPassThroughEnv": ["CROWDIN_PROJECT_ID", "CROWDIN_PERSONAL_TOKEN", "GITHUB_TOKEN"],
+   "envMode": "loose",
+  "ui": "stream",
   "pipeline": {
     "topo": {
       "dependsOn": ["^topo"]
@@ -15,7 +19,10 @@
         "NODE_ENV",
         "VERCEL_URL"
       ],
-      "outputs": [".next/**", "!.next/cache/**", "next-env.d.ts"]
+      "outputs": [".next/**", "!.next/cache/**", "next-env.d.ts"],
+      "inputs": ["$TURBO_DEFAULT$", "!README.md"],
+      "outputLogs": "full"
+
     },
     "dev": {
       "persistent": true,
@@ -36,8 +43,6 @@
     "clean": {
       "cache": false
     }
-  },
-  "remoteCache": {
-    "signature": false
   }
+
 }
