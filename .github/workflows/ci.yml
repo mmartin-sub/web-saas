@@ -1,9 +1,11 @@
+# trunk-ignore-all(checkov/CKV2_GHA_1)
 name: CI
 
 on:
   pull_request:
     branches: ["*"]
   push:
+    # trunk-ignore(yamllint/quoted-strings)
     branches: ["main"]
   merge_group:
 
@@ -56,6 +58,7 @@ jobs:
           POSTGRES_USER: default
           POSTGRES_PASSWORD: default
           POSTGRES_DB: verceldb
+          # trunk-ignore(checkov/CKV_SECRET_4)
           POSTGRES_URL: postgres://default:default@localhost:5432/verceldb
 
       - name: lint and type-check

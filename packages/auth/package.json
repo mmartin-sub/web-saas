@@ -24,7 +24,7 @@
     "@saasfly/eslint-config": "workspace:*",
     "@saasfly/prettier-config": "workspace:*",
     "@saasfly/typescript-config": "workspace:*",
-    "eslint": "9.9.0",
+    "eslint": "9.9.1",
     "prettier": "3.3.3",
     "typescript": "5.5.4"
   },

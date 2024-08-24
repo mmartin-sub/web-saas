@@ -31,6 +31,7 @@ declare module "next-auth" {
   }
 }
 
+// NextAuthOptions defines options for the project
 export const authOptions: NextAuthOptions = {
   session: {
     strategy: "jwt",
@@ -43,8 +44,8 @@ export const authOptions: NextAuthOptions = {
   adapter: KyselyAdapter(db),
   providers: [
     GitHubProvider({
-      clientId: env.GITHUB_CLIENT_ID,
-      clientSecret: env.GITHUB_CLIENT_SECRET,
+      clientId: env.GITHUB_CLIENT_ID!,
+      clientSecret: env.GITHUB_CLIENT_SECRET!,
     }),
     EmailProvider({
       sendVerificationRequest: async ({ identifier, url }) => {
@@ -126,7 +127,7 @@ export const authOptions: NextAuthOptions = {
   debug: env.IS_DEBUG === "true",
 };
 
-// Use it in server contexts
+// auth is used in server contexts
 export function auth(
   ...args:
     | [GetServerSidePropsContext["req"], GetServerSidePropsContext["res"]]
