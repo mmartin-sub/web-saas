@@ -1,5 +1,5 @@
 {
-  "$schema": "https://turborepo.org/schema1.json",
+  "$schema": "https://turborepo.org/schema.v1.json",
   "globalDependencies": ["**/.env", "**/.env.*local", "tsconfig.json"],
   "globalEnv": ["PACKAGE_VERSION", "NODE_ENV"],
   "globalPassThroughEnv": ["CROWDIN_PROJECT_ID", "CROWDIN_PERSONAL_TOKEN", "GITHUB_TOKEN"],
@@ -18,7 +18,9 @@
         "VERCEL_URL"
       ],
       "outputs": [".next/**", "!.next/cache/**", "next-env.d.ts"],
-      "inputs": ["$TURBO_DEFAULT$", "!README.md"]
+      "inputs": ["$TURBO_DEFAULT$", "!README.md", "!.trunk/**", "!.vscode/**", "!.dockerignore",
+      "!.prettierignore", "!.prettier", "!*.md",
+       "!.env.example", "!i18n/**"]
     },
     "dev": {
       "persistent": true,
