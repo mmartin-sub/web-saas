@@ -3,8 +3,6 @@
   "globalDependencies": ["**/.env", "**/.env.*local", "tsconfig.json"],
   "globalEnv": ["PACKAGE_VERSION", "NODE_ENV"],
   "globalPassThroughEnv": ["CROWDIN_PROJECT_ID", "CROWDIN_PERSONAL_TOKEN", "GITHUB_TOKEN"],
-   "envMode": "loose",
-  "ui": "stream",
   "pipeline": {
     "topo": {
       "dependsOn": ["^topo"]
@@ -20,9 +18,7 @@
         "VERCEL_URL"
       ],
       "outputs": [".next/**", "!.next/cache/**", "next-env.d.ts"],
-      "inputs": ["$TURBO_DEFAULT$", "!README.md"],
-      "outputLogs": "full"
-
+      "inputs": ["$TURBO_DEFAULT$", "!README.md"]
     },
     "dev": {
       "persistent": true,
