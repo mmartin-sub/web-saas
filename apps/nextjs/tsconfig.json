@@ -2,9 +2,11 @@
   "extends": "@saasfly/typescript-config/base.json",
   "compilerOptions": {
     "baseUrl": ".",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
     "paths": {
       "~/*": ["./src/*"],
-      "contentlayer/generated": ["./.contentlayer/generated"]
+      "contentlayer/generated": ["./.contentlayer/generated"],
     },
     "plugins": [
       {

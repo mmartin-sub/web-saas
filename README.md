@@ -29,7 +29,7 @@ On top of the fork:
 - [ ] Integrate Cloudinary/Imgix or other image optimizer
 - [ ] `bun run crowdin` not using the .env.local data while it seems there. at least crowdin is confused; maybe it is an EXPORT issue?
 - [ ] Automate and optimize the translation process (using i18next-scanner or [i18n-js](https://github.com/fnando/i18n-js))
-- [ ] Script to deploy dev, stage and prod with proper stripe coonnexion
+- [ ] Script to deploy dev, stage and prod with proper stripe connexion
 - [ ] Setup name of the company, website and email from dict so it is easier to deploy to multiple domains (i.e. using more siteConfig.url)
 - [ ] Review cors setup
 - [ ] Remove k8s references
@@ -40,15 +40,16 @@ On top of the fork:
 - [ ] Update the review from apps/nextjs/src/components/comments.tsx based on actual twitter and comments from database. Show the number of hashtags based on input
 - [ ] Add errors, not-found, global-error and other specific pages related to [NextJS routing](https://nextjs.org/docs/app/building-your-application/routing)
 - [ ] Improve dynamic routing for (pages)/external for terms and privacy so UI looks better with headers and footers
-- [ ] Add apply job, use cases sections (Uses cases per industry)
-- [ ] Many lint issue about any to clean-up from upstream
-
+- [ ] Add apply job, use cases sections (Uses cases per industry), terms and privacy link from footer
+- [x] Many lint issue about any to clean-up from upstream
+- [ ] Review dict variable types <Record> across code base
+- [ ] Review stripe-pricing.json, so benefits and limitations can be translated with crowdin, need to extract  sub-piece of the json.
 ## Known issues
 
-[ ] Stripe webhooks should return 200 as fast as possible, leverage sub/pub approach to do DB work async
-[ ] If Resend is sending an error, it is not catched
+[ ] Stripe web-hooks should return 200 as fast as possible, leverage sub/pub approach to do DB work async
+[ ] If Resend is sending an error, it is not cached
 [ ] <p> cannot be a descendant of <p> from TypewriterEffectSmooths/TypewriterEffectImpl animation; the code is different to the source code for this component.
-[ ] upgrade missing depedencies (see ncu -ws)
+[ ] upgrade missing dependencies (see ncu -ws)
 
 ## Extra Documentation
 - tooling/tailwind-config/index.ts: tailwind extra configuration

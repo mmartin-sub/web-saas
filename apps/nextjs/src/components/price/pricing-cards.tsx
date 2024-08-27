@@ -67,7 +67,9 @@ export function PricingCards({
       </div>
 
       <div className="mx-auto grid max-w-screen-lg gap-5 bg-inherit py-5 md:grid-cols-3 lg:grid-cols-3">
-        {pricingData.map(
+        {pricingData
+          .sort((a, b) => a.position - b.position)
+        .map(
           (offer: {
             title:
               | boolean
@@ -93,6 +95,7 @@ export function PricingCards({
             limitations: any[];
             currencySign: string;
             id: string;
+            position: number;
           }) => (
             <div
               className="relative flex flex-col overflow-hidden rounded-xl border"
@@ -110,19 +113,32 @@ export function PricingCards({
                         <>
                           <span className="mr-2 text-muted-foreground line-through">
                             {offer?.currencySign}
-                            {offer?.prices?.monthly}
+                            {offer?.prices?.monthly.toFixed(2)}
                           </span>
                           <span>
                             {offer?.currencySign}
-                            {offer?.prices?.yearly / 12}
+                            {(offer?.prices?.yearly / 12).toFixed(2)}
                           </span>
                         </>
                       ) : (
-                        `${offer?.currencySign}${offer?.prices?.monthly}`
-                      )}
+                        offer?.prices?.monthly != null ? (
+                          `${offer?.currencySign}${offer?.prices?.monthly.toFixed(2)}`
+                        ) : (
+                          `${dict.contact_us}`
+                      )
+                      )
+                    }
                     </div>
                     <div className="-mb-1 ml-2 text-left text-sm font-medium">
-                      <div>{dict.mo}</div>
+                      <div>
+                      {
+                        offer?.prices?.monthly != null ? (
+                          `${dict.mo}`
+                        ) : (
+                          null
+                      )
+                    }
+                       </div>
                     </div>
                   </div>
                 </div>
@@ -130,7 +146,15 @@ export function PricingCards({
                   <div className="text-left text-sm text-muted-foreground">
                     {isYearly
                       ? `${offer?.currencySign}${offer?.prices?.yearly} ${dict.annual_info}`
-                      : `${dict.monthly_info}`}
+                      :
+                      (
+                        offer?.prices?.monthly != null ? (
+                          `${dict.monthly_info}`
+                        ) : (
+                          null
+                      )
+                      )
+                    }
                   </div>
                 ) : null}
               </div>

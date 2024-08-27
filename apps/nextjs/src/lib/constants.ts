@@ -36,7 +36,7 @@ export const HIDE_WORD_REVEAL = false;
 export const HIDE_BLOG_HOMEPAGE = false;
 
 /**
- * Hide the Featurecard section in the homepage - more notifications
+ * Hide the Featurecard section in the homepage - flow of notifications of actions requested by the user
  * @constant
  */
 export const HIDE_FEATURECARD_HOMEPAGE = false;

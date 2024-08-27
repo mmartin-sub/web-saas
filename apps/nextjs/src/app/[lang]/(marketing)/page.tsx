@@ -37,8 +37,8 @@ export default async function IndexPage({
 
   return (
     <>
-      <section className="w-full px-8 sm:px-48 md:px-48 xl:h-[100vh] xl:px-48">
-        <div className="grid grid-cols-1 gap-10 pb-10 md:pb-40 2xl:grid-cols-2">
+      <section className="w-full px-8 sm:px-48 md:px-48 xl:px-48">
+        <div className="grid grid-cols-1 gap-10 pb-5 md:pb-10">
           <div className="flex flex-col items-start">
             <div className="flex flex-col pt-4 md:pt-28 lg:pt-28 xl:pt-28">
               <DocumentGuide>
@@ -73,7 +73,7 @@ export default async function IndexPage({
           </div>
 
           {/* xl:block original value with discord */}
-          <div className={cn("h-full w-full", "l:block")}>
+          <div className={cn("h-full w-full", "block")}>
             <div className={cn("flex flex-col pt-28")}>
               {/* Discord link */}
               {constp.HIDE_DISCORD_LINK ? (
@@ -105,11 +105,10 @@ export default async function IndexPage({
 
       <section
         className={cn(
-          "h-[50vh] w-full xl:block",
-          constp.HIDE_WORD_SECTION ? "hidden" : "",
+          "h-[40vh] w-full xl2:block",
         )}
       >
-        <div className="flex h-full w-full justify-between px-[200px]">
+        <div className="flex h-full justify-between px-[200px]">
           <div className="flex w-[75%] flex-col pr-4 pt-40">
             {/* Philosophy...  */}
             {constp.HIDE_WORD_SECTION ? null : <WobbleCardShow />}
@@ -127,17 +126,17 @@ export default async function IndexPage({
         </div>
       </section>
 
-      <section className={`h-[100vh] w-full xl:block`}>
+      <section className={`h-[100vh] w-full block`}>
         <div className="flex h-full w-full justify-between px-[220px]">
           <div className="flex w-[60%] flex-col pr-4 pt-40">
             <div className="px-[120px]">
-              {!constp.HIDE_QUESTIONS_SECTION && <Questions />}
+
             </div>
           </div>
         </div>
       </section>
 
-      <section className={`w-full px-8 xl:hidden`}>
+      <section className={`w-full px-8 block`}>
         {!constp.HIDE_QUESTIONS_SECTION && <Questions />}
       </section>
 
