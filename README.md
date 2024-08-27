@@ -22,6 +22,7 @@ On top of the fork:
 - i18n [config](apps/nextjs/src/config/i18n-config.ts)
 - Crowdin steps, see [documentation](https://docusaurus.io/docs/i18n/crowdin)
 - update FAQ from [price-faq-data.ts]£(apps/nextjs/src/config/price/price-faq-data.ts)
+- extra documentation from (https://docs.saasfly.io/get-started/)[saasfly]
 
 ## Todo
 
@@ -44,6 +45,7 @@ On top of the fork:
 - [x] Many lint issue about any to clean-up from upstream
 - [ ] Review dict variable types <Record> across code base
 - [ ] Review stripe-pricing.json, so benefits and limitations can be translated with crowdin, need to extract  sub-piece of the json.
+
 ## Known issues
 
 [ ] Stripe web-hooks should return 200 as fast as possible, leverage sub/pub approach to do DB work async

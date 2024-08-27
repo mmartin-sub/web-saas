@@ -19,7 +19,7 @@ export const SignInModal = ({ dict }: { dict: Record<string, string> }) => {
     <Modal showModal={signInModal.isOpen} setShowModal={signInModal.onClose}>
       <div className="w-full">
         <div className="flex flex-col items-center justify-center space-y-3 border-b bg-background px-4 py-6 pt-8 text-center md:px-16">
-          <a href={siteConfig.url}>
+          <a href={siteConfig.url} aria-label="Main site">
             <Image
               src="/images/avatars/sub-logo.svg"
               className="mx-auto"
