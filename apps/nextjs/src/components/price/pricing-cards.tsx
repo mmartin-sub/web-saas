@@ -109,25 +109,35 @@ export function PricingCards({
                 <div className="flex flex-row">
                   <div className="flex items-end">
                     <div className="flex text-left text-3xl font-semibold leading-6">
-                      {isYearly && offer?.prices?.monthly > 0 ? (
-                        <>
-                          <span className="mr-2 text-muted-foreground line-through">
-                            {offer?.currencySign}
-                            {offer?.prices?.monthly.toFixed(2)}
-                          </span>
-                          <span>
-                            {offer?.currencySign}
-                            {(offer?.prices?.yearly / 12).toFixed(2)}
-                          </span>
-                        </>
+                    {
+                      offer?.prices?.monthly === 0 ? (
+                        <span>
+                          {dict.free}
+                        </span>
                       ) : (
-                        offer?.prices?.monthly != null ? (
-                          `${offer?.currencySign}${offer?.prices?.monthly.toFixed(2)}`
+                        isYearly && offer?.prices?.monthly > 0 ? (
+                          <>
+                            <span className="mr-2 text-muted-foreground line-through">
+                              {offer?.currencySign}
+                              {offer?.prices?.monthly.toFixed(2)}
+                            </span>
+                            <span>
+                              {offer?.currencySign}
+                              {(offer?.prices?.yearly / 12).toFixed(2)}
+                            </span>
+                          </>
                         ) : (
-                          `${dict.contact_us}`
+                          offer?.prices?.monthly != null ? (
+                            `${offer?.currencySign}${offer?.prices?.monthly.toFixed(2)}`
+                          ) : (
+                            `${dict.contact_us}`
+                        )
+                        )
+
                       )
-                      )
-                    }
+                      }
+
+
                     </div>
                     <div className="-mb-1 ml-2 text-left text-sm font-medium">
                       <div>
@@ -142,7 +152,7 @@ export function PricingCards({
                     </div>
                   </div>
                 </div>
-                {offer.prices.monthly > 0 ? (
+                {offer?.prices?.monthly > 0 ? (
                   <div className="text-left text-sm text-muted-foreground">
                     {isYearly
                       ? `${offer?.currencySign}${offer?.prices?.yearly} ${dict.annual_info}`
@@ -181,7 +191,7 @@ export function PricingCards({
                 </ul>
 
                 {userId && subscriptionPlan ? (
-                  offer?.id === "starter" ? (
+                  offer?.price?.monthly === 0 ? (
                     <Link
                       href="/dashboard"
                       className={buttonVariants({

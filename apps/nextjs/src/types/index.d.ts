@@ -61,17 +61,24 @@ export interface DashboardConfig {
 }
 
 export interface SubscriptionPlan {
+  id?: string;
   title?: string;
   description?: string;
   benefits?: string[];
   limitations?: string[];
+  currencySign?: string;
+  position?: number;
   prices?: {
-    monthly: number;
-    yearly: number;
+      monthly: number | null;
+      yearly: number | null;
   };
   stripeIds?: {
-    monthly: string | null;
-    yearly: string | null;
+      monthly: string | null;
+      yearly: string | null;
+  };
+  trialperiod?:{
+      monthly?: string | null ;
+      yearly?: string | null ;
   };
 }
 
