@@ -2,15 +2,64 @@
   "object": "list",
   "data": [
     {
-      "id": "prod_Qd3DvsZGprkR37",
+      "id": "prod_QjzJckUV6wug8b",
       "object": "product",
       "active": true,
       "attributes": [],
-      "created": 1723187978,
-      "default_price": "price_1Pln6sRomOsbKybGxOlVqNYW",
+      "created": 1724787969,
+      "default_price": null,
+      "description": "The best AI offer for professional",
+      "images": [],
+      "livemode": true,
+      "marketing_features": [
+        {
+          "name": "Select automatically the best AI model"
+        },
+        {
+          "name": "Privacy & Trust by default"
+        },
+        {
+          "name": "Chat capability for the User Experience"
+        },
+        {
+          "name": "Limit to 100 requests per day"
+        },
+        {
+          "name": "Advanced analytics and reporting"
+        },
+        {
+          "name": "Access to business templates"
+        },
+        {
+          "name": "Priority customer support"
+        }
+      ],
+      "metadata": {
+        "limitation_1": "Support Substantifik best practices workflow",
+        "limitation_2": "Limited access to business resources",
+        "position": "2",
+        "product_id": "pro"
+      },
+      "name": "Pro-business",
+      "package_dimensions": null,
+      "shippable": null,
+      "statement_descriptor": null,
+      "tax_code": null,
+      "type": "service",
+      "unit_label": null,
+      "updated": 1724787969,
+      "url": null
+    },
+    {
+      "id": "prod_QjwcWr1TDO7N9s",
+      "object": "product",
+      "active": true,
+      "attributes": [],
+      "created": 1724777943,
+      "default_price": null,
       "description": "AI that suits your needs.",
       "images": [],
-      "livemode": false,
+      "livemode": true,
       "marketing_features": [
         {
           "name": "Select automatically the best AI model"
@@ -53,102 +102,12 @@
       "name": "Enterprise",
       "package_dimensions": null,
       "shippable": null,
-      "statement_descriptor": "Business",
-      "tax_code": "txcd_10000000",
+      "statement_descriptor": null,
+      "tax_code": null,
       "type": "service",
       "unit_label": null,
-      "updated": 1724748343,
-      "url": null
-    },
-    {
-      "id": "prod_Qd3BSp4qEJRqHa",
-      "object": "product",
-      "active": true,
-      "attributes": [],
-      "created": 1723187857,
-      "default_price": "price_1Pln4wRomOsbKybGSJCfNQEU",
-      "description": "The best AI offer for professional",
-      "images": [],
-      "livemode": false,
-      "marketing_features": [
-        {
-          "name": "Select automatically the best AI model"
-        },
-        {
-          "name": "Privacy & Trust by default"
-        },
-        {
-          "name": "Chat capability for the User Experience"
-        },
-        {
-          "name": "Limit to 100 requests per day"
-        },
-        {
-          "name": "Advanced analytics and reporting"
-        },
-        {
-          "name": "Access to business templates"
-        },
-        {
-          "name": "Priority customer support"
-        }
-      ],
-      "metadata": {
-        "limitation_1": "Support Substantifik best practices workflow",
-        "limitation_2": "Limited access to business resources",
-        "position": "2",
-        "product_id": "pro"
-      },
-      "name": "Pro-business",
-      "package_dimensions": null,
-      "shippable": null,
-      "statement_descriptor": "Pro",
-      "tax_code": "txcd_10000000",
-      "type": "service",
-      "unit_label": null,
-      "updated": 1724748329,
-      "url": null
-    },
-    {
-      "id": "prod_Qd39hY2uXL5h6F",
-      "object": "product",
-      "active": true,
-      "attributes": [],
-      "created": 1723187757,
-      "default_price": "price_1Pln3KRomOsbKybGfAn7XXDR",
-      "description": "Starter Offer - Get the best of AI.",
-      "images": [],
-      "livemode": false,
-      "marketing_features": [
-        {
-          "name": "Select automatically the best AI model"
-        },
-        {
-          "name": "Privacy & Trust by default"
-        },
-        {
-          "name": "Chat capability for the User Experience"
-        },
-        {
-          "name": "Limit to 30 requests per day"
-        }
-      ],
-      "metadata": {
-        "limitation_1": "No priority access to new features",
-        "limitation_2": "Limited customer support\"",
-        "limitation_3": "Limited access to business resources",
-        "position": "1",
-        "product_id": "starter"
-      },
-      "name": "Starter",
-      "package_dimensions": null,
-      "shippable": null,
-      "statement_descriptor": "For Beginners",
-      "tax_code": "txcd_10000000",
-      "type": "service",
-      "unit_label": null,
-      "updated": 1724748315,
-      "url": null
+      "updated": 1724787968,
+      "url": ""
     }
   ],
   "has_more": false,
