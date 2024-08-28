@@ -29,7 +29,7 @@
     "@saasfly/db": "workspace:*",
     "@trpc/client": "10.45.2",
     "@trpc/server": "10.45.2",
-    "@t3-oss/env-nextjs": "0.11.0",
+    "@t3-oss/env-nextjs": "0.11.1",
     "superjson": "2.2.1",
     "dinero.js": "2.0.0-alpha.14",
     "@dinero.js/currencies": "2.0.0-alpha.14",
