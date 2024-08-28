@@ -8,6 +8,8 @@ export const priceDataMap: Record<string, SubscriptionPlanTranslation[]> = {};
 
 export interface SubscriptionPlanTranslation extends SubscriptionPlan {}
 
+// we don't want to export anything to the console since the full output is forwarded to a file
+//console.log('Default path:', __dirname,);
 export const pathProduct = path.join(__dirname, "products.json");
 export const pathPrice = path.join(__dirname, "prices.json");
 
