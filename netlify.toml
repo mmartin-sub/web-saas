@@ -13,3 +13,12 @@
 [dev]
   port = 8888
   targetPort = 3000
+
+# According to recommendation: https://docs.netlify.com/frameworks/next-js/runtime-v4/overview/#next-js-runtime
+# but not needed for now
+#[[redirects]]
+#from = '/_next/image/*'
+#query = { q = ':quality', url = ':url', w = ':width' }
+#to = '/.netlify/images?url=:url&w=:width&q=:quality'
+#status = 200
+#force = true

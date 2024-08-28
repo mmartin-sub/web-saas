@@ -2,6 +2,7 @@ import { redirect } from "next/navigation";
 import { NextRequest, NextResponse } from "next/server";
 import { match as matchLocale } from "@formatjs/intl-localematcher";
 import Negotiator from "negotiator";
+import type { NextAuthOptions } from "next-auth"
 import { getToken } from "next-auth/jwt";
 import { withAuth } from "next-auth/middleware";
 
@@ -96,6 +97,11 @@ const authMiddleware = withAuth(
     const token = await getToken({ req });
     const isAuth = !!token;
     const isAdmin = token?.isAdmin;
+
+    // Overall, this regex matches strings that start with a forward slash, followed by at least two alphabetic characters, another forward slash, and then either login or register
+    // End with either login or register
+//    Matching Pathname: /en/login or /us/register
+// Non-Matching Pathname: /login, /en/log, /123/login
     const isAuthPage = /^\/[a-zA-Z]{2,}\/(login|register)/.test(
       req.nextUrl.pathname,
     );
@@ -135,6 +141,11 @@ const authMiddleware = withAuth(
   },
 );
 
+/* Matching Paths
+* https://nextjs.org/docs/app/building-your-application/routing/middleware
+* This regex matches any string that does not contain a dot (.) and does not contain the substring _next.
+* This regex matches strings that start with either api or trpc, followed by any characters.
+*/
 export const config = {
   matcher: ["/((?!.*\\..*|_next).*)", "/", "/(api|trpc)(.*)"],
-};
+} ;
