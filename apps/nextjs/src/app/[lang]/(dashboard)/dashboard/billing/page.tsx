@@ -44,7 +44,7 @@ export default async function BillingPage({
 }
 
 function generateSubscriptionMessage(
-dict: Record<string, string>,
+  dict: Record<string, string>,
   subscription: Subscription,
 ): string {
   const content = String(dict.subscriptionInfo);

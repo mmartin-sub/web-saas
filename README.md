@@ -1,4 +1,5 @@
 # Substantifik
+
 The first is that we have a single interface for interacting with multiple large language model providers. This means that users can easily switch between different models without having to learn new APIs or authentication mechanisms.
 
 An easy-to-use and enterprise-grade Next.js boilerplate.
@@ -44,7 +45,7 @@ On top of the fork:
 - [ ] Add apply job, use cases sections (Uses cases per industry), terms and privacy link from footer
 - [x] Many lint issue about any to clean-up from upstream
 - [ ] Review dict variable types <Record> across code base
-- [ ] Review stripe-pricing.json, so benefits and limitations can be translated with crowdin, need to extract  sub-piece of the json.
+- [ ] Review stripe-pricing.json, so benefits and limitations can be translated with crowdin, need to extract sub-piece of the json.
 
 ## Known issues
 
@@ -54,9 +55,11 @@ On top of the fork:
 [ ] upgrade missing dependencies (see ncu -ws)
 
 ## Extra Documentation
+
 - tooling/tailwind-config/index.ts: tailwind extra configuration
 
 ## Production
+
 - bun install --production for proper install
 
 ### 🐭 Frameworks

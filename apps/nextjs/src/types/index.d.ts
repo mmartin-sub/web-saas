@@ -69,16 +69,16 @@ export interface SubscriptionPlan {
   currencySign?: string;
   position?: number;
   prices?: {
-      monthly: number | null;
-      yearly: number | null;
+    monthly: number | null;
+    yearly: number | null;
   };
   stripeIds?: {
-      monthly: string | null;
-      yearly: string | null;
+    monthly: string | null;
+    yearly: string | null;
   };
-  trialperiod?:{
-      monthly?: string | null ;
-      yearly?: string | null ;
+  trialperiod?: {
+    monthly?: string | null;
+    yearly?: string | null;
   };
 }
 

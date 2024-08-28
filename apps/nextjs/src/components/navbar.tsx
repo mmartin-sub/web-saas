@@ -16,7 +16,7 @@ import { UserAccountNav } from "./user-account-nav";
 type Dictionary = Record;
 
 interface NavBarProps {
-  user: Pick<User, 'name' | 'email' | 'image'> | undefined;
+  user: Pick<User, "name" | "email" | "image"> | undefined;
   items?: MainNavItem[];
   children?: React.ReactNode;
   rightElements?: React.ReactNode;

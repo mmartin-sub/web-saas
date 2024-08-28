@@ -15,7 +15,7 @@ import {
 import { UserAvatar } from "~/components/user-avatar";
 
 interface UserAccountNavProps extends React.HTMLAttributes<HTMLDivElement> {
-  user: Pick<User, 'name' | 'email' | 'image'>;
+  user: Pick<User, "name" | "email" | "image">;
   params: {
     lang: string;
   };

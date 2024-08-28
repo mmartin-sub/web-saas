@@ -103,11 +103,7 @@ export default async function IndexPage({
         </div>
       </section>
 
-      <section
-        className={cn(
-          "h-[40vh] w-full xl2:block",
-        )}
-      >
+      <section className={cn("xl2:block h-[40vh] w-full")}>
         <div className="flex h-full justify-between px-[200px]">
           <div className="flex w-[75%] flex-col pr-4 pt-40">
             {/* Philosophy...  */}
@@ -126,17 +122,15 @@ export default async function IndexPage({
         </div>
       </section>
 
-      <section className={`h-[100vh] w-full block`}>
+      <section className={`block h-[100vh] w-full`}>
         <div className="flex h-full w-full justify-between px-[220px]">
           <div className="flex w-[60%] flex-col pr-4 pt-40">
-            <div className="px-[120px]">
-
-            </div>
+            <div className="px-[120px]"></div>
           </div>
         </div>
       </section>
 
-      <section className={`w-full px-8 block`}>
+      <section className={`block w-full px-8`}>
         {!constp.HIDE_QUESTIONS_SECTION && <Questions />}
       </section>
 

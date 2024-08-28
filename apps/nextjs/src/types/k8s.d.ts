@@ -7,7 +7,7 @@ interface ClusterStatus {
   DELETED: "DELETED";
 }
 
-type ClusterPlan = "FREE" | "STD" |  "BUSINESS" | "PRO";
+type ClusterPlan = "FREE" | "STD" | "BUSINESS" | "PRO";
 
 export interface Cluster {
   id: number;

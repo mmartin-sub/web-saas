@@ -16,7 +16,7 @@ import { toast } from "@saasfly/ui/use-toast";
 
 type Dictionary = Record;
 
-interface UserAuthFormProps extends React.HTMLAttributes<HTMLElement>  {
+interface UserAuthFormProps extends React.HTMLAttributes<HTMLElement> {
   lang: string;
   dict: Dictionary;
   disabled?: boolean;
@@ -112,7 +112,7 @@ export function UserAuthForm({
         <div className="flex items-center">
           <span className="w-full border-t" />
         </div>
-        <div className="relative flex justify-center text-xs uppercase mt-6">
+        <div className="relative mt-6 flex justify-center text-xs uppercase">
           <span className="bg-background px-2 text-muted-foreground">
             {dict.signin_others}
             {/* Or continue with */}

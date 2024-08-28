@@ -26,7 +26,7 @@ import { userNameSchema } from "~/lib/validations/user";
 import { trpc } from "~/trpc/client";
 
 interface UserNameFormProps extends React.HTMLAttributes<HTMLDivElement> {
-  user: Pick<User, 'name' | 'email' | 'image'>;
+  user: Pick<User, "name" | "email" | "image">;
 }
 
 type FormData = z.infer;

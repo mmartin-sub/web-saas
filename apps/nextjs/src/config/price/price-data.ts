@@ -1,9 +1,9 @@
 import { env } from "~/env.mjs";
 import { SubscriptionPlanTranslation } from "./generate-pricing";
+import pricingData from "./stripe-pricing.json";
 
-import pricingData from './stripe-pricing.json';
-
-export const priceDataMap: Record<string, SubscriptionPlanTranslation[]> = pricingData;
+export const priceDataMap: Record<string, SubscriptionPlanTranslation[]> =
+  pricingData;
 
 /*
 export const priceDataMap: Record<string, SubscriptionPlanTranslation[]> = {
