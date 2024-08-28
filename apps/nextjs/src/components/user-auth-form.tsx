@@ -16,7 +16,7 @@ import { toast } from "@saasfly/ui/use-toast";
 
 type Dictionary = Record;
 
-interface UserAuthFormProps extends React.HTMLAttributes {
+interface UserAuthFormProps extends React.HTMLAttributes<HTMLElement>  {
   lang: string;
   dict: Dictionary;
   disabled?: boolean;
@@ -24,14 +24,15 @@ interface UserAuthFormProps extends React.HTMLAttributes {
 
 const userAuthSchema = z.object({
   email: z.string().email(),
+  password: z.string().min(6),
 });
 
-type FormData = z.infer;
+type FormData = z.infer<typeof userAuthSchema>;
 
 export function UserAuthForm({
   className,
   lang,
-  dict,
+  dict, //usually: {dict.login}
   disabled,
   ...props
 }: UserAuthFormProps) {
@@ -108,10 +109,10 @@ export function UserAuthForm({
         </div>
       </form>
       <div className="relative">
-        <div className="absolute inset-0 flex items-center">
+        <div className="flex items-center">
           <span className="w-full border-t" />
         </div>
-        <div className="relative flex justify-center text-xs uppercase">
+        <div className="relative flex justify-center text-xs uppercase mt-6">
           <span className="bg-background px-2 text-muted-foreground">
             {dict.signin_others}
             {/* Or continue with */}

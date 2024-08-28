@@ -210,7 +210,7 @@ export function PricingCards({
                     />
                   )
                 ) : (
-                  <Link href={`${lang}/register`}>
+                  <Link href={`/${lang}/register`}>
                    <Button onClick={signInModal.onOpen}>{dict.signup}</Button>
                   </Link>
                 )}

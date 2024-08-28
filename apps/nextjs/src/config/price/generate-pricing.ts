@@ -8,9 +8,12 @@ export const priceDataMap: Record<string, SubscriptionPlanTranslation[]> = {};
 
 export interface SubscriptionPlanTranslation extends SubscriptionPlan {};
 
+export const pathProduct= path.join(__dirname, 'products.json');
+export const pathPrice= path.join(__dirname, 'prices.json');
+
 // Read and parse JSON files
-const productsData = JSON.parse(fs.readFileSync(path.join(__dirname, 'products.json'), 'utf-8'));
-const pricesData = JSON.parse(fs.readFileSync(path.join(__dirname, 'prices.json'), 'utf-8'));
+const productsData = JSON.parse(fs.readFileSync(pathProduct, 'utf-8'));
+const pricesData = JSON.parse(fs.readFileSync(pathPrice, 'utf-8'));
 
 // Additional data file for full descriptions and benefits
 // const additionalData = JSON.parse(fs.readFileSync(path.join(__dirname, 'additional-product-data.json'), 'utf-8'));

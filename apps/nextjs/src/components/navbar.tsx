@@ -16,7 +16,7 @@ import { UserAccountNav } from "./user-account-nav";
 type Dictionary = Record;
 
 interface NavBarProps {
-  user: Pick | undefined;
+  user: Pick<User, 'name' | 'email' | 'image'> | undefined;
   items?: MainNavItem[];
   children?: React.ReactNode;
   rightElements?: React.ReactNode;
@@ -72,7 +72,7 @@ export function NavBar({
               dict={dropdown}
             />
           ) : (
-            <Link href={`${lang}/register`}>
+            <Link href={`/${lang}/register`}>
               <Button
                 className="px-3"
                 variant="default"
