@@ -87,10 +87,10 @@ export default async function DashboardPage({
             <EmptyPlaceholder>
               {/*<EmptyPlaceholder.Icon />*/}
               <EmptyPlaceholder.Title>
-                {dict.business.k8s.no_cluster_title}
+                {dict.business_k8s.no_cluster_title}
               </EmptyPlaceholder.Title>
               <EmptyPlaceholder.Description>
-                {dict.business.k8s.no_cluster_content}
+                {dict.business_k8s.no_cluster_content}
               </EmptyPlaceholder.Description>
               <K8sCreateButton variant="outline" dict={dict.business} />
             </EmptyPlaceholder>

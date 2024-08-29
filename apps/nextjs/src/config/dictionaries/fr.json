@@ -10,6 +10,8 @@
     "mo": "/mo",
     "contact": "to contact our support team.",
     "contact_2": "We propose a special price during the trial period because we are convinced that trying it will convince you.",
+    "contact_us": "Contact us",
+    "free": "Free",
     "faq": "Foire aux questions",
     "faq_detail": "Check our comprehensive FAQs for answers on how our AI solutions can benefit your enterprise. Learn how we improve transparency and collaboration between departments.",
     "signup": "S'inscrire",
@@ -19,7 +21,7 @@
     "": ""
   },
   "marketing": {
-    "introducing": "Introduction de Substantifik",
+    "introducing": "Reinventing Substantifik",
     "title": "Substantifik: How can human better work together?",
     "sub_title": "Unleash the power of unified AI to revolutionize cross-departmental transparency and collaboration.",
     "get_started": "Commencer",
@@ -31,6 +33,7 @@
     "devops_features": "Déploiement facile des applications",
     "price_features": "Économiquement efficace pour les environnements de production.",
     "main_nav_features": "Fonctionnalités",
+    "main_nav_usecases": "Use Cases",
     "main_nav_pricing": "Tarification",
     "main_nav_products": "Produits",
     "main_nav_blog": "Blogue",
@@ -53,32 +56,30 @@
   },
   "common": {
     "copyright": "Copyright © ${currentYear} Substantifik. All rights reserved.",
-    "dashboard": {
-      "main_nav_documentation": "Documentation",
-      "main_nav_support": "Soutien",
-      "sidebar_nav_clusters": "Clusters",
-      "sidebar_nav_billing": "Facturation",
-      "sidebar_nav_settings": "Réglages",
-      "title_text": "Créer et gérer des grappes."
-    },
     "": ""
   },
-  "business": {
-    "k8s": {
-      "new_cluster": "Nouveau cluster",
-      "no_cluster_title": "Aucun cluster créé",
-      "no_cluster_content": "You don't have any clusters yet. Start creating cluster. ",
-      "": ""
-    },
-    "billing": {
-      "billing": "Facturation",
-      "content": "Gérer vos informations d'abonnement et de facturation",
-      "noSubscription": "Vous n'êtes abonné à aucun forfait. ",
-      "subscriptionInfo": "Vous êtes actuellement sur le plan <strong>{plan}</strong> . Votre abonnement sera renouvelé sur <strong>{date}</strong>.",
-      "manage_subscription": "Gérer l'abonnement",
-      "upgrade": "mise à jour",
-      "": ""
-    }
+  "dashboard": {
+    "main_nav_documentation": "Documentation",
+    "main_nav_support": "Support",
+    "sidebar_nav_clusters": "Clusters",
+    "sidebar_nav_billing": "Billing",
+    "sidebar_nav_settings": "Settings",
+    "title_text": "Create and manage clusters."
+  },
+  "business_k8s": {
+    "new_cluster": "New Cluster",
+    "no_cluster_title": "No clusters created",
+    "no_cluster_content": "You don't have any clusters yet. Start creating cluster. ",
+    "": ""
+  },
+  "business_billing": {
+    "billing": "Billing",
+    "content": "Manage your subscription and billing details",
+    "noSubscription": "You are not subscribed to any plan. ",
+    "subscriptionInfo": "You are currently on the <strong>{plan}</strong> plan.Your subscription will renew on <strong>{date}</strong>.",
+    "manage_subscription": "Manage Subscription",
+    "upgrade": "upgrade",
+    "": ""
   },
   "dropdown": {
     "dashboard": "Tableau de bord",

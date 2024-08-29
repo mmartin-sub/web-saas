@@ -8,13 +8,17 @@ export const getMarketingConfig = async ({
   params: {
     lang: Locale;
   };
-}): Promise => {
+}): Promise<MarketingConfig> => {
   const dict = await getDictionary(lang);
   return {
     mainNav: [
       {
         title: dict.marketing.main_nav_features,
         href: `/#features`,
+      },
+      {
+        title: dict.marketing.main_nav_usecases,
+        href: `/#usecases`,
       },
       {
         title: dict.marketing.main_nav_pricing,

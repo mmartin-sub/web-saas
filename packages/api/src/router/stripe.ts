@@ -5,10 +5,15 @@ import { getCurrentUser } from "@saasfly/auth";
 import { Customer, db } from "@saasfly/db";
 import { stripe } from "@saasfly/stripe";
 
-import { pricingData } from "../../../common/src/subscriptions";
+//import { pricingData } from "~/config/price";
+//import { priceDataMap } from "../../../../apps/nextjs/src/config/price";
+
+import priceDataMap from "./price-prod.json";
+
 import { env } from "../env.mjs";
 import { createTRPCRouter, protectedProcedure } from "../trpc";
 
+const pricingData=priceDataMap['en'];
 export interface SubscriptionPlan {
   title: string;
   description: string;

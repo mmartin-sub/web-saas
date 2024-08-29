@@ -34,12 +34,12 @@ export default async function MarketingLayout({
           dropdown={dict.dropdown}
         />
       </Suspense>
-      <ModalProvider dict={dict.login} />
+      <ModalProvider dict={dict.login!} />
       <main className="flex-1">{children}</main>
       <SiteFooter
         className="border-t border-border"
         params={{ lang: `${lang}` }}
-        dict={dict.common}
+        dictCommon={dict.common!}
       />
     </div>
   );

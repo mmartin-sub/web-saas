@@ -44,7 +44,7 @@ export default async function DashboardLayout({
               email: user.email,
             }}
             params={{ lang: `${lang}` }}
-            dict={dict.dropdown}
+            dict={dict.dropdown!}
           />
         </div>
       </header>
@@ -62,7 +62,7 @@ export default async function DashboardLayout({
       <SiteFooter
         className="border-t"
         params={{ lang: `${lang}` }}
-        dict={dict.common}
+        dictCommon={dict.common!}
       />
     </div>
   );

@@ -33,6 +33,7 @@
     "devops_features": "Easy application deployment",
     "price_features": "Economically efficient for production environments.",
     "main_nav_features": "Features",
+    "main_nav_usecases": "Use Cases",
     "main_nav_pricing": "Pricing",
     "main_nav_products": "Products",
     "main_nav_blog": "Blog",
@@ -55,24 +56,24 @@
   },
   "common": {
     "copyright": "Copyright © ${currentYear} Substantifik. All rights reserved.",
-    "dashboard": {
-      "main_nav_documentation": "Documentation",
-      "main_nav_support": "Support",
-      "sidebar_nav_clusters": "Clusters",
-      "sidebar_nav_billing": "Billing",
-      "sidebar_nav_settings": "Settings",
-      "title_text": "Create and manage clusters."
-    },
     "": ""
   },
-  "business": {
-    "k8s": {
+  "dashboard": {
+    "main_nav_documentation": "Documentation",
+    "main_nav_support": "Support",
+    "sidebar_nav_clusters": "Clusters",
+    "sidebar_nav_billing": "Billing",
+    "sidebar_nav_settings": "Settings",
+    "title_text": "Create and manage clusters."
+  },
+
+    "business_k8s": {
       "new_cluster": "New Cluster",
       "no_cluster_title": "No clusters created",
       "no_cluster_content": "You don't have any clusters yet. Start creating cluster. ",
       "": ""
     },
-    "billing": {
+    "business_billing": {
       "billing": "Billing",
       "content": "Manage your subscription and billing details",
       "noSubscription": "You are not subscribed to any plan. ",
@@ -80,7 +81,6 @@
       "manage_subscription": "Manage Subscription",
       "upgrade": "upgrade",
       "": ""
-    }
   },
   "dropdown": {
     "dashboard": "Dashboard",

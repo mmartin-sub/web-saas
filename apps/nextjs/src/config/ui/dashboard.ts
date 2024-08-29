@@ -14,11 +14,11 @@ export const getDashboardConfig = async ({
   return {
     mainNav: [
       {
-        title: dict.common.dashboard.main_nav_documentation,
+        title: dict.dashboard.main_nav_documentation,
         href: "/docs",
       },
       {
-        title: dict.common.dashboard.main_nav_support,
+        title: dict.dashboard.main_nav_support,
         href: "/support",
         disabled: true,
       },
@@ -26,17 +26,17 @@ export const getDashboardConfig = async ({
     sidebarNav: [
       {
         id: "clusters",
-        title: dict.common.dashboard.sidebar_nav_clusters,
+        title: dict.dashboard.sidebar_nav_clusters,
         href: "/dashboard/",
       },
       {
         id: "billing",
-        title: dict.common.dashboard.sidebar_nav_billing,
+        title: dict.dashboard.sidebar_nav_billing,
         href: "/dashboard/billing",
       },
       {
         id: "settings",
-        title: dict.common.dashboard.sidebar_nav_settings,
+        title: dict.dashboard.sidebar_nav_settings,
         href: "/dashboard/settings",
       },
     ],

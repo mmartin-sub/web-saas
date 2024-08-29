@@ -41,7 +41,7 @@ export default async function DocsLayout({
       <SiteFooter
         className="border-t"
         params={{ lang: `${lang}` }}
-        dict={dict.common}
+        dictCommon={dict.common!}
       />
     </div>
   );

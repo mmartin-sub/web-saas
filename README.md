@@ -51,9 +51,11 @@ On top of the fork:
 
 [ ] Stripe web-hooks should return 200 as fast as possible, leverage sub/pub approach to do DB work async
 [ ] If Resend is sending an error, it is not cached
-[ ] <p> cannot be a descendant of <p> from TypewriterEffectSmooths/TypewriterEffectImpl animation; the code is different to the source code for this component.
-[ ] upgrade missing dependencies (see ncu -ws)
-
+[x] <p> cannot be a descendant of <p> from TypewriterEffectSmooths/TypewriterEffectImpl animation; the code is different to the source code for this component.
+[ ] upgrade missing dependencies (see ncu -ws) - turbo
+[ ] in package/stripe (packages/api/src/router/stripe.ts) access to json should be in different place and coming frokk prodä/dev approach
+[ ] there are some dict.common! for exmple in the code, not sure why ! is needed
+[ ] Create an account (register page) should have sign-up button, not Login with email
 ## Extra Documentation
 
 - tooling/tailwind-config/index.ts: tailwind extra configuration

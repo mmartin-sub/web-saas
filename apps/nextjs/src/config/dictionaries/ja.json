@@ -10,6 +10,8 @@
     "mo": "/mo",
     "contact": "to contact our support team.",
     "contact_2": "We propose a special price during the trial period because we are convinced that trying it will convince you.",
+    "contact_us": "Contact us",
+    "free": "Free",
     "faq": "よく寄せられる質問",
     "faq_detail": "Check our comprehensive FAQs for answers on how our AI solutions can benefit your enterprise. Learn how we improve transparency and collaboration between departments.",
     "signup": "新規登録",
@@ -19,7 +21,7 @@
     "": ""
   },
   "marketing": {
-    "introducing": "Substantifik のご紹介",
+    "introducing": "Reinventing Substantifik",
     "title": "Substantifik: How can human better work together?",
     "sub_title": "Unleash the power of unified AI to revolutionize cross-departmental transparency and collaboration.",
     "get_started": "はじめよう",
@@ -31,6 +33,7 @@
     "devops_features": "アプリ展開が簡単",
     "price_features": "生産環境では経済的に効率的です",
     "main_nav_features": "特徴",
+    "main_nav_usecases": "Use Cases",
     "main_nav_pricing": "価格",
     "main_nav_products": "商品",
     "main_nav_blog": "ブログ",
@@ -53,32 +56,30 @@
   },
   "common": {
     "copyright": "Copyright © ${currentYear} Substantifik. All rights reserved.",
-    "dashboard": {
-      "main_nav_documentation": "ドキュメント",
-      "main_nav_support": "サポート",
-      "sidebar_nav_clusters": "Clusters",
-      "sidebar_nav_billing": "請求",
-      "sidebar_nav_settings": "設定",
-      "title_text": "クラスターの作成と管理。"
-    },
     "": ""
   },
-  "business": {
-    "k8s": {
-      "new_cluster": "新規クラスター",
-      "no_cluster_title": "クラスターが作成されていません",
-      "no_cluster_content": "You don't have any clusters yet. Start creating cluster. ",
-      "": ""
-    },
-    "billing": {
-      "billing": "請求",
-      "content": "サブスクリプションと請求の詳細を管理します",
-      "noSubscription": "プランを購読していません。 ",
-      "subscriptionInfo": "あなたは現在 <strong>{plan}</strong> プランにいます。あなたのサブスクリプションは <strong>{date}</strong> で更新されます。",
-      "manage_subscription": "サブスクリプションの管理",
-      "upgrade": "アップグレード",
-      "": ""
-    }
+  "dashboard": {
+    "main_nav_documentation": "Documentation",
+    "main_nav_support": "Support",
+    "sidebar_nav_clusters": "Clusters",
+    "sidebar_nav_billing": "Billing",
+    "sidebar_nav_settings": "Settings",
+    "title_text": "Create and manage clusters."
+  },
+  "business_k8s": {
+    "new_cluster": "New Cluster",
+    "no_cluster_title": "No clusters created",
+    "no_cluster_content": "You don't have any clusters yet. Start creating cluster. ",
+    "": ""
+  },
+  "business_billing": {
+    "billing": "Billing",
+    "content": "Manage your subscription and billing details",
+    "noSubscription": "You are not subscribed to any plan. ",
+    "subscriptionInfo": "You are currently on the <strong>{plan}</strong> plan.Your subscription will renew on <strong>{date}</strong>.",
+    "manage_subscription": "Manage Subscription",
+    "upgrade": "upgrade",
+    "": ""
   },
   "dropdown": {
     "dashboard": "ダッシュボード",

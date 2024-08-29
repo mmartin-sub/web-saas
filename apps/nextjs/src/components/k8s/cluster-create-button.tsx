@@ -81,7 +81,7 @@ export function K8sCreateButton({
       ) : (
         <Icons.Add className="mr-2 h-4 w-4" />
       )}
-      {dict.k8s?.new_cluster}
+      {dict.business_k8s?.new_cluster}
     </button>
   );
 }

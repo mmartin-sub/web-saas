@@ -4,8 +4,8 @@
   "scripts": {
     "build": "turbo build ",
     "crowdin": "crowdin ",
-    "crowdin:upload": "set -a && soure .env.local && set +a &&  crowdin upload",
-    "crowdin:download": "set -a && soure .env.local && set +a && crowdin download",
+    "crowdin:upload": "set -a && source .env.local && set +a &&  crowdin upload",
+    "crowdin:download": "set -a && source .env.local && set +a && crowdin download",
     "crowdin:sync": "i18next-scanner --config tooling/i18next-scanner.config.js && set -a && soure .env.local && crowdin upload && crowdin download",
     "18next:scanner": "i18next-scanner --config tooling/i18next-scanner.config.js",
     "clean": "git clean -xdf node_modules",

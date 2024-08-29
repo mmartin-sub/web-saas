@@ -32,11 +32,11 @@ export default async function BillingPage({
   const dict = await getDictionary(lang);
   return (
     <DashboardShell
-      title={dict.business.billing.billing}
-      description={dict.business.billing.content}
+      title={dict.business_billing.billing}
+      description={dict.business_billing.content}
       className="space-y-4"
     >
-      <SubscriptionCard dict={dict.business.billing} />
+      <SubscriptionCard dict={dict.business_billing} />
 
       <UsageCard />
     </DashboardShell>

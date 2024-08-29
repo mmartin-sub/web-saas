@@ -1,0 +1,448 @@
+{
+    "en": [
+      {
+        "id": "business",
+        "title": "Enterprise",
+        "description": "AI that suits your needs.",
+        "benefits": [
+          "Select automatically the best AI model",
+          "Privacy & Trust by default",
+          "Chat capability for the User Experience",
+          "Limit to 500 requests per day",
+          "Access to all templates, including custom branding",
+          "Assigned account manager and business support team",
+          "Personalized configuration and account management",
+          "Exclusive webinars and training",
+          "SSO and other enterprise audit capabilities",
+          "Cloud, private or hybrid hosting options",
+          "Support custom-made and private best practice's workflows"
+        ],
+        "limitations": [],
+        "currencySign": "$",
+        "position": 3,
+        "prices": {
+          "monthly": null,
+          "yearly": null
+        },
+        "stripeIds": {
+          "monthly": null,
+          "yearly": null
+        },
+        "createLocaleData": {}
+      },
+      {
+        "id": "pro",
+        "title": "Pro-business",
+        "description": "The best AI offer for professional",
+        "benefits": [
+          "Select automatically the best AI model",
+          "Privacy & Trust by default",
+          "Chat capability for the User Experience",
+          "Limit to 100 requests per day",
+          "Advanced analytics and reporting",
+          "Access to business templates",
+          "Priority customer support"
+        ],
+        "limitations": [
+          "Support Substantifik best practices workflow",
+          "Limited access to business resources"
+        ],
+        "currencySign": "$",
+        "position": 2,
+        "prices": {
+          "monthly": 39.95,
+          "yearly": 399
+        },
+        "stripeIds": {
+          "monthly": "price_1PsokV2NLDodIyXyMFesU98R",
+          "yearly": "price_1PsokV2NLDodIyXyHHu7AES2"
+        },
+        "createLocaleData": {
+          "monthly": null,
+          "yearly": null
+        }
+      },
+      {
+        "id": "starter",
+        "title": "Starter",
+        "description": "Starter Offer - Get the best of AI.",
+        "benefits": [
+          "Select automatically the best AI model",
+          "Privacy & Trust by default",
+          "Chat capability for the User Experience",
+          "Limit to 30 requests per day"
+        ],
+        "limitations": [
+          "No priority access to new features",
+          "Limited customer support\"",
+          "Limited access to business resources"
+        ],
+        "currencySign": "$",
+        "position": 1,
+        "prices": {
+          "monthly": 19.95,
+          "yearly": 199
+        },
+        "stripeIds": {
+          "monthly": "price_1PsokR2NLDodIyXymsgEvAzX",
+          "yearly": "price_1PsokR2NLDodIyXyotTm4blF"
+        },
+        "createLocaleData": {
+          "monthly": null,
+          "yearly": null
+        }
+      }
+    ],
+    "fr": [
+      {
+        "id": "business",
+        "title": "Enterprise",
+        "description": "AI that suits your needs.",
+        "benefits": [
+          "Select automatically the best AI model",
+          "Privacy & Trust by default",
+          "Chat capability for the User Experience",
+          "Limit to 500 requests per day",
+          "Access to all templates, including custom branding",
+          "Assigned account manager and business support team",
+          "Personalized configuration and account management",
+          "Exclusive webinars and training",
+          "SSO and other enterprise audit capabilities",
+          "Cloud, private or hybrid hosting options",
+          "Support custom-made and private best practice's workflows"
+        ],
+        "limitations": [],
+        "currencySign": "€",
+        "position": 3,
+        "prices": {
+          "monthly": null,
+          "yearly": null
+        },
+        "stripeIds": {
+          "monthly": null,
+          "yearly": null
+        },
+        "createLocaleData": {}
+      },
+      {
+        "id": "pro",
+        "title": "Pro-business",
+        "description": "The best AI offer for professional",
+        "benefits": [
+          "Select automatically the best AI model",
+          "Privacy & Trust by default",
+          "Chat capability for the User Experience",
+          "Limit to 100 requests per day",
+          "Advanced analytics and reporting",
+          "Access to business templates",
+          "Priority customer support"
+        ],
+        "limitations": [
+          "Support Substantifik best practices workflow",
+          "Limited access to business resources"
+        ],
+        "currencySign": "€",
+        "position": 2,
+        "prices": {
+          "monthly": null,
+          "yearly": null
+        },
+        "stripeIds": {
+          "monthly": null,
+          "yearly": null
+        },
+        "createLocaleData": {}
+      },
+      {
+        "id": "starter",
+        "title": "Starter",
+        "description": "Starter Offer - Get the best of AI.",
+        "benefits": [
+          "Select automatically the best AI model",
+          "Privacy & Trust by default",
+          "Chat capability for the User Experience",
+          "Limit to 30 requests per day"
+        ],
+        "limitations": [
+          "No priority access to new features",
+          "Limited customer support\"",
+          "Limited access to business resources"
+        ],
+        "currencySign": "€",
+        "position": 1,
+        "prices": {
+          "monthly": null,
+          "yearly": null
+        },
+        "stripeIds": {
+          "monthly": null,
+          "yearly": null
+        },
+        "createLocaleData": {}
+      }
+    ],
+    "de": [
+      {
+        "id": "business",
+        "title": "Enterprise",
+        "description": "AI that suits your needs.",
+        "benefits": [
+          "Select automatically the best AI model",
+          "Privacy & Trust by default",
+          "Chat capability for the User Experience",
+          "Limit to 500 requests per day",
+          "Access to all templates, including custom branding",
+          "Assigned account manager and business support team",
+          "Personalized configuration and account management",
+          "Exclusive webinars and training",
+          "SSO and other enterprise audit capabilities",
+          "Cloud, private or hybrid hosting options",
+          "Support custom-made and private best practice's workflows"
+        ],
+        "limitations": [],
+        "currencySign": "€",
+        "position": 3,
+        "prices": {
+          "monthly": null,
+          "yearly": null
+        },
+        "stripeIds": {
+          "monthly": null,
+          "yearly": null
+        },
+        "createLocaleData": {}
+      },
+      {
+        "id": "pro",
+        "title": "Pro-business",
+        "description": "The best AI offer for professional",
+        "benefits": [
+          "Select automatically the best AI model",
+          "Privacy & Trust by default",
+          "Chat capability for the User Experience",
+          "Limit to 100 requests per day",
+          "Advanced analytics and reporting",
+          "Access to business templates",
+          "Priority customer support"
+        ],
+        "limitations": [
+          "Support Substantifik best practices workflow",
+          "Limited access to business resources"
+        ],
+        "currencySign": "€",
+        "position": 2,
+        "prices": {
+          "monthly": null,
+          "yearly": null
+        },
+        "stripeIds": {
+          "monthly": null,
+          "yearly": null
+        },
+        "createLocaleData": {}
+      },
+      {
+        "id": "starter",
+        "title": "Starter",
+        "description": "Starter Offer - Get the best of AI.",
+        "benefits": [
+          "Select automatically the best AI model",
+          "Privacy & Trust by default",
+          "Chat capability for the User Experience",
+          "Limit to 30 requests per day"
+        ],
+        "limitations": [
+          "No priority access to new features",
+          "Limited customer support\"",
+          "Limited access to business resources"
+        ],
+        "currencySign": "€",
+        "position": 1,
+        "prices": {
+          "monthly": null,
+          "yearly": null
+        },
+        "stripeIds": {
+          "monthly": null,
+          "yearly": null
+        },
+        "createLocaleData": {}
+      }
+    ],
+    "es": [
+      {
+        "id": "business",
+        "title": "Enterprise",
+        "description": "AI that suits your needs.",
+        "benefits": [
+          "Select automatically the best AI model",
+          "Privacy & Trust by default",
+          "Chat capability for the User Experience",
+          "Limit to 500 requests per day",
+          "Access to all templates, including custom branding",
+          "Assigned account manager and business support team",
+          "Personalized configuration and account management",
+          "Exclusive webinars and training",
+          "SSO and other enterprise audit capabilities",
+          "Cloud, private or hybrid hosting options",
+          "Support custom-made and private best practice's workflows"
+        ],
+        "limitations": [],
+        "currencySign": "€",
+        "position": 3,
+        "prices": {
+          "monthly": null,
+          "yearly": null
+        },
+        "stripeIds": {
+          "monthly": null,
+          "yearly": null
+        },
+        "createLocaleData": {}
+      },
+      {
+        "id": "pro",
+        "title": "Pro-business",
+        "description": "The best AI offer for professional",
+        "benefits": [
+          "Select automatically the best AI model",
+          "Privacy & Trust by default",
+          "Chat capability for the User Experience",
+          "Limit to 100 requests per day",
+          "Advanced analytics and reporting",
+          "Access to business templates",
+          "Priority customer support"
+        ],
+        "limitations": [
+          "Support Substantifik best practices workflow",
+          "Limited access to business resources"
+        ],
+        "currencySign": "€",
+        "position": 2,
+        "prices": {
+          "monthly": null,
+          "yearly": null
+        },
+        "stripeIds": {
+          "monthly": null,
+          "yearly": null
+        },
+        "createLocaleData": {}
+      },
+      {
+        "id": "starter",
+        "title": "Starter",
+        "description": "Starter Offer - Get the best of AI.",
+        "benefits": [
+          "Select automatically the best AI model",
+          "Privacy & Trust by default",
+          "Chat capability for the User Experience",
+          "Limit to 30 requests per day"
+        ],
+        "limitations": [
+          "No priority access to new features",
+          "Limited customer support\"",
+          "Limited access to business resources"
+        ],
+        "currencySign": "€",
+        "position": 1,
+        "prices": {
+          "monthly": null,
+          "yearly": null
+        },
+        "stripeIds": {
+          "monthly": null,
+          "yearly": null
+        },
+        "createLocaleData": {}
+      }
+    ],
+    "ch": [
+      {
+        "id": "business",
+        "title": "Enterprise",
+        "description": "AI that suits your needs.",
+        "benefits": [
+          "Select automatically the best AI model",
+          "Privacy & Trust by default",
+          "Chat capability for the User Experience",
+          "Limit to 500 requests per day",
+          "Access to all templates, including custom branding",
+          "Assigned account manager and business support team",
+          "Personalized configuration and account management",
+          "Exclusive webinars and training",
+          "SSO and other enterprise audit capabilities",
+          "Cloud, private or hybrid hosting options",
+          "Support custom-made and private best practice's workflows"
+        ],
+        "limitations": [],
+        "currencySign": "CHF",
+        "position": 3,
+        "prices": {
+          "monthly": null,
+          "yearly": null
+        },
+        "stripeIds": {
+          "monthly": null,
+          "yearly": null
+        },
+        "createLocaleData": {}
+      },
+      {
+        "id": "pro",
+        "title": "Pro-business",
+        "description": "The best AI offer for professional",
+        "benefits": [
+          "Select automatically the best AI model",
+          "Privacy & Trust by default",
+          "Chat capability for the User Experience",
+          "Limit to 100 requests per day",
+          "Advanced analytics and reporting",
+          "Access to business templates",
+          "Priority customer support"
+        ],
+        "limitations": [
+          "Support Substantifik best practices workflow",
+          "Limited access to business resources"
+        ],
+        "currencySign": "CHF",
+        "position": 2,
+        "prices": {
+          "monthly": null,
+          "yearly": null
+        },
+        "stripeIds": {
+          "monthly": null,
+          "yearly": null
+        },
+        "createLocaleData": {}
+      },
+      {
+        "id": "starter",
+        "title": "Starter",
+        "description": "Starter Offer - Get the best of AI.",
+        "benefits": [
+          "Select automatically the best AI model",
+          "Privacy & Trust by default",
+          "Chat capability for the User Experience",
+          "Limit to 30 requests per day"
+        ],
+        "limitations": [
+          "No priority access to new features",
+          "Limited customer support\"",
+          "Limited access to business resources"
+        ],
+        "currencySign": "CHF",
+        "position": 1,
+        "prices": {
+          "monthly": null,
+          "yearly": null
+        },
+        "stripeIds": {
+          "monthly": null,
+          "yearly": null
+        },
+        "createLocaleData": {}
+      }
+    ]
+  }

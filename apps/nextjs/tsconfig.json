@@ -10,7 +10,8 @@
       ],
       "contentlayer/generated": [
         "./.contentlayer/generated"
-      ]
+      ],
+      "nextjs/*": ["./src/*"],
     },
     "plugins": [
       {
