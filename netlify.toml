@@ -22,3 +22,9 @@
 #to = '/.netlify/images?url=:url&w=:width&q=:quality'
 #status = 200
 #force = true
+
+# if we want to set https://docs.netlify.com/monitor-sites/real-user-metrics/
+#[[headers]]
+#  for = "/*"
+#  [headers.values]
+#    Content-Security-Policy = "[...] script-src https://netlify-rum.netlify.app"
