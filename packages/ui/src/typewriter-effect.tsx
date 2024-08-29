@@ -69,7 +69,7 @@ export const TypewriterEffectImpl = ({
   };
 
   return (
-    <p className={cn("", className)}>
+    <div className={cn("", className)}>
       {renderWords()}
       <motion.span
         initial={{
@@ -88,7 +88,7 @@ export const TypewriterEffectImpl = ({
           cursorClassName,
         )}
       ></motion.span>
-    </p>
+    </div>
   );
 };
 

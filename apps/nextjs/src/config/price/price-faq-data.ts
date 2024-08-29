@@ -4,7 +4,7 @@ interface FAQItem {
   answer: string;
 }
 
-export const priceFaqDataMap: Record = {
+export const priceFaqDataMap: Record<string, FAQItem[]> = {
   en: [
     {
       id: "item-1",

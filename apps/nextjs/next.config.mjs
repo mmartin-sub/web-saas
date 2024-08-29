@@ -58,9 +58,9 @@ const config = {
   output: "standalone",
 
 // Only for debug purposes
-  trailingSlash: false,
-  skipTrailingSlashRedirect: true, // Default value is false, @debug only
-  skipMiddlewareUrlNormalize: true, // https://nextjs.org/docs/app/building-your-application/routing/middleware
+//  trailingSlash: true,
+//  skipTrailingSlashRedirect: true, // Default value is false, @debug only
+//  skipMiddlewareUrlNormalize: true, // https://nextjs.org/docs/app/building-your-application/routing/middleware
 };
 
 export default withNextDevtools(withMDX()(config));

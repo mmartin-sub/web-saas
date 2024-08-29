@@ -13,6 +13,7 @@ const noNeedProcessRoute = [".*\\.png", ".*\\.jpg", ".*\\.opengraph-image.png"];
 const noRedirectRoute = ["/api(.*)", "/trpc(.*)", "/admin"];
 
 // Only publicRoute are excluded from authentification
+// Every other pages, such as /xxx will request login
 const publicRoute = [
   "/(\\w{2}/)?signin(.*)",
   //Was missing, not sure why?
@@ -23,7 +24,7 @@ const publicRoute = [
   "/(\\w{2}/)?external(.*)",
   "/(\\w{2}/)?blog(.*)",
   "/(\\w{2}/)?pricing(.*)",
-  "^/\\w{2}$", // root with locale
+  "^/\\w{2}/?$", // root with locale
 ];
 
 function getLocale(request: NextRequest): string | undefined {
@@ -70,10 +71,22 @@ export default async function middleware(request: NextRequest) {
   }
   const pathname = request.nextUrl.pathname;
   // Check if there is any supported locale in the pathname
+
+  /*
+  * 1st pass is with /, then, it will be /en
+  */
+  // console.log('Pathname:', pathname);
+
   const pathnameIsMissingLocale = i18n.locales.every(
     (locale) =>
       !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`,
   );
+
+   /*
+  * 1st pass is with / -> true, then, it will be /en -> false
+  */
+ // console.log('Pathname missing locales:', pathnameIsMissingLocale);
+
   // Redirect if there is no locale
   if (!isNoRedirect(request) && pathnameIsMissingLocale) {
     const locale = getLocale(request);
@@ -90,6 +103,7 @@ export default async function middleware(request: NextRequest) {
   }
   // @ts-ignore
   return authMiddleware(request, null);
+//  return null;
 }
 
 const authMiddleware = withAuth(
@@ -98,20 +112,22 @@ const authMiddleware = withAuth(
     const isAuth = !!token;
     const isAdmin = token?.isAdmin;
 
+    const pathname = req.nextUrl.pathname;
+
     // Overall, this regex matches strings that start with a forward slash, followed by at least two alphabetic characters, another forward slash, and then either login or register
     // End with either login or register
 //    Matching Pathname: /en/login or /us/register
 // Non-Matching Pathname: /login, /en/log, /123/login
     const isAuthPage = /^\/[a-zA-Z]{2,}\/(login|register)/.test(
-      req.nextUrl.pathname,
+      pathname
     );
-    const isAuthRoute = /^\/api\/trpc\//.test(req.nextUrl.pathname);
+    const isAuthRoute = /^\/api\/trpc\//.test(pathname);
     const locale = getLocale(req);
 
     if (isAuthRoute && isAuth) {
       return NextResponse.next();
     }
-    if (req.nextUrl.pathname.startsWith("/admin/dashboard")) {
+    if (pathname.startsWith("/admin/dashboard")) {
       if (!isAuth || !isAdmin)
         return NextResponse.redirect(new URL(`/admin/login`, req.url));
       return NextResponse.next();
@@ -123,7 +139,7 @@ const authMiddleware = withAuth(
       return null;
     }
     if (!isAuth) {
-      let from = req.nextUrl.pathname;
+      let from = pathname;
       if (req.nextUrl.search) {
         from += req.nextUrl.search;
       }
@@ -141,7 +157,10 @@ const authMiddleware = withAuth(
   },
 );
 
-/* Matching Paths
+/*
+ * Config object for middleware matcher.
+* Matching Paths
+* we want pretty much everything since we need to apply the locale
 * https://nextjs.org/docs/app/building-your-application/routing/middleware
 * This regex matches any string that does not contain a dot (.) and does not contain the substring _next.
 * This regex matches strings that start with either api or trpc, followed by any characters.
