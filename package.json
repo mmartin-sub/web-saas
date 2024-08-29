@@ -52,6 +52,7 @@
     "@crowdin/cli": "^4.1.1",
     "@netlify/plugin-lighthouse": "^6.0.0",
     "@netlify/plugin-nextjs": "^5.7.0",
+    "@prisma/client": "^5.19.0",
     "@tanstack/eslint-plugin-query": "^5.52.0",
     "@turbo/gen": "1.13.4",
     "check-dependency-version-consistency": "4.1.0",
@@ -61,13 +62,12 @@
     "kysely-ctl": "^0.9.0",
     "netlify-cli": "^17.34.3",
     "next-sitemap": "^4.2.3",
-    "prettier": "3.3.3",
+    "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.6",
     "tailwind-config-viewer": "^2.0.4",
     "turbo": "1.13.4",
     "typescript": "5.5.4",
-    "vercel": "^37.2.1",
-    "@prisma/client": "^5.19.0"
+    "vercel": "^37.2.1"
   },
   "engines": {
     "node": ">=20.0.0"

@@ -1,7 +1,12 @@
 /* eslint-disable @typescript-eslint/no-explicit-any, @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access */
 
 import { notFound } from "next/navigation";
+import { Suspense } from "react";
+import { getMarketingConfig } from "~/config/ui/marketing";
 
+import { getCurrentUser } from "@saasfly/auth";
+
+import { NavBar } from "~/components/navbar";
 import { Mdx } from "~/components/content/mdx-components";
 import { DocsPageHeader } from "~/components/docs/page-header";
 import { PagesPager } from "~/components/pages/pager";
@@ -82,11 +87,24 @@ export default async function PagePage({ params }: PagePageProps) {
   }
   const lang = "en";
   const dict = await getDictionary(lang);
+  const user = await getCurrentUser();
 
   return (
     <div className="flex min-h-screen flex-col space-y-6">
+            <Suspense fallback="...">
+        <NavBar
+          items={
+            (await getMarketingConfig({ params: { lang: `${lang}` } })).mainNav
+          }
+          params={{ lang: `${lang}` }}
+          scroll={true}
+          user={user}
+          marketing={dict.marketing!}
+          dropdown={dict.dropdown!}
+        />
+      </Suspense>
       <main className="relative py-6 lg:gap-10 lg:py-10 xl:grid xl:grid-cols-[1fr_300px]">
-        <div className="mx-auto w-full min-w-0">
+        <div className="mx-auto w-full min-w-0 px-16">
           <DocsPageHeader heading={doc.title} text={doc.description} />
           <Mdx code={doc.body.code} />
           <hr className="my-4 md:my-6" />

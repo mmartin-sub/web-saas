@@ -33,8 +33,8 @@ export default async function DocsLayout({
           params={{ lang: `${lang}` }}
           scroll={true}
           user={user}
-          marketing={dict.marketing}
-          dropdown={dict.dropdown}
+          marketing={dict.marketing!}
+          dropdown={dict.dropdown!}
         />
       </Suspense>
       <div className="container flex-1">{children}</div>

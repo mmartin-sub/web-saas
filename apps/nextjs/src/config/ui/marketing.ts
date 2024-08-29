@@ -13,23 +13,23 @@ export const getMarketingConfig = async ({
   return {
     mainNav: [
       {
-        title: dict.marketing.main_nav_features,
+        title: dict.marketing!.main_nav_features!,
         href: `/#features`,
       },
       {
-        title: dict.marketing.main_nav_usecases,
+        title: dict.marketing!.main_nav_usecases!,
         href: `/#usecases`,
       },
       {
-        title: dict.marketing.main_nav_pricing,
+        title: dict.marketing!.main_nav_pricing!,
         href: `/pricing`,
       },
       {
-        title: dict.marketing.main_nav_blog,
+        title: dict.marketing!.main_nav_blog!,
         href: `/blog`,
       },
       {
-        title: dict.marketing.main_nav_documentation,
+        title: dict.marketing!.main_nav_documentation!,
         href: `/docs`,
       },
     ],

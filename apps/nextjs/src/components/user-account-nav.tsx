@@ -24,7 +24,7 @@ interface UserAccountNavProps extends React.HTMLAttributes<HTMLDivElement> {
 export function UserAccountNav({
   user,
   params: { lang },
-  dict,
+  dict, // in practice, it is a dict.dropdown
 }: UserAccountNavProps) {
   return (
     <DropdownMenu>

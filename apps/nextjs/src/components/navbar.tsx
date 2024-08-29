@@ -13,8 +13,6 @@ import type { MainNavItem } from "~/types";
 import { MainNav } from "./main-nav";
 import { UserAccountNav } from "./user-account-nav";
 
-type Dictionary = Record;
-
 interface NavBarProps {
   user: Pick<User, "name" | "email" | "image"> | undefined;
   items?: MainNavItem[];
@@ -24,8 +22,8 @@ interface NavBarProps {
   params: {
     lang: string;
   };
-  marketing: Dictionary;
-  dropdown: Record;
+  marketing: Record<string,string>;
+  dropdown: Record<string,string>;
 }
 
 export function NavBar({
