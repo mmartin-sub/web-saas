@@ -13,12 +13,11 @@ import * as Icons from "@saasfly/ui/icons";
 import { Input } from "@saasfly/ui/input";
 import { Label } from "@saasfly/ui/label";
 import { toast } from "@saasfly/ui/use-toast";
-
-type Dictionary = Record;
+import type {  DictionarySubKey } from "./../lib/get-dictionary"
 
 interface UserAuthFormProps extends React.HTMLAttributes<HTMLElement> {
   lang: string;
-  dict: Dictionary;
+  dictLogin: DictionarySubKey;
   disabled?: boolean;
 }
 
@@ -32,7 +31,7 @@ type FormData = z.infer<typeof userAuthSchema>;
 export function UserAuthForm({
   className,
   lang,
-  dict, //usually: {dict.login}
+  dictLogin, //usually: {dict.login}
   disabled,
   ...props
 }: UserAuthFormProps) {
@@ -103,40 +102,12 @@ export function UserAuthForm({
             {isLoading && (
               <Icons.Spinner className="mr-2 h-4 w-4 animate-spin" />
             )}
-            {dict.signin_email}
+            {dictLogin.signin_email}
             {/* Sign In with Email */}
           </button>
         </div>
       </form>
-      <div className="relative">
-        <div className="flex items-center">
-          <span className="w-full border-t" />
-        </div>
-        <div className="relative mt-6 flex justify-center text-xs uppercase">
-          <span className="bg-background px-2 text-muted-foreground">
-            {dict.signin_others}
-            {/* Or continue with */}
-          </span>
-        </div>
-      </div>
-      <button
-        type="button"
-        className={cn(buttonVariants({ variant: "outline" }))}
-        onClick={() => {
-          setIsGitHubLoading(true);
-          signIn("github").catch((error) => {
-            console.error("GitHub signIn error:", error);
-          });
-        }}
-        disabled={isLoading || isGitHubLoading}
-      >
-        {isGitHubLoading ? (
-          <Icons.Spinner className="mr-2 h-4 w-4 animate-spin" />
-        ) : (
-          <Icons.GitHub className="mr-2 h-4 w-4" />
-        )}{" "}
-        Github
-      </button>
+
     </div>
   );
 }

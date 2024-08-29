@@ -24,6 +24,7 @@ export default async function LoginPage({
   };
 }) {
   const dict = await getDictionary(lang);
+  const dictLogin=dict.login!;
   return (
     <div className="container flex h-screen w-screen flex-col items-center justify-center">
       <Link
@@ -35,7 +36,7 @@ export default async function LoginPage({
       >
         <>
           <Icons.ChevronLeft className="mr-2 h-4 w-4" />
-          {dict.login.back}
+          {dictLogin.back}
         </>
       </Link>
       <div className="mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[350px]">
@@ -48,13 +49,13 @@ export default async function LoginPage({
             alt="logo"
           />
           <h1 className="text-2xl font-semibold tracking-tight">
-            {dict.login.welcome_back}
+            {dictLogin.welcome_back}
           </h1>
           <p className="text-sm text-muted-foreground">
-            {dict.login.signin_title}
+            {dictLogin.signin_title}
           </p>
         </div>
-        <UserAuthForm lang={lang} dict={dict.login} />
+        <UserAuthForm lang={lang} dictLogin={dictLogin} />
         {/*
         Disabled section in upstream
          */}
@@ -63,7 +64,7 @@ export default async function LoginPage({
             href={`/${lang}/register`}
             className="hover:text-brand underline underline-offset-4"
           >
-            {dict.login.singup_title}
+            {dictLogin.singup_title}
           </Link>
         </p>
       </div>

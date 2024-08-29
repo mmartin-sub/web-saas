@@ -2,8 +2,10 @@ import "server-only";
 
 import type { Locale } from "~/config/i18n-config";
 
+export type DictionarySubKey=Record<string, string>;
+
 // Define the type for your dictionary with an index signature
-export type Dictionary = Record<string, Record<string, string>>;
+export type Dictionary = Record<string, DictionarySubKey>;
 
 // Define the type for the dictionary loader
 type DictionaryLoader = () => Promise<Dictionary>;
