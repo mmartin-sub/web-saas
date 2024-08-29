@@ -38,13 +38,13 @@ export function SiteFooter({
           </p>
           <div className="flex space-x-4">
             <Link
-              href="/${lang}/external/privacy"
+              href="{`/${lang}/external/privacy`}"
               className="text-sm text-muted-foreground hover:underline"
             >
               Privacy
             </Link>
             <Link
-              href="/${lang}/external/terms"
+              href="{`/${lang}/external/terms`}"
               className="text-sm text-muted-foreground hover:underline"
             >
               Terms
