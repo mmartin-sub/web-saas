@@ -3,7 +3,7 @@ import * as React from "react";
 import { cn } from "@saasfly/ui";
 import * as Icons from "@saasfly/ui/icons";
 
-type EmptyPlaceholderProps = React.HTMLAttributes;
+type EmptyPlaceholderProps = React.HTMLAttributes<HTMLDivElement>;
 
 export function EmptyPlaceholder({
   className,
@@ -46,7 +46,7 @@ EmptyPlaceholder.Icon = function EmptyPlaceHolderIcon({
   );
 };
 
-type EmptyPlacholderTitleProps = React.HTMLAttributes;
+type EmptyPlacholderTitleProps = React.HTMLAttributes<HTMLDivElement>;
 
 EmptyPlaceholder.Title = function EmptyPlaceholderTitle({
   className,
@@ -58,7 +58,7 @@ EmptyPlaceholder.Title = function EmptyPlaceholderTitle({
   );
 };
 
-type EmptyPlacholderDescriptionProps = React.HTMLAttributes;
+type EmptyPlacholderDescriptionProps = React.HTMLAttributes<HTMLDivElement>;
 
 EmptyPlaceholder.Description = function EmptyPlaceholderDescription({
   className,

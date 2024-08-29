@@ -67,7 +67,7 @@ const isValidLocation = (
 };
 
 export function ClusterConfig({ cluster, params: { lang } }: ClusterProps) {
-  const form = useForm<z.infer>({
+  const form = useForm<z.infer<typeof FormSchema>>({
     defaultValues: {
       name: cluster.name, // default value
       location: isValidLocation(cluster.location)

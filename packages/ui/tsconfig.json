@@ -1,6 +1,7 @@
 {
   "extends": "@saasfly/typescript-config/base.json",
   "compilerOptions": {
+     "rootDir": "./src",
     "tsBuildInfoFile": "node_modules/.cache/tsbuildinfo.json"
   },
   "include": ["*.ts", "src"],

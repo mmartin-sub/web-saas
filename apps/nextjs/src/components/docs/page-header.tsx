@@ -1,6 +1,6 @@
 import { cn } from "@saasfly/ui";
 
-interface DocsPageHeaderProps extends React.HTMLAttributes {
+interface DocsPageHeaderProps extends React.HTMLAttributes<HTMLDivElement> {
   heading: string;
   text?: string;
 }

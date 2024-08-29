@@ -30,7 +30,7 @@
     "prettier": "3.3.3",
     "prisma": "^5.19.0",
     "prisma-kysely": "1.8.0",
-    "@types/pg": "8.11.7",
+    "@types/pg": "8.11.8",
     "typescript": "5.5.4"
   },
   "eslintConfig": {

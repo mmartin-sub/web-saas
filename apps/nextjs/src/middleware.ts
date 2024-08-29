@@ -28,7 +28,7 @@ const publicRoute = [
 
 function getLocale(request: NextRequest): string | undefined {
   // Negotiator expects plain object so we need to transform headers
-  const negotiatorHeaders: Record = {};
+  const negotiatorHeaders: Record<string, string> = {};
   request.headers.forEach((value, key) => (negotiatorHeaders[key] = value));
   const locales = Array.from(i18n.locales);
   // Use negotiator and intl-localematcher to get best locale

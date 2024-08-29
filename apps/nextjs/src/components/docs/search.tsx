@@ -6,7 +6,7 @@ import { cn } from "@saasfly/ui";
 import { Input } from "@saasfly/ui/input";
 import { toast } from "@saasfly/ui/use-toast";
 
-interface DocsSearchProps extends React.HTMLAttributes {
+interface DocsSearchProps extends React.HTMLAttributes<HTMLFormElement> {
   lang: string;
 }
 

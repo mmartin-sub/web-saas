@@ -10,8 +10,8 @@ interface Post {
   description?: string;
   date: string;
   published: boolean;
-  image: string;
-  alt_image: string;
+  image?: string;
+  alt_image?: string;
   authors: string[];
   slug: string;
 }
