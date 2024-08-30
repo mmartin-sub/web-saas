@@ -9,6 +9,7 @@ import {
 
 import type { Locale } from "~/config/i18n-config";
 import { priceFaqDataMap } from "~/config/price/price-faq-data";
+import { Dictionary} from "~/lib/get-dictionary";
 
 export function PricingFaq({
   params: { lang },
@@ -17,7 +18,7 @@ export function PricingFaq({
   params: {
     lang: Locale;
   };
-  dict: Record<string, Record<string, string>>;
+  dict: Dictionary['price'];
 }) {
   const pricingFaqData = priceFaqDataMap[lang];
   return (

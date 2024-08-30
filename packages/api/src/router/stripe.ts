@@ -8,7 +8,7 @@ import { stripe } from "@saasfly/stripe";
 //import { pricingData } from "~/config/price";
 //import { priceDataMap } from "../../../../apps/nextjs/src/config/price";
 
-import priceDataMap from "./price-prod.json";
+import priceDataMap from "./stripe-pricing-prod.json";
 
 import { env } from "../env.mjs";
 import { createTRPCRouter, protectedProcedure } from "../trpc";

@@ -2,28 +2,33 @@ import { SubscriptionPlan } from "@saasfly/db";
 
 import { env } from "./env.mjs";
 
+// const priceDataMap: Record<string, SubscriptionPlan[]> = {};
+
+import priceDataMap from "./../../api/src/router/stripe-pricing-prod.json";
+
+// We load the 'en' default one to get the mapping
+const transformedPlans = priceDataMap.en.reduce((acc, plan) => {
+  const planType = plan.id.toUpperCase() as PlanType;
+
+  if (plan.stripeIds.monthly) {
+    acc[plan.stripeIds.monthly] = planType;
+    acc[plan.stripeIds.yearly] = planType;
+  }
+  return acc;
+}, {} as Record<string, PlanType>);
+
+
 export const PLANS: Record<
   string,
   (typeof SubscriptionPlan)[keyof typeof SubscriptionPlan]
-> = {
-  // @ts-ignore
-  [env.NEXT_PUBLIC_STRIPE_STD_MONTHLY_PRICE_ID]: SubscriptionPlan.STD,
-  // @ts-ignore
-  [env.NEXT_PUBLIC_STRIPE_STD_YEARLY_PRICE_ID]: SubscriptionPlan.STD,
-
-  // @ts-ignore
-  [env.NEXT_PUBLIC_STRIPE_PRO_MONTHLY_PRICE_ID]: SubscriptionPlan.PRO,
-  // @ts-ignore
-  [env.NEXT_PUBLIC_STRIPE_PRO_YEARLY_PRICE_ID]: SubscriptionPlan.PRO,
-
-  // @ts-ignore
-  [env.NEXT_PUBLIC_STRIPE_BUSINESS_MONTHLY_PRICE_ID]: SubscriptionPlan.BUSINESS,
-  // @ts-ignore
-  [env.NEXT_PUBLIC_STRIPE_BUSINESS_YEARLY_PRICE_ID]: SubscriptionPlan.BUSINESS,
-};
+> = transformedPlans;
 
 type PlanType = (typeof SubscriptionPlan)[keyof typeof SubscriptionPlan];
 
+// @warning: not sure it is working as expected:
+// SubscriptionPlan.BUSINESS has no price (custom) and it should not be maopped to free (price is 0)
+
+// getSubscriptionPlan returns the corresponding subscription plan based on the provided priceId
 export function getSubscriptionPlan(priceId: string | undefined): PlanType {
   return priceId && PLANS[priceId] ? PLANS[priceId]! : SubscriptionPlan.FREE;
 }

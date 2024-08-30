@@ -1,6 +1,4 @@
-/* siteConfig setup with Title and other headers
-*
-*/
+// siteConfig setup with Title and other headers
 export const siteConfig = {
   name: "Substantifik",
   description: "We provide an easier way for humans to work together",

@@ -3,7 +3,7 @@ import { getCurrentUser } from "@saasfly/auth";
 import { PricingCards } from "~/components/price/pricing-cards";
 import { PricingFaq } from "~/components/price/pricing-faq";
 import type { Locale } from "~/config/i18n-config";
-import { getDictionary } from "~/lib/get-dictionary";
+import { getDictionary ,Dictionary} from "~/lib/get-dictionary";
 import { trpc } from "~/trpc/server";
 
 export const metadata = {

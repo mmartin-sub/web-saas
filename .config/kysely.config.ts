@@ -7,6 +7,8 @@ import {
 import { defineConfig } from "kysely-ctl";
 
 export default defineConfig({
+  // see https://github.com/kysely-org/kysely-ctl for extra reference about the options
+
   // replace me with a real dialect instance OR a dialect name + `dialectConfig` prop.
   dialect: {
     createAdapter() {

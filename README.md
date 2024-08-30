@@ -49,6 +49,8 @@ On top of the fork:
 - [ ] Propose Resend and other provider through (nodemailer)[https://community.nodemailer.com]
 - [ ] Add a GDPR banner such as : We use tracking cookies to understand how you use the product and help us improve it! Please accept cookies to help us improve. if cookie is sent for tracking (not the case today)
 - [ ] setup test scenario as per [https://authjs.dev/guides/testing] or Cypress
+- [ ] Review the color using the browser extennsion from (Designer GUI)[https://www.designgui.io/]
+- [ ] Review best practices from https://www.youtube.com/@WebDevEducation/featured
 
 ## Known issues
 

@@ -1,8 +1,15 @@
 generator client {
+  // https://www.npmjs.com/package/prisma-kysely
   provider     = "prisma-kysely"
+  // Optionally provide a destination directory for the generated file
+  // and a filename of your choice
   output       = "."
   fileName     = "types.ts"
+  // Required for netlify deployement
+  binaryTargets = ["native", "rhel-openssl-3.0.x"]
+  // Optionally generate runtime enums to a separate file
   enumFileName = "enums.ts"
+
 }
 
 datasource db {
@@ -13,6 +20,7 @@ datasource db {
 
 enum SubscriptionPlan {
   FREE
+  STD
   PRO
   BUSINESS
 }
@@ -49,6 +57,7 @@ model Account {
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([provider, providerAccountId])
+  @@index([userId])
 }
 
 model Session {
@@ -57,6 +66,8 @@ model Session {
   userId       String
   expires      DateTime
   user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
 }
 
 model User {

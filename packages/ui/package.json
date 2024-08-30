@@ -44,7 +44,7 @@
     "@radix-ui/react-toggle-group": "next",
     "@radix-ui/react-tooltip": "next",
     "@react-email/button": "0.0.17",
-    "@react-email/components": "0.0.23",
+    "@react-email/components": "0.0.24",
     "@react-email/html": "0.0.10",
     "class-variance-authority": "0.7.0",
     "clsx": "2.1.1",
@@ -56,8 +56,8 @@
     "@tsparticles/engine": "3.5.0",
     "@tsparticles/slim": "3.5.0",
     "@react-three/fiber": "8.17.6",
-    "@react-three/drei": "9.111.4",
-    "three": "0.167.1",
+    "@react-three/drei": "9.111.5",
+    "three": "0.168.0",
     "three-globe": "2.31.1"
   },
   "devDependencies": {
@@ -65,7 +65,7 @@
     "@saasfly/prettier-config": "workspace:*",
     "@saasfly/typescript-config": "workspace:*",
     "@saasfly/tailwind-config": "workspace:*",
-    "@types/react": "18.3.4",
+    "@types/react": "18.3.5",
     "@tanstack/react-table": "8.20.5",
     "date-fns": "3.6.0",
     "eslint": "9.9.1",
