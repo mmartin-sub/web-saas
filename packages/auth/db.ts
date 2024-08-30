@@ -1,6 +1,14 @@
 import { createKysely } from "@vercel/postgres-kysely";
 import type { GeneratedAlways } from "kysely";
 
+// See for reference: https://authjs.dev/getting-started/adapters/kysely
+
+// This adapter exports a wrapper of the original `Kysely` class called `KyselyAuth`,
+// that can be used to provide additional type-safety.
+// While using it isn't required, it is recommended as it will verify
+// that the database interface has all the fields that Auth.js expects.
+import { KyselyAuth } from "@auth/kysely-adapter"
+
 interface Database {
   User: {
     id: GeneratedAlways<string>;
@@ -36,4 +44,6 @@ interface Database {
   };
 }
 
+// export const db = new KyselyAuth<Database>({
+// Not working, compiler error
 export const db = createKysely<Database>();

@@ -53,6 +53,8 @@ bun.lockb
 # Local and build overwide env
 .env.development.local
 .env.production.local
+.env.development
+.env.production
 
 # Part of the build process
 /i18n/

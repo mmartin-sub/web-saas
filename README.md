@@ -18,6 +18,17 @@ On top of the fork:
 - in github, setup some secret (see workflows)
 - install i18next-scanner/i18next-scanner-typescript (i.e. `bun run 18next:scanner`)
 
+## Install
+### for Dev
+```
+bun db:push
+bun run build
+bun dev
+```
+### for prod
+```
+bun db:push:prod
+```
 ## Setup
 
 - i18n [config](apps/nextjs/src/config/i18n-config.ts)
