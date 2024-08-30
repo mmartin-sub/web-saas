@@ -30,7 +30,7 @@ export const getDictionary = async (locale: Locale): Promise<Dictionary> => {
   return loader();
 };
 
-/* getDictionarySync
+/* getDictionarySync is not needed as the function is async. It would be used like this:
 *
 */
 export const getDictionarySync = (locale: Locale) : Promise<Dictionary> =>

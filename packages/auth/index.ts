@@ -5,6 +5,8 @@ import type {
 } from "next";
 import { KyselyAdapter } from "@auth/kysely-adapter";
 import { getServerSession, type NextAuthOptions, type User } from "next-auth";
+
+// EmailProvider is for sending Verification Token by email, so no password
 import EmailProvider from "next-auth/providers/email";
 import GitHubProvider from "next-auth/providers/github";
 
@@ -42,11 +44,14 @@ export const authOptions: NextAuthOptions = {
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-expect-error
   adapter: KyselyAdapter(db),
+
   providers: [
+    //We keep github for now, but we don't want to support it in the future
     GitHubProvider({
       clientId: env.GITHUB_CLIENT_ID!,
       clientSecret: env.GITHUB_CLIENT_SECRET!,
     }),
+
     EmailProvider({
       sendVerificationRequest: async ({ identifier, url }) => {
         const user = await db

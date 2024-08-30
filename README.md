@@ -46,6 +46,9 @@ On top of the fork:
 - [x] Many lint issue about any to clean-up from upstream
 - [ ] Review dict variable types <Record> across code base
 - [ ] Review stripe-pricing.json, so benefits and limitations can be translated with crowdin, need to extract sub-piece of the json.
+- [ ] Propose Resend and other provider through (nodemailer)[https://community.nodemailer.com]
+- [ ] Add a GDPR banner such as : We use tracking cookies to understand how you use the product and help us improve it! Please accept cookies to help us improve. if cookie is sent for tracking (not the case today)
+- [ ] setup test scenario as per [https://authjs.dev/guides/testing] or Cypress
 
 ## Known issues
 

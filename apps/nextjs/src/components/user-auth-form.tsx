@@ -22,8 +22,10 @@ interface UserAuthFormProps extends React.HTMLAttributes<HTMLElement> {
 }
 
 const userAuthSchema = z.object({
-  email: z.string().email(),
-  password: z.string().min(6),
+  email: z.string().email("Please provide a valid e-mail address."),
+  password: z.string().min(6, {
+    message: "Password must be at least 6 characters.",
+  }),
 });
 
 type FormData = z.infer<typeof userAuthSchema>;

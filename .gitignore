@@ -84,3 +84,6 @@ apps/nextjs/netlify/
 
 # VS code history
 .history/
+
+# Cypress
+cypress.env.json
