@@ -11,7 +11,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@auth/kysely-adapter": "0.4.2",
+    "@auth/kysely-adapter": "1.4.2",
     "@saasfly/db": "workspace:*",
     "@t3-oss/env-nextjs": "0.11.1",
     "next": "14.2.7",

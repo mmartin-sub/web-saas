@@ -2,7 +2,7 @@
   "name": "nextjs-template",
   "private": true,
   "scripts": {
-    "build": "turbo build ",
+    "build": "NODE_ENV='production' turbo build ",
     "crowdin": "crowdin ",
     "crowdin:upload": "set -a && source .env.local && set +a &&  crowdin upload",
     "crowdin:download": "set -a && source .env.local && set +a && crowdin download",
