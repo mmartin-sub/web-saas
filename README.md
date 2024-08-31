@@ -62,6 +62,7 @@ bun db:push:prod
 - [ ] setup test scenario as per [https://authjs.dev/guides/testing] or Cypress
 - [ ] Review the color using the browser extennsion from (Designer GUI)[https://www.designgui.io/]
 - [ ] Review best practices from https://www.youtube.com/@WebDevEducation/featured
+- [ ] Create a env.d.ts/env.mjs that support interface ProcessEnv and complete missing ones
 
 ## Known issues
 

@@ -73,3 +73,11 @@ export const SITECONFIG_KEYWORDS = [
  * @constant
  */
 export const DELAY_FEATURE = 3000;
+
+/**
+ * define the in right part of the email of the web site.
+ * in an ideal word, should be part of the .env file
+ * @todo: implement it using .env file
+ * @constant
+ */
+export const domainexamples = '@substantifik.com';

@@ -58,7 +58,7 @@
     "@tanstack/eslint-plugin-query": "^5.53.0",
     "@turbo/gen": "1.13.4",
     "check-dependency-version-consistency": "4.1.0",
-    "eslint-config-turbo": "^2.1.0",
+    "eslint-config-turbo": "^2.1.1",
     "i18next-scanner": "^4.5.0",
     "i18next-scanner-typescript": "^1.2.1",
     "kysely-ctl": "^0.9.0",

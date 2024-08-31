@@ -39,6 +39,8 @@ import {
   TableRow,
 } from "@saasfly/ui/table";
 
+import * as constp from "~/lib/constants";
+
 export default function Dashboard() {
   return (
     <div className="flex min-h-screen w-full flex-col">
@@ -250,7 +252,7 @@ export default function Dashboard() {
                     <TableCell>
                       <div className="font-medium">Liam Johnson</div>
                       <div className="hidden text-sm text-muted-foreground md:inline">
-                        liam@example.com
+                        liam{constp.domainexamples}
                       </div>
                     </TableCell>
                     <TableCell className="hidden xl:table-column">
@@ -270,7 +272,7 @@ export default function Dashboard() {
                     <TableCell>
                       <div className="font-medium">Olivia Smith</div>
                       <div className="hidden text-sm text-muted-foreground md:inline">
-                        olivia@example.com
+                        olivia{constp.domainexamples}
                       </div>
                     </TableCell>
                     <TableCell className="hidden xl:table-column">
@@ -290,7 +292,7 @@ export default function Dashboard() {
                     <TableCell>
                       <div className="font-medium">Noah Williams</div>
                       <div className="hidden text-sm text-muted-foreground md:inline">
-                        noah@example.com
+                        noah{constp.domainexamples}
                       </div>
                     </TableCell>
                     <TableCell className="hidden xl:table-column">
@@ -310,7 +312,7 @@ export default function Dashboard() {
                     <TableCell>
                       <div className="font-medium">Emma Brown</div>
                       <div className="hidden text-sm text-muted-foreground md:inline">
-                        emma@example.com
+                        emma{constp.domainexamples}
                       </div>
                     </TableCell>
                     <TableCell className="hidden xl:table-column">
@@ -330,7 +332,7 @@ export default function Dashboard() {
                     <TableCell>
                       <div className="font-medium">Liam Johnson</div>
                       <div className="hidden text-sm text-muted-foreground md:inline">
-                        liam@example.com
+                        liam{constp.domainexamples}
                       </div>
                     </TableCell>
                     <TableCell className="hidden xl:table-column">
@@ -365,7 +367,7 @@ export default function Dashboard() {
                     Olivia Martin
                   </p>
                   <p className="text-sm text-muted-foreground">
-                    olivia.martin@email.com
+                    olivia.martin{constp.domainexamples}
                   </p>
                 </div>
                 <div className="ml-auto font-medium">+$1,999.00</div>
@@ -380,7 +382,7 @@ export default function Dashboard() {
                     Jackson Lee
                   </p>
                   <p className="text-sm text-muted-foreground">
-                    jackson.lee@email.com
+                    jackson.lee{constp.domainexamples}
                   </p>
                 </div>
                 <div className="ml-auto font-medium">+$39.00</div>
@@ -395,7 +397,7 @@ export default function Dashboard() {
                     Isabella Nguyen
                   </p>
                   <p className="text-sm text-muted-foreground">
-                    isabella.nguyen@email.com
+                    isabella.nguyen{constp.domainexamples}
                   </p>
                 </div>
                 <div className="ml-auto font-medium">+$299.00</div>
@@ -410,7 +412,7 @@ export default function Dashboard() {
                     William Kim
                   </p>
                   <p className="text-sm text-muted-foreground">
-                    will@email.com
+                    will{constp.domainexamples}
                   </p>
                 </div>
                 <div className="ml-auto font-medium">+$99.00</div>
@@ -425,7 +427,7 @@ export default function Dashboard() {
                     Sofia Davis
                   </p>
                   <p className="text-sm text-muted-foreground">
-                    sofia.davis@email.com
+                    sofia.davis{constp.domainexamples}
                   </p>
                 </div>
                 <div className="ml-auto font-medium">+$39.00</div>
