@@ -62,7 +62,15 @@ bun db:push:prod
 - [ ] setup test scenario as per [https://authjs.dev/guides/testing] or Cypress
 - [ ] Review the color using the browser extennsion from (Designer GUI)[https://www.designgui.io/]
 - [ ] Review best practices from https://www.youtube.com/@WebDevEducation/featured
-- [ ] Create a env.d.ts/env.mjs that support interface ProcessEnv and complete missing ones
+- [ ] Create a env.d.ts/env.mjs that support interface ProcessEnv and complete missing ones; review (T3 env)[https://env.t3.gg/docs/core]
+- [ ] Split the DB connection url between the authentification, session and other activities (different schema/user credentials at the minimum). The best would be to move some production activities to a different url such as: api.example.com
+- [ ] Need to define a signOut page and workflow for logout - handleSignOut
+- [ ] Review the i18n integration and leverage next or React components, see Trans options within:
+
+### Authentification
+What to review:
+- [ ] See youtube video to review what can be done: https://www.youtube.com/watch?v=TLGFTH4s_0Y, see source from: https://github.com/DaliGabriel/NextAuthExample
+- [ ] Possibly review the JWT token approach (https://github.com/nextauthjs/next-auth/issues/11295)
 
 ## Known issues
 

@@ -3,6 +3,11 @@ apps/nextjs/.next/
 apps/nextjs/.contentlayer/
 
 #Specific files, mix between yaml and json; not understood well by prettier
-/crowdin.yml
+crowdin.yml
 
 .history/
+
+turbo/generators/config.ts
+
+packages/db/prisma/enums.ts
+packages/db/prisma/types.ts

@@ -30,7 +30,7 @@ export default async function RegisterPage({
           "absolute right-4 top-4 md:right-8 md:top-8",
         )}
       >
-        {dict.marketing!.login!}
+        {dict.marketing.login}
       </Link>
       <div className="hidden h-full bg-muted lg:block" />
       <div className="lg:p-8">
@@ -38,27 +38,28 @@ export default async function RegisterPage({
           <div className="flex flex-col space-y-2 text-center">
             {/*<Icons.Logo className="mx-auto h-6 w-6" />*/}
             <h1 className="text-2xl font-semibold tracking-tight">
-              Create an account
+            {dict.login.create_account}
             </h1>
             <p className="text-sm text-muted-foreground">
-              Enter your email below to create your account
+            {dict.login.entermail_below}
             </p>
           </div>
-          <UserAuthForm lang={lang} dictLogin={dict.login!} disabled={false} />
+          <UserAuthForm lang={lang} dictLogin={dict.login} disabled={false} typeform="signup"/>
           <p className="px-8 text-center text-sm text-muted-foreground">
-            By clicking continue, you agree to our{" "}
+          {/*By clicking continue, you agree to */}
+            {dict.login.click_agree}{" "}
             <Link
               href={`/${lang}/external/terms`}
               className="hover:text-brand underline underline-offset-4"
             >
-              Terms of Service
+              {dict.login.terms}
             </Link>{" "}
             and{" "}
             <Link
               href={`/${lang}/external/privacy`}
               className="hover:text-brand underline underline-offset-4"
             >
-              Privacy Policy
+              {dict.login.privacypolicy}
             </Link>
             .
           </p>

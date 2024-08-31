@@ -1,4 +1,4 @@
-//Define list of locales
+//i18n Defines list of locales
 export const i18n = {
   defaultLocale: "en",
   locales: [
@@ -9,9 +9,10 @@ export const i18n = {
   ],
 } as const;
 
+// Locale type
 export type Locale = (typeof i18n)["locales"][number];
 
-//Define list of proposed languages
+//localeMap defines list of proposed languages
 export const localeMap = {
   en: "English",
 

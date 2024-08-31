@@ -252,7 +252,7 @@ export default function Dashboard() {
                     <TableCell>
                       <div className="font-medium">Liam Johnson</div>
                       <div className="hidden text-sm text-muted-foreground md:inline">
-                        liam{constp.domainexamples}
+                        liam{constp.DOMAIN_EXAMPLES}
                       </div>
                     </TableCell>
                     <TableCell className="hidden xl:table-column">
@@ -272,7 +272,7 @@ export default function Dashboard() {
                     <TableCell>
                       <div className="font-medium">Olivia Smith</div>
                       <div className="hidden text-sm text-muted-foreground md:inline">
-                        olivia{constp.domainexamples}
+                        olivia{constp.DOMAIN_EXAMPLES}
                       </div>
                     </TableCell>
                     <TableCell className="hidden xl:table-column">
@@ -292,7 +292,7 @@ export default function Dashboard() {
                     <TableCell>
                       <div className="font-medium">Noah Williams</div>
                       <div className="hidden text-sm text-muted-foreground md:inline">
-                        noah{constp.domainexamples}
+                        noah{constp.DOMAIN_EXAMPLES}
                       </div>
                     </TableCell>
                     <TableCell className="hidden xl:table-column">
@@ -312,7 +312,7 @@ export default function Dashboard() {
                     <TableCell>
                       <div className="font-medium">Emma Brown</div>
                       <div className="hidden text-sm text-muted-foreground md:inline">
-                        emma{constp.domainexamples}
+                        emma{constp.DOMAIN_EXAMPLES}
                       </div>
                     </TableCell>
                     <TableCell className="hidden xl:table-column">
@@ -332,7 +332,7 @@ export default function Dashboard() {
                     <TableCell>
                       <div className="font-medium">Liam Johnson</div>
                       <div className="hidden text-sm text-muted-foreground md:inline">
-                        liam{constp.domainexamples}
+                        liam{constp.DOMAIN_EXAMPLES}
                       </div>
                     </TableCell>
                     <TableCell className="hidden xl:table-column">
@@ -367,7 +367,7 @@ export default function Dashboard() {
                     Olivia Martin
                   </p>
                   <p className="text-sm text-muted-foreground">
-                    olivia.martin{constp.domainexamples}
+                    olivia.martin{constp.DOMAIN_EXAMPLES}
                   </p>
                 </div>
                 <div className="ml-auto font-medium">+$1,999.00</div>
@@ -382,7 +382,7 @@ export default function Dashboard() {
                     Jackson Lee
                   </p>
                   <p className="text-sm text-muted-foreground">
-                    jackson.lee{constp.domainexamples}
+                    jackson.lee{constp.DOMAIN_EXAMPLES}
                   </p>
                 </div>
                 <div className="ml-auto font-medium">+$39.00</div>
@@ -397,7 +397,7 @@ export default function Dashboard() {
                     Isabella Nguyen
                   </p>
                   <p className="text-sm text-muted-foreground">
-                    isabella.nguyen{constp.domainexamples}
+                    isabella.nguyen{constp.DOMAIN_EXAMPLES}
                   </p>
                 </div>
                 <div className="ml-auto font-medium">+$299.00</div>
@@ -412,7 +412,7 @@ export default function Dashboard() {
                     William Kim
                   </p>
                   <p className="text-sm text-muted-foreground">
-                    will{constp.domainexamples}
+                    will{constp.DOMAIN_EXAMPLES}
                   </p>
                 </div>
                 <div className="ml-auto font-medium">+$99.00</div>
@@ -427,7 +427,7 @@ export default function Dashboard() {
                     Sofia Davis
                   </p>
                   <p className="text-sm text-muted-foreground">
-                    sofia.davis{constp.domainexamples}
+                    sofia.davis{constp.DOMAIN_EXAMPLES}
                   </p>
                 </div>
                 <div className="ml-auto font-medium">+$39.00</div>

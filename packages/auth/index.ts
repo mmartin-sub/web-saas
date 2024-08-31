@@ -39,7 +39,12 @@ export const authOptions: NextAuthOptions = {
     strategy: "jwt",
   },
   pages: {
+  // This will disable the default /api/auth/signin
     signIn: "/login",
+//    signOut: "/auth/signout",
+//     error: '/auth/error',
+//    verifyRequest: '/auth/verify-request',
+//     newUser: '/auth/new-user'
   },
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-expect-error
@@ -50,10 +55,13 @@ export const authOptions: NextAuthOptions = {
     GitHubProvider({
       clientId: env.GITHUB_CLIENT_ID!,
       clientSecret: env.GITHUB_CLIENT_SECRET!,
+      allowDangerousEmailAccountLinking:false, // default value is false, only if we want to trust github'email address and link it with magiclink account
     }),
 
     EmailProvider({
       sendVerificationRequest: async ({ identifier, url }) => {
+
+     //   console.log(db);
         const user = await db
           .selectFrom("User")
           .select(["name", "emailVerified"])
@@ -85,7 +93,10 @@ export const authOptions: NextAuthOptions = {
           console.log(error);
         }
       },
+
+
     }),
+
   ],
   callbacks: {
     session({ token, session }) {

@@ -7,12 +7,13 @@ import * as Icons from "@saasfly/ui/icons";
 
 import { trpc } from "~/trpc/client";
 import type { SubscriptionPlan, UserSubscriptionPlan } from "~/types";
+import { Dictionary } from "~/lib/get-dictionary";
 
 interface BillingFormButtonProps {
   offer: SubscriptionPlan;
   subscriptionPlan: UserSubscriptionPlan;
   year: boolean;
-  dict: Record<string, Record<string, string>>;
+  dict: Dictionary["price"];
 }
 
 export function BillingFormButton({

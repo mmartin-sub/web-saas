@@ -80,4 +80,9 @@ export const DELAY_FEATURE = 3000;
  * @todo: implement it using .env file
  * @constant
  */
-export const domainexamples = '@substantifik.com';
+export const DOMAIN_EXAMPLES = '@substantifik.com';
+
+/**
+ * Define the name of the application in the metabase headers
+ */
+export const APPLICATION_NAME= "Substantifik";

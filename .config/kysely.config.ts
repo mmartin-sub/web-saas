@@ -1,3 +1,7 @@
+/*
+* Default configuration for the CLI, not used for now, more for debugging purposes.
+*/
+
 import {
   DummyDriver,
   PostgresAdapter,

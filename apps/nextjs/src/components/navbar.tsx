@@ -12,6 +12,7 @@ import { useSigninModal } from "~/hooks/use-signin-modal";
 import type { MainNavItem } from "~/types";
 import { MainNav } from "./main-nav";
 import { UserAccountNav } from "./user-account-nav";
+import { Dictionary} from "~/lib/get-dictionary";
 
 interface NavBarProps {
   user: Pick<User, "name" | "email" | "image"> | undefined;
@@ -22,8 +23,8 @@ interface NavBarProps {
   params: {
     lang: string;
   };
-  marketing: Record<string,string>;
-  dropdown: Record<string,string>;
+  marketing: Dictionary["marketing"];
+  dropdown: Dictionary["dropdown"];
 }
 
 export function NavBar({
@@ -37,6 +38,8 @@ export function NavBar({
   dropdown,
 }: NavBarProps) {
   const scrolled = useScroll(50);
+
+  // We keep signInModal for now, we will have to change the code
   const signInModal = useSigninModal();
   return (
     <header

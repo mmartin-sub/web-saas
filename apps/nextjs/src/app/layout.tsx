@@ -39,9 +39,10 @@ export const metadata = {
   },
   description: siteConfig.description,
   keywords: constp.SITECONFIG_KEYWORDS,
+  applicationName: constp.APPLICATION_NAME,
   authors: [
     {
-      name: "Substantifik",
+      name: "Substantifik's team",
     },
   ],
   creator: "Substantifik",

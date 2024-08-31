@@ -13,18 +13,19 @@ import {
 } from "@saasfly/ui/dropdown-menu";
 
 import { UserAvatar } from "~/components/user-avatar";
+import { Dictionary } from "~/lib/get-dictionary";
 
 interface UserAccountNavProps extends React.HTMLAttributes<HTMLDivElement> {
   user: Pick<User, "name" | "email" | "image">;
   params: {
     lang: string;
   };
-  dict: Record<string, string>;
+  dict: Dictionary["dropdown"];
 }
 export function UserAccountNav({
   user,
   params: { lang },
-  dict, // in practice, it is a dict.dropdown
+  dict,
 }: UserAccountNavProps) {
   return (
     <DropdownMenu>

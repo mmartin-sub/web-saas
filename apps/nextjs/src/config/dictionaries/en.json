@@ -50,8 +50,15 @@
     "signin_email": "Log in with Email",
     "signin_others": "Or continue with",
     "signup": "Sign up",
+    "signup_email": "I want to sign-up",
+    "email": "Email",
     "privacy": "only your email and profile picture will be stored.",
     "signup_github": "Sign Up with Github",
+    "entermail_below": "Enter your email below to create your account",
+    "create_account": "Create an account",
+    "click_agree": "By clicking continue, you agree to our ",
+    "terms": "Terms of Service",
+    "privacypolicy": "Privacy Policy",
     "": ""
   },
   "common": {

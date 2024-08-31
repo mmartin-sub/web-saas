@@ -19,28 +19,45 @@ interface UserAuthFormProps extends React.HTMLAttributes<HTMLElement> {
   lang: string;
   dictLogin: DictionarySubKey;
   disabled?: boolean;
+  typeform: "signup" | "login";
 }
 
 const userAuthSchema = z.object({
-  email: z.string().email("Please provide a valid e-mail address."),
-  password: z.string().min(6, {
+  email: z.string().email(
+    /* "Please provide a valid e-mail address." */
+  ),
+  password: z
+  .string()
+  .min(6, "Please make the password at least 6 characters")
+  .optional()
+  .or(z.literal('')) // If the password is not shown, zod will not report the error and the form can't be submitted
+    /*{
     message: "Password must be at least 6 characters.",
-  }),
+  } */
+
 });
 
 type FormData = z.infer<typeof userAuthSchema>;
+
+/*
+* Could be for signup or login screen
+*/
 
 export function UserAuthForm({
   className,
   lang,
   dictLogin, //usually: {dict.login}
-  disabled,
+  disabled = false,
+  typeform,
   ...props
 }: UserAuthFormProps) {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors ,
+      // isDirty, isSubmitting, touchedFields, submitCount
+
+    },
   } = useForm<FormData>({
     resolver: zodResolver(userAuthSchema),
   });
@@ -49,7 +66,14 @@ export function UserAuthForm({
   const searchParams = useSearchParams();
 
   async function onSubmit(data: FormData) {
+
+    console.log("Form submitted with data:", data); // Log the submitted data
+    console.log("Current loading state before submission:", isLoading); // Log isLoading before setting it
+
     setIsLoading(true);
+
+    console.log("Loading state after setting to true:", isLoading); // Log isLoading after setting it
+
 
     const signInResult = await signIn("email", {
       email: data.email.toLowerCase(),
@@ -60,6 +84,11 @@ export function UserAuthForm({
     });
 
     setIsLoading(false);
+
+    console.log("Loading state after submission:", isLoading); // Log isLoading after setting it back
+
+
+ //   console.log('Signin result: ',signInResult);
 
     if (!signInResult?.ok) {
       return toast({
@@ -81,7 +110,7 @@ export function UserAuthForm({
         <div className="grid gap-2">
           <div className="grid gap-1">
             <Label className="sr-only" htmlFor="email">
-              Email
+              {dictLogin.email}
             </Label>
             <Input
               id="email"
@@ -90,9 +119,10 @@ export function UserAuthForm({
               autoCapitalize="none"
               autoComplete="email"
               autoCorrect="off"
-              //  from upstream, but not sure what disabled is doing
+              //  disabled if from upstream
               disabled={isLoading || isGitHubLoading || disabled}
               {...register("email")}
+              required
             />
             {errors?.email && (
               <p className="px-1 text-xs text-red-600">
@@ -100,11 +130,12 @@ export function UserAuthForm({
               </p>
             )}
           </div>
-          <button  type="submit" className={cn(buttonVariants())} disabled={isLoading}>
+          <button type="submit" className={cn(buttonVariants())} disabled={isLoading}>
             {isLoading && (
               <Icons.Spinner className="mr-2 h-4 w-4 animate-spin" />
             )}
-            {dictLogin.signin_email}
+            { (typeform=="login")? dictLogin.signin_email: dictLogin.signup_email}
+
             {/* Sign In with Email */}
           </button>
         </div>

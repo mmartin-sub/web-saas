@@ -24,7 +24,7 @@ export default async function LoginPage({
   };
 }) {
   const dict = await getDictionary(lang);
-  const dictLogin=dict.login!;
+  const dictLogin=dict.login;
   return (
     <div className="container flex h-screen w-screen flex-col items-center justify-center">
       <Link
@@ -55,7 +55,7 @@ export default async function LoginPage({
             {dictLogin.signin_title}
           </p>
         </div>
-        <UserAuthForm lang={lang} dictLogin={dictLogin} />
+        <UserAuthForm lang={lang} dictLogin={dictLogin} typeform="login"/>
         {/*
         Disabled section in upstream
          */}
