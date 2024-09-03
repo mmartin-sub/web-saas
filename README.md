@@ -67,10 +67,23 @@ bun db:push:prod
 - [ ] Need to define a signOut page and workflow for logout - handleSignOut
 - [ ] Review the i18n integration and leverage next or React components, see Trans options within:
 
-### Authentification
+#### Emails
+- [ ] refactor the code so the email piece and the templates and puut aside of the authentification module.
+- [ ] Different API - Resend Key / from-email fields/ template could exist for dev and prod
+
+#### Payments
+- [ ] Refactor Stripe code to move products and prices from one env to another.
+- [ ] Refactor code for capture the pricing information and load them on the web page or internally, so the proper configuration is coming from env
+
+#### Authentification
 What to review:
 - [ ] See youtube video to review what can be done: https://www.youtube.com/watch?v=TLGFTH4s_0Y, see source from: https://github.com/DaliGabriel/NextAuthExample
 - [ ] Possibly review the JWT token approach (https://github.com/nextauthjs/next-auth/issues/11295)
+- [ ] If email service of DB service is delayed, details should be logged and users advised to wait as "the side is under scheduled maintenance and further details for the authentification migth be delayed"
+
+#### Logging capability
+- [ ] replace console.log or console.debug within the code with external service for logging purposes. for error messages, need to raise a notification; maybe one maximum per hour/day
+- [ ] Include prisma logging into the main logging subsystem
 
 ## Known issues
 
@@ -82,6 +95,7 @@ What to review:
 - [ ] there are some dict.common! for exmple in the code, not sure why ! is needed
 - [ ] Create an account (register page) should have sign-up button, not Login with email
 - [ ] Github auth was not working, code has been removed
+- [ ] (Link preview)[https://linkpreview.xyz/] reports preview of web site with logo not centered properly
 
 ## Extra Documentation
 

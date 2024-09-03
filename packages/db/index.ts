@@ -1,4 +1,5 @@
-import { createKysely } from "@vercel/postgres-kysely";
+// import { createKysely } from "@vercel/postgres-kysely";
+import { createKysely } from "./../auth/postgres-kysely-g";
 
 import type { DB } from "./prisma/types";
 

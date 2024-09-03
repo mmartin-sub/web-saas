@@ -46,6 +46,9 @@ export const authOptions: NextAuthOptions = {
 //    verifyRequest: '/auth/verify-request',
 //     newUser: '/auth/new-user'
   },
+
+  // @todo need review as maybe something is missing here
+  // See open issue from: https://github.com/nextauthjs/next-auth/issues/8660
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-expect-error
   adapter: KyselyAdapter(db),
@@ -61,7 +64,7 @@ export const authOptions: NextAuthOptions = {
     EmailProvider({
       sendVerificationRequest: async ({ identifier, url }) => {
 
-     //   console.log(db);
+        console.log('EmailProvider Log');
         const user = await db
           .selectFrom("User")
           .select(["name", "emailVerified"])
@@ -113,6 +116,8 @@ export const authOptions: NextAuthOptions = {
     },
     async jwt({ token, user }) {
       const email = token?.email ?? "";
+
+      console.log('jwt Log');
       const dbUser = await db
         .selectFrom("User")
         .where("email", "=", email)

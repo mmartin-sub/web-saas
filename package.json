@@ -54,7 +54,7 @@
     "@crowdin/cli": "^4.1.1",
     "@netlify/plugin-lighthouse": "^6.0.0",
     "@netlify/plugin-nextjs": "^5.7.0",
-    "@prisma/client": "^5.19.0",
+    "@prisma/client": "^5.19.1",
     "@tanstack/eslint-plugin-query": "^5.53.0",
     "@turbo/gen": "1.13.4",
     "check-dependency-version-consistency": "4.1.0",

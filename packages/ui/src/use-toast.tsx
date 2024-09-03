@@ -1,10 +1,11 @@
 // Inspired by react-hot-toast library
+// But lib is old/outdted? https://github.com/timolins/react-hot-toast
 import * as React from "react";
 
 import type { ToastActionElement, ToastProps } from "./toast";
 
 const TOAST_LIMIT = 1;
-const TOAST_REMOVE_DELAY = 1000000;
+const TOAST_REMOVE_DELAY = 1000 * 1000; // In msec
 
 type ToasterToast = ToastProps & {
   id: string;

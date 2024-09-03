@@ -61,6 +61,7 @@ export type User = {
   email: string | null;
   emailVerified: Timestamp | null;
   image: string | null;
+  role: string | null;
 };
 export type VerificationToken = {
   identifier: string;
