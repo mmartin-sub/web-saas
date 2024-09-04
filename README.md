@@ -67,6 +67,9 @@ bun db:push:prod
 - [ ] Need to define a signOut page and workflow for logout - handleSignOut
 - [ ] Review the i18n integration and leverage next or React components, see Trans options within:
 
+### UI
+- [ ] Review how (shadcn)[https://ui.shadcn.com/docs/] is installed as it seems the code was copied without installing properly the lib; `bunx --bun shadcn-ui@latest add alert` is not working as expected.
+
 #### Emails
 - [ ] refactor the code so the email piece and the templates and puut aside of the authentification module.
 - [ ] Different API - Resend Key / from-email fields/ template could exist for dev and prod
@@ -74,6 +77,7 @@ bun db:push:prod
 #### Payments
 - [ ] Refactor Stripe code to move products and prices from one env to another.
 - [ ] Refactor code for capture the pricing information and load them on the web page or internally, so the proper configuration is coming from env
+- [ ] Stripe events source should come form package: https://github.com/kgajera/stripe-event-types and not be embeded directly
 
 #### Authentification
 What to review:
@@ -100,6 +104,7 @@ What to review:
 ## Extra Documentation
 
 - tooling/tailwind-config/index.ts: tailwind extra configuration
+- testing stripe can be done using test credit card number, see: https://docs.stripe.com/testing
 
 ## Production
 

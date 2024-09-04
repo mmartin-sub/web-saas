@@ -29,3 +29,5 @@ SECURITY.md
 
 # Application folder
 reports
+apps/nextjs/src/config/price/prices.json
+apps/nextjs/src/config/price/products.json

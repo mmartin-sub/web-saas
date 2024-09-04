@@ -67,12 +67,12 @@ export function UserAuthForm({
 
   async function onSubmit(data: FormData) {
 
-    console.log("Form submitted with data:", data); // Log the submitted data
-    console.log("Current loading state before submission:", isLoading); // Log isLoading before setting it
+//    console.log("Form submitted with data:", data); // Log the submitted data
+//    console.log("Current loading state before submission:", isLoading); // Log isLoading before setting it
 
     setIsLoading(true);
 
-    console.log("Loading state after setting to true:", isLoading); // Log isLoading after setting it
+ //   console.log("Loading state after setting to true:", isLoading); // Log isLoading after setting it
 
 
     const signInResult = await signIn("email", {
@@ -85,7 +85,7 @@ export function UserAuthForm({
 
     setIsLoading(false);
 
-    console.log("Loading state after submission:", isLoading); // Log isLoading after setting it back
+  //  console.log("Loading state after submission:", isLoading); // Log isLoading after setting it back
 
 
  //   console.log('Signin result: ',signInResult);

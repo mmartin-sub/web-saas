@@ -1,8 +1,14 @@
 import { KyselyConfig, Kysely, PostgresDialect } from 'kysely';
 
-// import { Pool,QueryResult } from 'pg'
+/*
+* @neondatabase/serverless seems to support the select ion of the schema
+* But pg is not
+*/
+import { Pool } from 'pg'
+
 // Switch to neon serveless driver (https://github.com/neondatabase/serverless)
-import { Pool, neonConfig } from '@neondatabase/serverless';
+// Seems a problem, see: https://github.com/kysely-org/kysely/issues/453
+// import { Pool, neonConfig } from '@neondatabase/serverless';
 
 // Prisma Kyseley - https://github.com/valtyr/prisma-kysely
 // See generator client / provider for more information
@@ -37,7 +43,7 @@ port: 5432, // default PostgreSQL port
 pool.on('connect', (client) => {
     if (process.env.POSTGRES_URL_SCHEMA) {
         const setsearchpath=`SET search_path = '${process.env.POSTGRES_URL_SCHEMA}';`;
-        console.log('check set schema: ', setsearchpath);
+   //     console.log('check set schema: ', setsearchpath);
         client.query(setsearchpath);
     }
 

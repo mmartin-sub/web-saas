@@ -5,6 +5,7 @@ export const env = createEnv({
   shared: {},
   server: {
     STRIPE_API_KEY: z.string(),
+    WEBHOOK_SIGNING_SECRET: z.string().optional(),
   },
   client: {
   },

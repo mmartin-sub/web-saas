@@ -64,7 +64,7 @@ export const authOptions: NextAuthOptions = {
     EmailProvider({
       sendVerificationRequest: async ({ identifier, url }) => {
 
-        console.log('EmailProvider Log');
+        console.log('EmailProvider Log:', url);
         const user = await db
           .selectFrom("User")
           .select(["name", "emailVerified"])
@@ -117,7 +117,7 @@ export const authOptions: NextAuthOptions = {
     async jwt({ token, user }) {
       const email = token?.email ?? "";
 
-      console.log('jwt Log');
+  //    console.log('jwt Log');
       const dbUser = await db
         .selectFrom("User")
         .where("email", "=", email)

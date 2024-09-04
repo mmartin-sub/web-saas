@@ -86,3 +86,8 @@ export const DOMAIN_EXAMPLES = '@substantifik.com';
  * Define the name of the application in the metabase headers
  */
 export const APPLICATION_NAME= "Substantifik";
+
+/**
+ * Define if from the pricing page, we allow user to buy a subscription
+ */
+export const ALLOW_BUY = false;

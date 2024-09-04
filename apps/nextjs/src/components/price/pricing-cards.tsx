@@ -21,6 +21,12 @@ import { BillingFormButton } from "~/components/price/billing-form-button";
 import { priceDataMap } from "~/config/price/price-data";
 import { useSigninModal } from "~/hooks/use-signin-modal";
 import { UserSubscriptionPlan } from "~/types";
+import * as constp from "~/lib/constants";
+
+import { ExclamationTriangleIcon } from "@radix-ui/react-icons"
+
+import { Alert, AlertDescription, AlertTitle } from "@saasfly/ui/alert"
+//import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 
 interface PricingCardsProps {
   userId?: string;
@@ -53,6 +59,13 @@ export function PricingCards({
         <h2 className="font-heading text-3xl leading-[1.1] md:text-5xl">
           {dict.slogan}
         </h2>
+        <Alert variant="warning">
+      <ExclamationTriangleIcon className="h-8 w-8" />
+      <AlertTitle>{dict.notice_limited}</AlertTitle>
+      <AlertDescription>
+      {dict.notice_limited_long}
+      </AlertDescription>
+    </Alert>
       </div>
 
       <div className="mb-4 flex items-center gap-5">
@@ -183,6 +196,7 @@ export function PricingCards({
                         year={isYearly}
                         offer={offer}
                         subscriptionPlan={subscriptionPlan}
+                        allowbuy={constp.ALLOW_BUY}
                         dict={dict}
                       />
                     )

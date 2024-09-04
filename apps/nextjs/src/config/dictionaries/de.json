@@ -67,8 +67,8 @@
     "title_text": "Create and manage clusters."
   },
   "business_k8s": {
-    "new_cluster": "New Cluster",
-    "no_cluster_title": "No clusters created",
+    "new_cluster": "New",
+    "no_cluster_title": "Nothing defined yet",
     "no_cluster_content": "You don't have any clusters yet. Start creating cluster. ",
     "": ""
   },

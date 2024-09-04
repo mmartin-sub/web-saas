@@ -54,8 +54,8 @@
         "yearly": 399
       },
       "stripeIds": {
-        "monthly": "price_1PsokV2NLDodIyXyMFesU98R",
-        "yearly": "price_1PsokV2NLDodIyXyHHu7AES2"
+        "monthly": "price_1Pln4wRomOsbKybGSJCfNQEU",
+        "yearly": "price_1Pln67RomOsbKybG36hBuhqv"
       },
       "createLocaleData": {
         "monthly": null,
@@ -84,8 +84,8 @@
         "yearly": 199
       },
       "stripeIds": {
-        "monthly": "price_1PsokR2NLDodIyXymsgEvAzX",
-        "yearly": "price_1PsokR2NLDodIyXyotTm4blF"
+        "monthly": "price_1Pln3KRomOsbKybGfAn7XXDR",
+        "yearly": "price_1Pln5fRomOsbKybGGQUoMb3k"
       },
       "createLocaleData": {
         "monthly": null,
@@ -144,14 +144,17 @@
       "currencySign": "€",
       "position": 2,
       "prices": {
-        "monthly": null,
-        "yearly": null
+        "monthly": 39.95,
+        "yearly": 399
       },
       "stripeIds": {
+        "monthly": "price_1Pln4wRomOsbKybGSJCfNQEU",
+        "yearly": "price_1Pln67RomOsbKybG36hBuhqv"
+      },
+      "createLocaleData": {
         "monthly": null,
         "yearly": null
-      },
-      "createLocaleData": {}
+      }
     },
     {
       "id": "starter",
@@ -171,14 +174,17 @@
       "currencySign": "€",
       "position": 1,
       "prices": {
-        "monthly": null,
-        "yearly": null
+        "monthly": 19.95,
+        "yearly": 199
       },
       "stripeIds": {
+        "monthly": "price_1Pln3KRomOsbKybGfAn7XXDR",
+        "yearly": "price_1Pln5fRomOsbKybGGQUoMb3k"
+      },
+      "createLocaleData": {
         "monthly": null,
         "yearly": null
-      },
-      "createLocaleData": {}
+      }
     }
   ],
   "de": [
@@ -232,14 +238,17 @@
       "currencySign": "€",
       "position": 2,
       "prices": {
-        "monthly": null,
-        "yearly": null
+        "monthly": 39.95,
+        "yearly": 399
       },
       "stripeIds": {
+        "monthly": "price_1Pln4wRomOsbKybGSJCfNQEU",
+        "yearly": "price_1Pln67RomOsbKybG36hBuhqv"
+      },
+      "createLocaleData": {
         "monthly": null,
         "yearly": null
-      },
-      "createLocaleData": {}
+      }
     },
     {
       "id": "starter",
@@ -259,14 +268,17 @@
       "currencySign": "€",
       "position": 1,
       "prices": {
-        "monthly": null,
-        "yearly": null
+        "monthly": 19.95,
+        "yearly": 199
       },
       "stripeIds": {
+        "monthly": "price_1Pln3KRomOsbKybGfAn7XXDR",
+        "yearly": "price_1Pln5fRomOsbKybGGQUoMb3k"
+      },
+      "createLocaleData": {
         "monthly": null,
         "yearly": null
-      },
-      "createLocaleData": {}
+      }
     }
   ],
   "es": [
@@ -320,14 +332,17 @@
       "currencySign": "€",
       "position": 2,
       "prices": {
-        "monthly": null,
-        "yearly": null
+        "monthly": 39.95,
+        "yearly": 399
       },
       "stripeIds": {
+        "monthly": "price_1Pln4wRomOsbKybGSJCfNQEU",
+        "yearly": "price_1Pln67RomOsbKybG36hBuhqv"
+      },
+      "createLocaleData": {
         "monthly": null,
         "yearly": null
-      },
-      "createLocaleData": {}
+      }
     },
     {
       "id": "starter",
@@ -347,14 +362,17 @@
       "currencySign": "€",
       "position": 1,
       "prices": {
-        "monthly": null,
-        "yearly": null
+        "monthly": 19.95,
+        "yearly": 199
       },
       "stripeIds": {
+        "monthly": "price_1Pln3KRomOsbKybGfAn7XXDR",
+        "yearly": "price_1Pln5fRomOsbKybGGQUoMb3k"
+      },
+      "createLocaleData": {
         "monthly": null,
         "yearly": null
-      },
-      "createLocaleData": {}
+      }
     }
   ],
   "ch": [
@@ -408,14 +426,17 @@
       "currencySign": "CHF",
       "position": 2,
       "prices": {
-        "monthly": null,
-        "yearly": null
+        "monthly": 39.95,
+        "yearly": 399
       },
       "stripeIds": {
+        "monthly": "price_1Pln4wRomOsbKybGSJCfNQEU",
+        "yearly": "price_1Pln67RomOsbKybG36hBuhqv"
+      },
+      "createLocaleData": {
         "monthly": null,
         "yearly": null
-      },
-      "createLocaleData": {}
+      }
     },
     {
       "id": "starter",
@@ -435,14 +456,17 @@
       "currencySign": "CHF",
       "position": 1,
       "prices": {
-        "monthly": null,
-        "yearly": null
+        "monthly": 19.95,
+        "yearly": 199
       },
       "stripeIds": {
+        "monthly": "price_1Pln3KRomOsbKybGfAn7XXDR",
+        "yearly": "price_1Pln5fRomOsbKybGGQUoMb3k"
+      },
+      "createLocaleData": {
         "monthly": null,
         "yearly": null
-      },
-      "createLocaleData": {}
+      }
     }
   ]
 }

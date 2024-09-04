@@ -44,7 +44,8 @@
     "check-deps:find": "ncu -ws",
     "check-deps:globaql": "ncu -g",
     "check-deps:update": "ncu -ws -du ",
-    "stripe:dev": "stripe products list --expand data.default_price > apps/nextjs/src/config/price/products.dev.json && stripe prices list --expand=data.currency_options > apps/nextjs/src/config/price/prices.dev.json && cp apps/nextjs/src/config/price/*.dev.json apps/nextjs/src/config/price/*.json && bun run apps/nextjs/src/config/price/generate-pricing.js > apps/nextjs/src/config/price/stripe-pricing.dev.json && cp apps/nextjs/src/config/price/stripe-pricing.json apps/nextjs/src/config/price/stripe-pricing.dev.json ",
+    "stripe:generate": "./tooling/stripe-tools/stripe-download.sh",
+    "stripe:export": "stripe products list --expand data.default_price > apps/nextjs/src/config/price/products.dev.json && stripe prices list --expand=data.currency_options > apps/nextjs/src/config/price/prices.dev.json && cp apps/nextjs/src/config/price/*.dev.json apps/nextjs/src/config/price/*.json && bun run apps/nextjs/src/config/price/generate-pricing.js > apps/nextjs/src/config/price/stripe-pricing.dev.json && cp apps/nextjs/src/config/price/stripe-pricing.json apps/nextjs/src/config/price/stripe-pricing.dev.json",
     "gen": "turbo gen --config 'turbo/generators/config.ts'",
     "update": "bun run update",
     "telemetry:off": "turbo telemetry off",
@@ -69,7 +70,7 @@
     "tailwind-config-viewer": "^2.0.4",
     "turbo": "1.13.4",
     "typescript": "5.5.4",
-    "vercel": "^37.2.1"
+    "vercel": "^37.3.0"
   },
   "engines": {
     "node": ">=20.0.0"

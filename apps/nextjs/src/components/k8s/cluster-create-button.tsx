@@ -16,7 +16,7 @@ import { trpc } from "~/trpc/client";
 
 interface K8sCreateButtonProps extends ButtonProps {
   customProp?: string;
-  dict: Record<string, Record<string, string>>;
+  dict: Dictionary["business_k8s"];
 }
 
 export function K8sCreateButton({
@@ -81,7 +81,7 @@ export function K8sCreateButton({
       ) : (
         <Icons.Add className="mr-2 h-4 w-4" />
       )}
-      {dict.business_k8s?.new_cluster}
+      {dict.new_cluster}
     </button>
   );
 }

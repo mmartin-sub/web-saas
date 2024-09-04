@@ -52,8 +52,8 @@ interface Database {
 // Function to log the default configuration and dialect setup
 function reportKyselyConfig(db: Kysely<Database>) {
 
-  console.log('DB Connection: ',db.connection.toString);
-  console.log('DB schema: ',db.schema);
+//  console.log('DB Connection: ',db.connection.toString);
+ // console.log('DB schema: ',db.schema);
 
 }
 

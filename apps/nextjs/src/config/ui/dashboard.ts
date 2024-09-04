@@ -8,7 +8,7 @@ export const getDashboardConfig = async ({
   params: {
     lang: Locale;
   };
-}): Promise => {
+}): Promise<DashboardConfig> => {
   const dict = await getDictionary(lang);
 
   return {
@@ -26,7 +26,7 @@ export const getDashboardConfig = async ({
     sidebarNav: [
       {
         id: "clusters",
-        title: dict.dashboard.sidebar_nav_clusters,
+        title: dict.dashboard.sidebar_nav_Platform,
         href: "/dashboard/",
       },
       {

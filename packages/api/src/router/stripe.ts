@@ -8,7 +8,18 @@ import { stripe } from "@saasfly/stripe";
 //import { pricingData } from "~/config/price";
 //import { priceDataMap } from "../../../../apps/nextjs/src/config/price";
 
-import priceDataMap from "./stripe-pricing-prod.json";
+import pricingDataProd from "./stripe-pricing.prod.json";
+import pricingDataDev from "./stripe-pricing.dev.json";
+
+let priceDataMap: typeof pricingDataProd ; // | typeof pricingDataDev;
+
+if (process.env.NODE_ENV === "development") {
+  priceDataMap = pricingDataDev;
+}
+else
+{
+  priceDataMap = pricingDataProd;
+}
 
 import { env } from "../env.mjs";
 import { createTRPCRouter, protectedProcedure } from "../trpc";
@@ -76,6 +87,7 @@ export const stripeRouter = createTRPCRouter({
       }
       const email = user.email!;
 
+      // This call requires a private key
       const session = await stripe.checkout.sessions.create({
         mode: "subscription",
         payment_method_types: ["card"],
@@ -120,7 +132,9 @@ export const stripeRouter = createTRPCRouter({
     // .output(Promise<UserSubscriptionPlan>)
     .query(async (opts) => {
       noStore();
+
       const userId = opts.ctx.userId! as string;
+      console.log('userPlans for user: ', userId );
       const custom = await db
         .selectFrom("Customer")
         .select([
@@ -133,9 +147,11 @@ export const stripeRouter = createTRPCRouter({
         .executeTakeFirst();
       if (!custom) {
         // throw new Error("Custom not found");
-        console.log("Custom not found:", userId);
+        console.log("Customer not found:", userId);
         return;
       }
+
+      console.log('stripePriceId: ', custom.stripePriceId);
       // Check if user is on a paid plan.
       const isPaid =
         custom.stripePriceId &&

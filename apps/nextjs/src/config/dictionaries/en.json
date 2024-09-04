@@ -3,6 +3,9 @@
     "title": "Cheap, transparent prices!",
     "pricing": "Pricing",
     "slogan": "Start at full speed !",
+    "notice_important" : "Important notice",
+    "notice_limited": "Limited Onboarding Due to High Demand",
+    "notice_limited_long": "Thank you for your interest! Due to high demand, we are currently limiting our onboarding process. Please create an account, and we will notify you as soon as subscriptions become available again.",
     "monthly_bill": "Monthly Billing",
     "annual_bill": "Annual Billing",
     "annual_info": "will be charged when annual",
@@ -69,15 +72,16 @@
     "main_nav_documentation": "Documentation",
     "main_nav_support": "Support",
     "sidebar_nav_clusters": "Clusters",
+    "sidebar_nav_Platform": "Platform",
     "sidebar_nav_billing": "Billing",
     "sidebar_nav_settings": "Settings",
-    "title_text": "Create and manage clusters."
+    "title_text": "Create and manage your platform."
   },
 
     "business_k8s": {
-      "new_cluster": "New Cluster",
-      "no_cluster_title": "No clusters created",
-      "no_cluster_content": "You don't have any clusters yet. Start creating cluster. ",
+      "new_cluster": "New",
+      "no_cluster_title": "Nothing defined yet",
+      "no_cluster_content": "You don't have any platform setup yet. Start creating one. ",
       "": ""
     },
     "business_billing": {

@@ -12,6 +12,7 @@ import { Dictionary } from "~/lib/get-dictionary";
 interface BillingFormButtonProps {
   offer: SubscriptionPlan;
   subscriptionPlan: UserSubscriptionPlan;
+  allowbuy: boolean;
   year: boolean;
   dict: Dictionary["price"];
 }
@@ -21,9 +22,11 @@ export function BillingFormButton({
   offer,
   dict,
   subscriptionPlan,
+  allowbuy = true,
 }: BillingFormButtonProps) {
   const [isPending, startTransition] = useTransition();
 
+  // Stripe SDK requires a private key (createSession)
   async function createSession(planId: string) {
     const res = await trpc.stripe.createSession.mutate({ planId: planId });
     if (res?.url) window.location.href = res?.url;
@@ -40,7 +43,7 @@ export function BillingFormButton({
     <Button
       variant="default"
       className="w-full"
-      disabled={isPending}
+      disabled={isPending || !allowbuy}
       onClick={stripeSessionAction}
     >
       {isPending ? (

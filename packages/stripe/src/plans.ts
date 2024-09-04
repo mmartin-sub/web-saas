@@ -4,7 +4,21 @@ import { env } from "./env.mjs";
 
 // const priceDataMap: Record<string, SubscriptionPlan[]> = {};
 
-import priceDataMap from "./../../api/src/router/stripe-pricing-prod.json";
+
+import pricingDataProd from "./../../api/src/router/stripe-pricing.prod.json";
+import pricingDataDev from "./../../api/src/router/stripe-pricing.dev.json";
+
+let priceDataMap: typeof pricingDataProd ; // | typeof pricingDataDev;
+
+if (process.env.NODE_ENV === "development") {
+  priceDataMap = pricingDataDev;
+}
+else
+{
+  priceDataMap = pricingDataProd;
+}
+
+//import priceDataMap from "./../../api/src/router/stripe-pricing.prod.json";
 
 // We load the 'en' default one to get the mapping
 const transformedPlans = priceDataMap.en.reduce((acc, plan) => {

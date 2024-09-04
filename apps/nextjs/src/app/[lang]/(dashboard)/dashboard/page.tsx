@@ -37,6 +37,7 @@ export default async function DashboardPage({
   if (!user) {
     redirect(authOptions?.pages?.signIn ?? "/login");
   }
+
   const customer = await trpc.customer.queryCustomer.query({
     userId: user.id,
   });
@@ -45,18 +46,20 @@ export default async function DashboardPage({
       userId: user.id,
     });
   }
+  console.log('getCurrentUser3');
   // const accout
   const result: ClustersArray = await trpc.k8s.getClusters.query();
+  console.log('getCurrentUser4: ', result);
   if (result) {
     const clusters = result;
     const dict = await getDictionary(lang);
     return (
       <DashboardShell>
         <DashboardHeader
-          heading="kubernetes"
-          text={dict.common.dashboard.title_text}
+          heading="Platform"
+          text={dict.dashboard.title_text}
         >
-          <K8sCreateButton dict={dict.business} />
+          <K8sCreateButton dict={dict.business_k8s} />
         </DashboardHeader>
         <div>
           {clusters.length ? (
@@ -92,7 +95,7 @@ export default async function DashboardPage({
               <EmptyPlaceholder.Description>
                 {dict.business_k8s.no_cluster_content}
               </EmptyPlaceholder.Description>
-              <K8sCreateButton variant="outline" dict={dict.business} />
+              <K8sCreateButton variant="outline" dict={dict.business_k8s} />
             </EmptyPlaceholder>
           )}
         </div>

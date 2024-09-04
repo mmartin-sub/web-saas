@@ -89,3 +89,7 @@ apps/nextjs/netlify/
 
 # Cypress
 cypress.env.json
+
+# Stripe build steps
+apps/nextjs/src/config/price/prices.json
+apps/nextjs/src/config/price/products.json

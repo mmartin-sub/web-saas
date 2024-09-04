@@ -9,7 +9,7 @@ export const authRouter = createTRPCRouter({
     noStore();
     const userId = opts.ctx.userId as string;
 
-    console.log('Check Customer--');
+//    console.log('Check Customer--');
     const customer = await db
       .selectFrom("Customer")
       .select(["plan", "stripeCurrentPeriodEnd"])
@@ -17,6 +17,10 @@ export const authRouter = createTRPCRouter({
       .executeTakeFirst();
 
     if (!customer) return null;
+
+    console.log('Actual plan: ', customer.plan);
+    console.log('Valid until: ', customer.stripeCurrentPeriodEnd);
+
     return {
       plan: customer.plan,
       endsAt: customer.stripeCurrentPeriodEnd,
