@@ -1,9 +1,32 @@
 {
   "version": "0.2",
-  "ignorePaths": ["node_modules/**", "*.toml"],
+  "ignorePaths": [
+    "node_modules/**",
+    "*.toml",
+    "**/*.json"
+  ],
   "dictionaryDefinitions": [],
   "dictionaries": [],
   "words": [],
-  "ignoreWords": [],
-  "import": []
+  "ignoreWords": ["trpc", "saasfly", "substantifik", "kysely", "prisma", "neon"],
+  "import": [],
+  "enabled": true,
+  "maxNumberOfProblems": 1,
+  "useGitignore": true,
+  "usePnP": true,
+  "patterns": [
+    {
+      "name": "comment-single-line",
+      "pattern": "/#.*/g"
+    },
+    {
+      "name": "comment-multi-line",
+      "pattern": "/(?:\\/\\*[\\s\\S]*?\\*\\/)/g"
+    }
+  ],
+  "ignoreRegExpList": [
+    "/from\\s+(['\"]).*\\1/",
+     "^\\$.+",
+     "\\$\\w+"
+  ]
 }

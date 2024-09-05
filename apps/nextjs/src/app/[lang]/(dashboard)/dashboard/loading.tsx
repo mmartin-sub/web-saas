@@ -7,7 +7,7 @@ export default function DashboardLoading() {
     <DashboardShell>
       <DashboardHeader
         heading="Platform"
-        text="Create and manage your AI driven best practicess."
+        text="Create and manage your AI driven best practices."
       ></DashboardHeader>
       <div className="divide-border-200 divide-y rounded-md border">
         <BasicItemSkeleton />

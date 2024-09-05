@@ -47,7 +47,7 @@ export default async function DashboardPage({
     });
   }
   console.log('getCurrentUser3');
-  // const accout
+  // const account
   const result: ClustersArray = await trpc.k8s.getClusters.query();
   console.log('getCurrentUser4: ', result);
   if (result) {

@@ -262,7 +262,7 @@ export function PricingCards({
                         year={isYearly}
                         offer={offer}
                         subscriptionPlan={subscriptionPlan}
-                        allowbuy={constp.ALLOW_BUY}
+                        allowBuy={constp.ALLOW_BUY}
                         dict={dict}
                       />
                     )

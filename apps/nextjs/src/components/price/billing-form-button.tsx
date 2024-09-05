@@ -12,7 +12,7 @@ import { Dictionary } from "~/lib/get-dictionary";
 interface BillingFormButtonProps {
   offer: SubscriptionPlan;
   subscriptionPlan: UserSubscriptionPlan;
-  allowbuy: boolean;
+  allowBuy: boolean;
   year: boolean;
   dict: Dictionary["price"];
 }
@@ -22,7 +22,7 @@ export function BillingFormButton({
   offer,
   dict,
   subscriptionPlan,
-  allowbuy = true,
+  allowBuy = true,
 }: BillingFormButtonProps) {
   const [isPending, startTransition] = useTransition();
 
@@ -43,7 +43,7 @@ export function BillingFormButton({
     <Button
       variant="default"
       className="w-full"
-      disabled={isPending || !allowbuy}
+      disabled={isPending || !allowBuy}
       onClick={stripeSessionAction}
     >
       {isPending ? (

@@ -40,7 +40,7 @@ export const PLANS: Record<
 type PlanType = (typeof SubscriptionPlan)[keyof typeof SubscriptionPlan];
 
 // @warning: not sure it is working as expected:
-// SubscriptionPlan.BUSINESS has no price (custom) and it should not be maopped to free (price is 0)
+// SubscriptionPlan.BUSINESS has no price (custom) and it should not be mapped to free (price is 0)
 
 // getSubscriptionPlan returns the corresponding subscription plan based on the provided priceId
 export function getSubscriptionPlan(priceId: string | undefined): PlanType {
