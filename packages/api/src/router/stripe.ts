@@ -133,6 +133,7 @@ export const stripeRouter = createTRPCRouter({
     .query(async (opts) => {
       noStore();
 
+      console.log('userPlans step1' );
       const userId = opts.ctx.userId! as string;
       console.log('userPlans for user: ', userId );
       const custom = await db

@@ -24,7 +24,7 @@ export default async function PricingPage({
   if (user) {
     console.log('subscriptionPlan for user:', user);
     subscriptionPlan = await trpc.stripe.userPlans.query();
-    console.log('subscriptionPlan: ', subscriptionPlan);
+    console.log('subscriptionPlanF: ', subscriptionPlan);
   }
   return (
     <div className="flex w-full flex-col gap-16 py-8 md:py-8">

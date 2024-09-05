@@ -3,7 +3,7 @@
     "title": "Cheap, transparent prices!",
     "pricing": "Pricing",
     "slogan": "Start at full speed !",
-    "notice_important" : "Important notice",
+    "notice_important": "Important notice",
     "notice_limited": "Limited Onboarding Due to High Demand",
     "notice_limited_long": "Thank you for your interest! Due to high demand, we are currently limiting our onboarding process. Please create an account, and we will notify you as soon as subscriptions become available again.",
     "monthly_bill": "Monthly Billing",
@@ -77,21 +77,20 @@
     "sidebar_nav_settings": "Settings",
     "title_text": "Create and manage your platform."
   },
-
-    "business_k8s": {
-      "new_cluster": "New",
-      "no_cluster_title": "Nothing defined yet",
-      "no_cluster_content": "You don't have any platform setup yet. Start creating one. ",
-      "": ""
-    },
-    "business_billing": {
-      "billing": "Billing",
-      "content": "Manage your subscription and billing details",
-      "noSubscription": "You are not subscribed to any plan. ",
-      "subscriptionInfo": "You are currently on the <strong>{plan}</strong> plan.Your subscription will renew on <strong>{date}</strong>.",
-      "manage_subscription": "Manage Subscription",
-      "upgrade": "upgrade",
-      "": ""
+  "business_k8s": {
+    "new_cluster": "New",
+    "no_cluster_title": "Nothing defined yet",
+    "no_cluster_content": "You don't have any platform setup yet. Start creating one. ",
+    "": ""
+  },
+  "business_billing": {
+    "billing": "Billing",
+    "content": "Manage your subscription and billing details",
+    "noSubscription": "You are not subscribed to any plan. ",
+    "subscriptionInfo": "You are currently on the <strong>{plan}</strong> plan.Your subscription will renew on <strong>{date}</strong>.",
+    "manage_subscription": "Manage Subscription",
+    "upgrade": "upgrade",
+    "": ""
   },
   "dropdown": {
     "dashboard": "Dashboard",

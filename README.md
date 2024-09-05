@@ -76,18 +76,25 @@ bun db:push:prod
 
 #### Payments
 - [ ] Refactor Stripe code to move products and prices from one env to another.
-- [ ] Refactor code for capture the pricing information and load them on the web page or internally, so the proper configuration is coming from env
+- [X] Refactor code for capture the pricing information and load them on the web page or internally, so the proper configuration is coming from env
 - [ ] Stripe events source should come form package: https://github.com/kgajera/stripe-event-types and not be embeded directly
+- [ ] Features and marketing information is coming from stripe in english only, it should be translated accordingly.
 
 #### Authentification
 What to review:
 - [ ] See youtube video to review what can be done: https://www.youtube.com/watch?v=TLGFTH4s_0Y, see source from: https://github.com/DaliGabriel/NextAuthExample
+- [ ] Review https://zenstack.dev/docs/guides/authentication/next-auth for good approach to use PrismaDialect and Credentials instead. Seems "easy" to implement.
 - [ ] Possibly review the JWT token approach (https://github.com/nextauthjs/next-auth/issues/11295)
 - [ ] If email service of DB service is delayed, details should be logged and users advised to wait as "the side is under scheduled maintenance and further details for the authentification migth be delayed"
+- [ ] Implement Authentification with login/passswword, see youtube https://www.youtube.com/watch?v=v6TPcU23wP8 and: https://github.com/github/vscode-github-actions/issues/222
 
 #### Logging capability
 - [ ] replace console.log or console.debug within the code with external service for logging purposes. for error messages, need to raise a notification; maybe one maximum per hour/day
 - [ ] Include prisma logging into the main logging subsystem
+
+#### Review web sites
+- [ ] Validate Production-ready scores in (Lighthouse)[https://web.dev/measure/] and (PageSpeed Insights reports)[https://pagespeed.web.dev/].
+- [ ] Review 404 pages based on exmaple from: https://floatui.com/components/404-pages
 
 ## Known issues
 
