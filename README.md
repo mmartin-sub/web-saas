@@ -87,6 +87,7 @@ What to review:
 - [ ] Possibly review the JWT token approach (https://github.com/nextauthjs/next-auth/issues/11295)
 - [ ] If email service of DB service is delayed, details should be logged and users advised to wait as "the side is under scheduled maintenance and further details for the authentification migth be delayed"
 - [ ] Implement Authentification with login/passswword, see youtube https://www.youtube.com/watch?v=v6TPcU23wP8 and: https://github.com/github/vscode-github-actions/issues/222
+- [ ] Verification link is a bad design, code should be better so user could check the code in one device and keep going with a different. Need to implement this change.
 
 #### Logging capability
 - [ ] replace console.log or console.debug within the code with external service for logging purposes. for error messages, need to raise a notification; maybe one maximum per hour/day
