@@ -10,6 +10,7 @@ import * as Icons from "@saasfly/ui/icons";
 import { Modal } from "~/components/modal";
 import { siteConfig } from "~/config/site";
 import { useSigninModal } from "~/hooks/use-signin-modal";
+import { ThemedSVG } from "~/components/loadsvg"
 
 export const SignInModal = ({ dict }: { dict: Record<string, string> }) => {
   const signInModal = useSigninModal();
@@ -20,13 +21,13 @@ export const SignInModal = ({ dict }: { dict: Record<string, string> }) => {
       <div className="w-full">
         <div className="flex flex-col items-center justify-center space-y-3 border-b bg-background px-4 py-6 pt-8 text-center md:px-16">
           <a href={siteConfig.url} aria-label="Main site">
-            <Image
-              src="/images/avatars/sub-logo.svg"
-              className="mx-auto"
-              width="64"
-              height="64"
+          <ThemedSVG
+              svgurl_light="/images/avatars/sub-logo.svg"
+              svgurl_dark="/logo/logo-blackbg.svg"
+              width={64}
+              height={64}
               alt="small-logo"
-            />
+              />
           </a>
           <h3 className="font-urban text-2xl font-bold">{dict.signup}</h3>
           <p className="text-sm text-gray-500">{dict.privacy}</p>

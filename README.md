@@ -66,6 +66,7 @@ bun db:push:prod
 - [ ] Split the DB connection url between the authentification, session and other activities (different schema/user credentials at the minimum). The best would be to move some production activities to a different url such as: api.example.com
 - [ ] Need to define a signOut page and workflow for logout - handleSignOut
 - [ ] Review the i18n integration and leverage next or React components, see Trans options within:
+- [ ] add RSS for the (blog posts)[https://javascript.plainenglish.io/generate-an-rss-feed-for-your-next-js-website-ce921e2d04c6]
 
 ### UI
 - [ ] Review how (shadcn)[https://ui.shadcn.com/docs/] is installed as it seems the code was copied without installing properly the lib; `bunx --bun shadcn-ui@latest add alert` is not working as expected.
@@ -79,6 +80,8 @@ bun db:push:prod
 - [X] Refactor code for capture the pricing information and load them on the web page or internally, so the proper configuration is coming from env
 - [ ] Stripe events source should come form package: https://github.com/kgajera/stripe-event-types and not be embeded directly
 - [ ] Features and marketing information is coming from stripe in english only, it should be translated accordingly.
+- [ ] Create a default variable STRIPE_CURRENCY
+- [ ] Integrate or leverage (Next Store)[https://github.com/yournextstore/yournextstore], this is more for product but maybe stripe backend if better?
 
 #### Authentification
 What to review:
@@ -92,6 +95,12 @@ What to review:
 #### Logging capability
 - [ ] replace console.log or console.debug within the code with external service for logging purposes. for error messages, need to raise a notification; maybe one maximum per hour/day
 - [ ] Include prisma logging into the main logging subsystem
+
+### SVG
+- [ ] check if needed to add attributes:
+    - aria-hidden="true"
+    - focusable="false"
+- [ ] Replace SVG by ReactComponent using (blog)[https://medium.com/@luanvuonggia/how-to-change-the-color-of-svg-image-in-reactjs-689333cf76eb]
 
 #### Review web sites
 - [ ] Validate Production-ready scores in (Lighthouse)[https://web.dev/measure/] and (PageSpeed Insights reports)[https://pagespeed.web.dev/].

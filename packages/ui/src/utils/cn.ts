@@ -2,7 +2,7 @@ import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 
 /**
- * A utility function to merge Tailwind CSS classes using `clsx` and `tailwind-merge`- twMerge.
+ * cn is a utility function to merge Tailwind CSS classes using `clsx` and `tailwind-merge`- twMerge.
  * ref: https://antematter.io/blogs/mastering-css-customization-with-tailwind-merge
  * possible source of it: https://ui.aceternity.com/components/following-pointer
  *

@@ -8,7 +8,7 @@ import { withAuth } from "next-auth/middleware";
 
 import { i18n } from "~/config/i18n-config";
 
-const noNeedProcessRoute = [".*\\.png", ".*\\.jpg", ".*\\.opengraph-image.png"];
+const noNeedProcessRoute = [".*\\.png", ".*\\.svg", ".*\\.jpg", ".*\\.opengraph-image.png"];
 
 const noRedirectRoute = ["/api(.*)", "/trpc(.*)", "/admin"];
 
@@ -23,6 +23,7 @@ const publicRoute = [
   "/(\\w{2}/)?docs(.*)",
   "/(\\w{2}/)?external(.*)",
   "/(\\w{2}/)?blog(.*)",
+  "/(\\w{2}/)?logo(.*)",
   "/(\\w{2}/)?pricing(.*)",
   "^/\\w{2}/?$", // root with locale
 ];
@@ -175,7 +176,11 @@ export const config = {
      * - favicon.ico, sitemap.xml, robots.txt (metadata files)
      */
   //      '/((?!api|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt).*)',
-
-    "/((?!.*\\..*|_next).*)", "/", "/(api|trpc)(.*)"
+   // Skip Next.js internals and all static files, unless found in search params
+   '/((?!_next|[^?]*\\.(?:html?|css|js(?!on)|jpe?g|webp|png|gif|svg|ttf|woff2?|ico|csv|docx?|xlsx?|zip|webmanifest)).*)',
+   // Always run for API routes
+   '/(api|trpc)(.*)',
+//    "/((?!.*\\..*|_next).*)",
+    "/"
   ],
 } ;

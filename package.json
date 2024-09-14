@@ -52,9 +52,9 @@
     "tsc:build": "tsc -b apps/*  && tsc -b packages/*"
   },
   "devDependencies": {
-    "@crowdin/cli": "^4.1.1",
+    "@crowdin/cli": "^4.1.2",
     "@netlify/plugin-lighthouse": "^6.0.0",
-    "@netlify/plugin-nextjs": "^5.7.0",
+    "@netlify/plugin-nextjs": "^5.7.1",
     "@prisma/client": "^5.19.1",
     "@tanstack/eslint-plugin-query": "^5.53.0",
     "@turbo/gen": "1.13.4",
@@ -63,14 +63,14 @@
     "i18next-scanner": "^4.5.0",
     "i18next-scanner-typescript": "^1.2.1",
     "kysely-ctl": "^0.9.0",
-    "netlify-cli": "^17.34.3",
+    "netlify-cli": "^17.35.0",
     "next-sitemap": "^4.2.3",
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.6",
     "tailwind-config-viewer": "^2.0.4",
     "turbo": "1.13.4",
     "typescript": "5.5.4",
-    "vercel": "^37.3.0"
+    "vercel": "^37.4.0"
   },
   "engines": {
     "node": ">=20.0.0"
@@ -88,6 +88,14 @@
     "@vercel/speed-insights",
     "contentlayer2",
     "prisma",
-    "protobufjs"
+    "protobufjs",
+    "@tsparticles/engine",
+    "esbuild",
+    "netlify-cli",
+    "puppeteer",
+    "@netlify/edge-bundler/node_modules/esbuild",
+    "@vercel/node/node_modules/esbuild",
+    "@vercel",
+    "@netlify"
   ]
 }
