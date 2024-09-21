@@ -2,7 +2,7 @@
 
 The first is that we have a single interface for interacting with multiple large language model providers. This means that users can easily switch between different models without having to learn new APIs or authentication mechanisms.
 
-An easy-to-use and enterprise-grade Next.js boilerplate.
+An easy-to-use and enterprise-grade (Next.js boilerplate)[https://github.com/ixartz/Next-js-Boilerplate].
 Fork from [SaasFly](https://github.com/saasfly/saasfly)
 
 ## ⭐ Features
@@ -66,10 +66,11 @@ bun db:push:prod
 - [ ] Split the DB connection url between the authentification, session and other activities (different schema/user credentials at the minimum). The best would be to move some production activities to a different url such as: api.example.com
 - [ ] Need to define a signOut page and workflow for logout - handleSignOut
 - [ ] Review the i18n integration and leverage next or React components, see Trans options within:
-- [ ] add RSS for the (blog posts)[https://javascript.plainenglish.io/generate-an-rss-feed-for-your-next-js-website-ce921e2d04c6]
+- [ ] add RSS for the (blog posts)[https://javascript.plainenglish.io/generate-an-rss-feed-for-your-next-js-website-ce921e2d04c6], other options from [https://news.ycombinator.com/item?id=41499905]
 
 ### UI
 - [ ] Review how (shadcn)[https://ui.shadcn.com/docs/] is installed as it seems the code was copied without installing properly the lib; `bunx --bun shadcn-ui@latest add alert` is not working as expected.
+- [ ] Review (RapidPages)[https://designer.rapidpages.com/] for quick mockup and module design
 
 #### Emails
 - [ ] refactor the code so the email piece and the templates and puut aside of the authentification module.
