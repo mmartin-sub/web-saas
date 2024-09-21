@@ -2,13 +2,18 @@ import { redirect } from "next/navigation";
 import { NextRequest, NextResponse } from "next/server";
 import { match as matchLocale } from "@formatjs/intl-localematcher";
 import Negotiator from "negotiator";
-import type { NextAuthOptions } from "next-auth"
+import type { NextAuthOptions } from "next-auth";
 import { getToken } from "next-auth/jwt";
 import { withAuth } from "next-auth/middleware";
 
 import { i18n } from "~/config/i18n-config";
 
-const noNeedProcessRoute = [".*\\.png", ".*\\.svg", ".*\\.jpg", ".*\\.opengraph-image.png"];
+const noNeedProcessRoute = [
+  ".*\\.png",
+  ".*\\.svg",
+  ".*\\.jpg",
+  ".*\\.opengraph-image.png",
+];
 
 const noRedirectRoute = ["/api(.*)", "/trpc(.*)", "/admin"];
 
@@ -74,8 +79,8 @@ export default async function middleware(request: NextRequest) {
   // Check if there is any supported locale in the pathname
 
   /*
-  * 1st pass is with /, then, it will be /en
-  */
+   * 1st pass is with /, then, it will be /en
+   */
   // console.log('Pathname:', pathname);
 
   const pathnameIsMissingLocale = i18n.locales.every(
@@ -83,10 +88,10 @@ export default async function middleware(request: NextRequest) {
       !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`,
   );
 
-   /*
-  * 1st pass is with / -> true, then, it will be /en -> false
-  */
- // console.log('Pathname missing locales:', pathnameIsMissingLocale);
+  /*
+   * 1st pass is with / -> true, then, it will be /en -> false
+   */
+  // console.log('Pathname missing locales:', pathnameIsMissingLocale);
 
   // Redirect if there is no locale
   if (!isNoRedirect(request) && pathnameIsMissingLocale) {
@@ -104,7 +109,7 @@ export default async function middleware(request: NextRequest) {
   }
   // @ts-ignore
   return authMiddleware(request, null);
-//  return null;
+  //  return null;
 }
 
 const authMiddleware = withAuth(
@@ -117,11 +122,9 @@ const authMiddleware = withAuth(
 
     // Overall, this regex matches strings that start with a forward slash, followed by at least two alphabetic characters, another forward slash, and then either login or register
     // End with either login or register
-//    Matching Pathname: /en/login or /us/register
-// Non-Matching Pathname: /login, /en/log, /123/login
-    const isAuthPage = /^\/[a-zA-Z]{2,}\/(login|register)/.test(
-      pathname
-    );
+    //    Matching Pathname: /en/login or /us/register
+    // Non-Matching Pathname: /login, /en/log, /123/login
+    const isAuthPage = /^\/[a-zA-Z]{2,}\/(login|register)/.test(pathname);
     const isAuthRoute = /^\/api\/trpc\//.test(pathname);
     const locale = getLocale(req);
 
@@ -160,27 +163,27 @@ const authMiddleware = withAuth(
 
 /*
  * Config object for middleware matcher.
-* Matching Paths
-* we want pretty much everything since we need to apply the locale
-* https://nextjs.org/docs/app/building-your-application/routing/middleware
-* This regex matches any string that does not contain a dot (.) and does not contain the substring _next.
-* This regex matches strings that start with either api or trpc, followed by any characters.
-*/
+ * Matching Paths
+ * we want pretty much everything since we need to apply the locale
+ * https://nextjs.org/docs/app/building-your-application/routing/middleware
+ * This regex matches any string that does not contain a dot (.) and does not contain the substring _next.
+ * This regex matches strings that start with either api or trpc, followed by any characters.
+ */
 export const config = {
   matcher: [
-        /*
+    /*
      * Match all request paths except for the ones starting with:
      * - api (API routes)
      * - _next/static (static files)
      * - _next/image (image optimization files)
      * - favicon.ico, sitemap.xml, robots.txt (metadata files)
      */
-  //      '/((?!api|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt).*)',
-   // Skip Next.js internals and all static files, unless found in search params
-   '/((?!_next|[^?]*\\.(?:html?|css|js(?!on)|jpe?g|webp|png|gif|svg|ttf|woff2?|ico|csv|docx?|xlsx?|zip|webmanifest)).*)',
-   // Always run for API routes
-   '/(api|trpc)(.*)',
-//    "/((?!.*\\..*|_next).*)",
-    "/"
+    //      '/((?!api|_next/static|_next/image|favicon.ico|sitemap.xml|robots.txt).*)',
+    // Skip Next.js internals and all static files, unless found in search params
+    "/((?!_next|[^?]*\\.(?:html?|css|js(?!on)|jpe?g|webp|png|gif|svg|ttf|woff2?|ico|csv|docx?|xlsx?|zip|webmanifest)).*)",
+    // Always run for API routes
+    "/(api|trpc)(.*)",
+    //    "/((?!.*\\..*|_next).*)",
+    "/",
   ],
-} ;
+};

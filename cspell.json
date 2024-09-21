@@ -1,14 +1,17 @@
 {
   "version": "0.2",
-  "ignorePaths": [
-    "node_modules/**",
-    "*.toml",
-    "**/*.json"
-  ],
+  "ignorePaths": ["node_modules/**", "*.toml", "**/*.json"],
   "dictionaryDefinitions": [],
   "dictionaries": [],
   "words": [],
-  "ignoreWords": ["trpc", "saasfly", "substantifik", "kysely", "prisma", "neon"],
+  "ignoreWords": [
+    "trpc",
+    "saasfly",
+    "substantifik",
+    "kysely",
+    "prisma",
+    "neon"
+  ],
   "import": [],
   "enabled": true,
   "maxNumberOfProblems": 1,
@@ -24,9 +27,5 @@
       "pattern": "/(?:\\/\\*[\\s\\S]*?\\*\\/)/g"
     }
   ],
-  "ignoreRegExpList": [
-    "/from\\s+(['\"]).*\\1/",
-     "^\\$.+",
-     "\\$\\w+"
-  ]
+  "ignoreRegExpList": ["/from\\s+(['\"]).*\\1/", "^\\$.+", "\\$\\w+"]
 }

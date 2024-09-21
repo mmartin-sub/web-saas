@@ -7,8 +7,8 @@ import { useSelectedLayoutSegment } from "next/navigation";
 
 import { cn } from "@saasfly/ui";
 import * as Icons from "@saasfly/ui/icons";
-import { ThemedSVG } from "~/components/loadsvg"
 
+import { ThemedSVG } from "~/components/loadsvg";
 import { MobileNav } from "~/components/mobile-nav";
 import type { MainNavItem } from "~/types";
 
@@ -33,15 +33,14 @@ export function MainNav({ items, children, params: { lang } }: MainNavProps) {
     <div className="flex gap-6 md:gap-10">
       <Link href={`/${lang}`} className="hidden items-center space-x-2 md:flex">
         <div>
-        <ThemedSVG
-              svgurl_light="/images/avatars/sub-logo.svg"
-              svgurl_dark="/logo/logo-blackbg.svg"
-              className=""
-              width={36}
-              height={36}
-              alt="small-logo"
-              />
-
+          <ThemedSVG
+            svgurl_light="/images/avatars/sub-logo.svg"
+            svgurl_dark="/logo/logo-blackbg.svg"
+            className=""
+            width={36}
+            height={36}
+            alt="small-logo"
+          />
         </div>
         <div className="text-2xl font-semibold">Substantifik</div>
       </Link>

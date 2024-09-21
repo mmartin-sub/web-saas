@@ -13,7 +13,8 @@ import * as Icons from "@saasfly/ui/icons";
 import { Input } from "@saasfly/ui/input";
 import { Label } from "@saasfly/ui/label";
 import { toast } from "@saasfly/ui/use-toast";
-import type {  DictionarySubKey } from "./../lib/get-dictionary"
+
+import type { DictionarySubKey } from "./../lib/get-dictionary";
 
 interface UserAuthFormProps extends React.HTMLAttributes<HTMLElement> {
   lang: string;
@@ -23,25 +24,26 @@ interface UserAuthFormProps extends React.HTMLAttributes<HTMLElement> {
 }
 
 const userAuthSchema = z.object({
-  email: z.string().email(
+  email: z
+    .string()
+    .email
     /* "Please provide a valid e-mail address." */
-  ),
+    (),
   password: z
-  .string()
-  .min(6, "Please make the password at least 6 characters")
-  .optional()
-  .or(z.literal('')) // If the password is not shown, zod will not report the error and the form can't be submitted
-    /*{
+    .string()
+    .min(6, "Please make the password at least 6 characters")
+    .optional()
+    .or(z.literal("")), // If the password is not shown, zod will not report the error and the form can't be submitted
+  /*{
     message: "Password must be at least 6 characters.",
   } */
-
 });
 
 type FormData = z.infer<typeof userAuthSchema>;
 
 /*
-* Could be for signup or login screen
-*/
+ * Could be for signup or login screen
+ */
 
 export function UserAuthForm({
   className,
@@ -54,9 +56,9 @@ export function UserAuthForm({
   const {
     register,
     handleSubmit,
-    formState: { errors ,
+    formState: {
+      errors,
       // isDirty, isSubmitting, touchedFields, submitCount
-
     },
   } = useForm<FormData>({
     resolver: zodResolver(userAuthSchema),
@@ -66,14 +68,12 @@ export function UserAuthForm({
   const searchParams = useSearchParams();
 
   async function onSubmit(data: FormData) {
-
-//    console.log("Form submitted with data:", data); // Log the submitted data
-//    console.log("Current loading state before submission:", isLoading); // Log isLoading before setting it
+    //    console.log("Form submitted with data:", data); // Log the submitted data
+    //    console.log("Current loading state before submission:", isLoading); // Log isLoading before setting it
 
     setIsLoading(true);
 
- //   console.log("Loading state after setting to true:", isLoading); // Log isLoading after setting it
-
+    //   console.log("Loading state after setting to true:", isLoading); // Log isLoading after setting it
 
     const signInResult = await signIn("email", {
       email: data.email.toLowerCase(),
@@ -85,10 +85,9 @@ export function UserAuthForm({
 
     setIsLoading(false);
 
-  //  console.log("Loading state after submission:", isLoading); // Log isLoading after setting it back
+    //  console.log("Loading state after submission:", isLoading); // Log isLoading after setting it back
 
-
- //   console.log('Signin result: ',signInResult);
+    //   console.log('Signin result: ',signInResult);
 
     if (!signInResult?.ok) {
       return toast({
@@ -130,17 +129,22 @@ export function UserAuthForm({
               </p>
             )}
           </div>
-          <button type="submit" className={cn(buttonVariants())} disabled={isLoading}>
+          <button
+            type="submit"
+            className={cn(buttonVariants())}
+            disabled={isLoading}
+          >
             {isLoading && (
               <Icons.Spinner className="mr-2 h-4 w-4 animate-spin" />
             )}
-            { (typeform=="login")? dictLogin.signin_email: dictLogin.signup_email}
+            {typeform == "login"
+              ? dictLogin.signin_email
+              : dictLogin.signup_email}
 
             {/* Sign In with Email */}
           </button>
         </div>
       </form>
-
     </div>
   );
 }

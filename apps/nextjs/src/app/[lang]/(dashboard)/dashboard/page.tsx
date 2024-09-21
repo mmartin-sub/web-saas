@@ -46,19 +46,16 @@ export default async function DashboardPage({
       userId: user.id,
     });
   }
-  console.log('getCurrentUser3');
+  console.log("getCurrentUser3");
   // const account
   const result: ClustersArray = await trpc.k8s.getClusters.query();
-  console.log('getCurrentUser4: ', result);
+  console.log("getCurrentUser4: ", result);
   if (result) {
     const clusters = result;
     const dict = await getDictionary(lang);
     return (
       <DashboardShell>
-        <DashboardHeader
-          heading="Platform"
-          text={dict.dashboard.title_text}
-        >
+        <DashboardHeader heading="Platform" text={dict.dashboard.title_text}>
           <K8sCreateButton dict={dict.business_k8s} />
         </DashboardHeader>
         <div>

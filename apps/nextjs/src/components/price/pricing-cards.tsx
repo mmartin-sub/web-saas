@@ -40,59 +40,62 @@ interface InformationalBannerProps {
   messageHeader: string;
   messageText: string;
 }
-const InformationalBanner: React.FC<InformationalBannerProps> = ({ messageHeader, messageText}) => {
+const InformationalBanner: React.FC<InformationalBannerProps> = ({
+  messageHeader,
+  messageText,
+}) => {
   const [isVisible, setIsVisible] = useState(true);
 
   const handleClose = () => {
-      setIsVisible(false);
+    setIsVisible(false);
   };
 
   return (
-      <>
-          {isVisible && (
-             <div
-             id="informational-banner"
-             tabindex="-1"
-             class="fixed start-0 top-0 z-50 flex w-full flex-col justify-between border-b border-gray-200 bg-gray-50 p-4 dark:border-gray-600 dark:bg-gray-700 md:flex-row"
-           >
-             <div class="mb-4 md:mb-0 md:me-4">
-               <h2 class="mb-1 text-base font-semibold text-gray-900 dark:text-white">
-                 {messageHeader}
-               </h2>
-               <p class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-                 {messageText}
-               </p>
-             </div>
-             {/* Source from https://flowbite.com/docs/components/banner/
-              */}
-             <div class="flex flex-shrink-0 items-center">
-               <button
-                 data-dismiss-target="#informational-banner"
-                 type="button"
-                 class="inline-flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-lg p-1.5 text-sm text-gray-400 hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-600 dark:hover:text-white"
-                 onClick={handleClose}
-             >
-                 <svg
-                   class="h-3 w-3"
-                   aria-hidden="true"
-                   xmlns="http://www.w3.org/2000/svg"
-                   fill="none"
-                   viewBox="0 0 14 14"
-                 >
-                   <path
-                     stroke="currentColor"
-                     stroke-linecap="round"
-                     stroke-linejoin="round"
-                     stroke-width="2"
-                     d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
-                   />
-                 </svg>
-                 <span class="sr-only">Close banner</span>
-               </button>
-             </div>
-           </div>
-          )}
-      </>
+    <>
+      {isVisible && (
+        <div
+          id="informational-banner"
+          tabindex="-1"
+          class="fixed start-0 top-0 z-50 flex w-full flex-col justify-between border-b border-gray-200 bg-gray-50 p-4 dark:border-gray-600 dark:bg-gray-700 md:flex-row"
+        >
+          <div class="mb-4 md:mb-0 md:me-4">
+            <h2 class="mb-1 text-base font-semibold text-gray-900 dark:text-white">
+              {messageHeader}
+            </h2>
+            <p class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
+              {messageText}
+            </p>
+          </div>
+          {/* Source from https://flowbite.com/docs/components/banner/
+           */}
+          <div class="flex flex-shrink-0 items-center">
+            <button
+              data-dismiss-target="#informational-banner"
+              type="button"
+              class="inline-flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-lg p-1.5 text-sm text-gray-400 hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-gray-600 dark:hover:text-white"
+              onClick={handleClose}
+            >
+              <svg
+                class="h-3 w-3"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 14"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                />
+              </svg>
+              <span class="sr-only">Close banner</span>
+            </button>
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 
@@ -119,7 +122,10 @@ export function PricingCards({
           {dict.slogan}
         </h2>
 
-        <InformationalBanner messageHeader={dict.notice_limited} messageText={dict.notice_limited_long} />
+        <InformationalBanner
+          messageHeader={dict.notice_limited}
+          messageText={dict.notice_limited_long}
+        />
 
         {/* Source from https://flowbite.com/docs/components/banner/
 

@@ -16,7 +16,6 @@ export const env = createEnv({
     NEXTAUTH_URL: process.env.NEXTAUTH_URL,
     NEXTAUTH_SECRET: process.env.NEXTAUTH_SECRET,
     RESEND_API_KEY: process.env.RESEND_API_KEY,
-
   },
   skipValidation:
     !!process.env.SKIP_ENV_VALIDATION ||

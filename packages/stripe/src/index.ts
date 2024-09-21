@@ -8,8 +8,7 @@ export * from "./webhooks";
 
 export type { Stripe };
 
-export const stripe = new Stripe(
-  env.STRIPE_API_KEY, {
+export const stripe = new Stripe(env.STRIPE_API_KEY, {
   typescript: true,
   maxNetworkRetries: 2,
   timeout: 20 * 1000, // 20 seconds

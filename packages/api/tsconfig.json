@@ -1,7 +1,7 @@
 {
   "extends": "@saasfly/typescript-config/base.json",
   "compilerOptions": {
-     "paths": {
+    "paths": {
       "nextjs/*": ["../../apps/nextjs/src/*"]
     },
     "tsBuildInfoFile": "node_modules/.cache/tsbuildinfo.json"

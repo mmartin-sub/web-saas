@@ -8,7 +8,7 @@ import {
 
 import { DashboardShell } from "~/components/shell";
 import type { Locale } from "~/config/i18n-config";
-import { getDictionary, Dictionary } from "~/lib/get-dictionary";
+import { Dictionary, getDictionary } from "~/lib/get-dictionary";
 import { trpc } from "~/trpc/server";
 import { SubscriptionForm } from "./subscription-form";
 
@@ -56,7 +56,11 @@ function generateSubscriptionMessage(
   return "";
 }
 
-async function SubscriptionCard({ dict }: { dict: Dictionary["business_billing"] }) {
+async function SubscriptionCard({
+  dict,
+}: {
+  dict: Dictionary["business_billing"];
+}) {
   const subscription = (await trpc.auth.mySubscription.query()) as Subscription;
   const content = generateSubscriptionMessage(dict, subscription);
   return (

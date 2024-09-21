@@ -80,12 +80,12 @@ export const DELAY_FEATURE = 3000;
  * @todo: implement it using .env file
  * @constant
  */
-export const DOMAIN_EXAMPLES = '@substantifik.com';
+export const DOMAIN_EXAMPLES = "@substantifik.com";
 
 /**
  * Define the name of the application in the metabase headers
  */
-export const APPLICATION_NAME= "Substantifik";
+export const APPLICATION_NAME = "Substantifik";
 
 /**
  * Define if from the pricing page, we allow user to buy a subscription

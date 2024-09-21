@@ -5,6 +5,6 @@ export const siteConfig = {
   url: "https://substantifik.com",
   ogImage: "",
   links: {
- //   github: "https://github.com/Substantifik/",
+    //   github: "https://github.com/Substantifik/",
   },
 };

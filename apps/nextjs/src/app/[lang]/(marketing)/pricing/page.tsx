@@ -3,7 +3,7 @@ import { getCurrentUser } from "@saasfly/auth";
 import { PricingCards } from "~/components/price/pricing-cards";
 import { PricingFaq } from "~/components/price/pricing-faq";
 import type { Locale } from "~/config/i18n-config";
-import { getDictionary ,Dictionary} from "~/lib/get-dictionary";
+import { Dictionary, getDictionary } from "~/lib/get-dictionary";
 import { trpc } from "~/trpc/server";
 
 export const metadata = {
@@ -22,9 +22,9 @@ export default async function PricingPage({
   let subscriptionPlan;
 
   if (user) {
-    console.log('subscriptionPlan for user:', user);
+    console.log("subscriptionPlan for user:", user);
     subscriptionPlan = await trpc.stripe.userPlans.query();
-    console.log('subscriptionPlanF: ', subscriptionPlan);
+    console.log("subscriptionPlanF: ", subscriptionPlan);
   }
   return (
     <div className="flex w-full flex-col gap-16 py-8 md:py-8">

@@ -1,16 +1,19 @@
-import { createKysely, pool } from "./postgres-kysely-g";
-import type { GeneratedAlways } from "kysely";
-import { KyselyConfig, Kysely,PostgresDialect } from 'kysely';
-
-import { QueryResult } from 'pg'
-
 // See for reference: https://authjs.dev/getting-started/adapters/kysely
 
 // This adapter exports a wrapper of the original `Kysely` class called `KyselyAuth`,
 // that can be used to provide additional type-safety.
 // While using it isn't required, it is recommended as it will verify
 // that the database interface has all the fields that Auth.js expects.
-import { KyselyAuth } from "@auth/kysely-adapter"
+import { KyselyAuth } from "@auth/kysely-adapter";
+import {
+  Kysely,
+  KyselyConfig,
+  PostgresDialect,
+  type GeneratedAlways,
+} from "kysely";
+import { QueryResult } from "pg";
+
+import { createKysely, pool } from "./postgres-kysely-g";
 
 // See: https://authjs.dev/guides/role-based-access-control
 interface Database {
@@ -51,22 +54,18 @@ interface Database {
 
 // Function to log the default configuration and dialect setup
 function reportKyselyConfig(db: Kysely<Database>) {
-
-//  console.log('DB Connection: ',db.connection.toString);
- // console.log('DB schema: ',db.schema);
-
+  //  console.log('DB Connection: ',db.connection.toString);
+  // console.log('DB schema: ',db.schema);
 }
-
 
 // export const db = new KyselyAuth<Database>({
 // Not working, compiler error
-const kyselyConfig:Partial<KyselyConfig>=
-(process.env.IS_DEBUG === "true") ?
-  {
-    log: ['query', 'error'],
-
-  }
-/*
+const kyselyConfig: Partial<KyselyConfig> =
+  process.env.IS_DEBUG === "true"
+    ? {
+        log: ["query", "error"],
+      }
+    : /*
   log(event): void {
     if (event.level === 'query') {
       console.log(event.query.sql)
@@ -74,18 +73,15 @@ const kyselyConfig:Partial<KyselyConfig>=
     }
   }
 */
-: {
-};
+      {};
 
 export const db = createKysely<Database>(
-  kyselyConfig
+  kyselyConfig,
   // It is a vercel Postgresql pooling, not sure how it works with other DBs
   // See: https://www.npmjs.com/package/@vercel/postgres-kysely
   // and: https://github.com/vercel/storage/tree/main/packages/postgres-kysely
-
 );
 //reportKyselyConfig(db);
-
 
 // console.log('connect string: ', process.env.POSTGRES_URL);
 

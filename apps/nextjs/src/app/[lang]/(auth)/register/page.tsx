@@ -38,15 +38,20 @@ export default async function RegisterPage({
           <div className="flex flex-col space-y-2 text-center">
             {/*<Icons.Logo className="mx-auto h-6 w-6" />*/}
             <h1 className="text-2xl font-semibold tracking-tight">
-            {dict.login.create_account}
+              {dict.login.create_account}
             </h1>
             <p className="text-sm text-muted-foreground">
-            {dict.login.entermail_below}
+              {dict.login.entermail_below}
             </p>
           </div>
-          <UserAuthForm lang={lang} dictLogin={dict.login} disabled={false} typeform="signup"/>
+          <UserAuthForm
+            lang={lang}
+            dictLogin={dict.login}
+            disabled={false}
+            typeform="signup"
+          />
           <p className="px-8 text-center text-sm text-muted-foreground">
-          {/*By clicking continue, you agree to */}
+            {/*By clicking continue, you agree to */}
             {dict.login.click_agree}{" "}
             <Link
               href={`/${lang}/external/terms`}

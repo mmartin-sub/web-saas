@@ -25,7 +25,12 @@ export function LocaleChange({ url }: { url: string }) {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" size="sm" className="h-8 w-8 px-0" aria-label="Switch Language">
+        <Button
+          variant="ghost"
+          size="sm"
+          className="h-8 w-8 px-0"
+          aria-label="Switch Language"
+        >
           <Icons.Languages />
           <span className="sr-only"></span>
         </Button>

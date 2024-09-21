@@ -5,9 +5,9 @@ import { useTransition } from "react";
 import { Button } from "@saasfly/ui/button";
 import * as Icons from "@saasfly/ui/icons";
 
+import { Dictionary } from "~/lib/get-dictionary";
 import { trpc } from "~/trpc/client";
 import type { SubscriptionPlan, UserSubscriptionPlan } from "~/types";
-import { Dictionary } from "~/lib/get-dictionary";
 
 interface BillingFormButtonProps {
   offer: SubscriptionPlan;

@@ -1,12 +1,12 @@
 {
-    "root": true,
-    "extends": ["plugin:tailwindcss/recommended"],
-    "parser": "@typescript-eslint/parser",
-    "settings": {
-        // ...
-        "tailwindcss": {
-          "callees": ["twMerge", "createTheme"],
-          "classRegex": "^(class(Name)|theme)?$"
-        },
-      }
+  "root": true,
+  "extends": ["plugin:tailwindcss/recommended"],
+  "parser": "@typescript-eslint/parser",
+  "settings": {
+    // ...
+    "tailwindcss": {
+      "callees": ["twMerge", "createTheme"],
+      "classRegex": "^(class(Name)|theme)?$"
+    }
   }
+}

@@ -4,7 +4,8 @@ import Link from "next/link";
 
 import { cn } from "@saasfly/ui";
 import { buttonVariants } from "@saasfly/ui/button";
-import { Dictionary} from "~/lib/get-dictionary";
+
+import { Dictionary } from "~/lib/get-dictionary";
 
 export function SubscriptionForm(props: {
   hasSubscription: boolean;

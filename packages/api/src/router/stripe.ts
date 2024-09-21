@@ -5,26 +5,23 @@ import { getCurrentUser } from "@saasfly/auth";
 import { Customer, db } from "@saasfly/db";
 import { stripe } from "@saasfly/stripe";
 
+import { env } from "../env.mjs";
+import { createTRPCRouter, protectedProcedure } from "../trpc";
+import pricingDataDev from "./stripe-pricing.dev.json";
 //import { pricingData } from "~/config/price";
 //import { priceDataMap } from "../../../../apps/nextjs/src/config/price";
 
 import pricingDataProd from "./stripe-pricing.prod.json";
-import pricingDataDev from "./stripe-pricing.dev.json";
 
-let priceDataMap: typeof pricingDataProd ; // | typeof pricingDataDev;
+let priceDataMap: typeof pricingDataProd; // | typeof pricingDataDev;
 
 if (process.env.NODE_ENV === "development") {
   priceDataMap = pricingDataDev;
-}
-else
-{
+} else {
   priceDataMap = pricingDataProd;
 }
 
-import { env } from "../env.mjs";
-import { createTRPCRouter, protectedProcedure } from "../trpc";
-
-const pricingData=priceDataMap['en'];
+const pricingData = priceDataMap["en"];
 export interface SubscriptionPlan {
   title: string;
   description: string;
@@ -133,9 +130,9 @@ export const stripeRouter = createTRPCRouter({
     .query(async (opts) => {
       noStore();
 
-      console.log('userPlans step1' );
+      console.log("userPlans step1");
       const userId = opts.ctx.userId! as string;
-      console.log('userPlans for user: ', userId );
+      console.log("userPlans for user: ", userId);
       const custom = await db
         .selectFrom("Customer")
         .select([
@@ -152,7 +149,7 @@ export const stripeRouter = createTRPCRouter({
         return;
       }
 
-      console.log('stripePriceId: ', custom.stripePriceId);
+      console.log("stripePriceId: ", custom.stripePriceId);
       // Check if user is on a paid plan.
       const isPaid =
         custom.stripePriceId &&

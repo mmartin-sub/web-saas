@@ -51,12 +51,15 @@
       "program": "${workspaceFolder}/node_modules/.bin/next",
       "runtimeArgs": ["--inspect"],
       "skipFiles": ["<node_internals>/**"],
-      "outFiles": ["${workspaceFolder}/dist/**/*.js", "!{workspaceFolder}/node_modules/**/*.js"],
+      "outFiles": [
+        "${workspaceFolder}/dist/**/*.js",
+        "!{workspaceFolder}/node_modules/**/*.js"
+      ],
       "sourceMaps": true,
       "resolveSourceMapLocations": [
-    "${workspaceFolder}/**",
-    "!**/node_modules/**"
-] ,
+        "${workspaceFolder}/**",
+        "!**/node_modules/**"
+      ],
       "serverReadyAction": {
         "action": "debugWithEdge",
         "killOnServerStop": true,
@@ -72,7 +75,10 @@
       "program": "${workspaceFolder}/node_modules/.bin/next",
       "runtimeArgs": ["--inspect"],
       "skipFiles": ["<node_internals>/**"],
-      "outFiles": ["${workspaceFolder}/dist/**/*.js", "!{workspaceFolder}/node_modules/**/*.js"],
+      "outFiles": [
+        "${workspaceFolder}/dist/**/*.js",
+        "!{workspaceFolder}/node_modules/**/*.js"
+      ],
       "serverReadyAction": {
         "action": "debugWithEdge",
         "killOnServerStop": true,
@@ -81,44 +87,42 @@
         "webRoot": "${workspaceFolder}"
       }
     },
-        {
-            "name": "Next.js: debug full stack - 2",
-            "type": "node",
-            "request": "launch",
-            "runtimeArgs": [
-                "run",
-                "dev" // "next dev --turbo",
-            ],
-            "runtimeExecutable": "bun",
-            "sourceMaps": true,
-         //   "preLaunchTask": "tsc: build - tsconfig.json",
-            "skipFiles": [
-                "<node_internals>/**"
-            ],
-            "internalConsoleOptions": "openOnSessionStart",
-            "autoAttachChildProcesses": true,
-            "presentation": {
-                "hidden": false
-            },
-            "serverReadyAction": {
-                "action": "debugWithChrome",
-                "pattern": "- Local:.+(https?://.+)",
-                "uriFormat": "%s"
-            }
-        },
+    {
+      "name": "Next.js: debug full stack - 2",
+      "type": "node",
+      "request": "launch",
+      "runtimeArgs": [
+        "run",
+        "dev" // "next dev --turbo",
+      ],
+      "runtimeExecutable": "bun",
+      "sourceMaps": true,
+      //   "preLaunchTask": "tsc: build - tsconfig.json",
+      "skipFiles": ["<node_internals>/**"],
+      "internalConsoleOptions": "openOnSessionStart",
+      "autoAttachChildProcesses": true,
+      "presentation": {
+        "hidden": false
+      },
+      "serverReadyAction": {
+        "action": "debugWithChrome",
+        "pattern": "- Local:.+(https?://.+)",
+        "uriFormat": "%s"
+      }
+    },
     {
       "type": "msedge",
       "name": "Launch Microsoft Edge",
       "request": "launch",
       "cleanUp": "wholeBrowser",
       "cascadeTerminateToConfigurations": [
-          "Launch Next.js app",
-          "Open Edge DevTools"
+        "Launch Next.js app",
+        "Open Edge DevTools"
       ],
       "url": "http:localhost:3000",
       "presentation": {
-          "hidden": true
+        "hidden": true
       }
-  },
+    }
   ]
 }

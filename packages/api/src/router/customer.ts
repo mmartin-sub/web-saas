@@ -53,7 +53,7 @@ export const customerRouter = createTRPCRouter({
     .input(insertCustomerSchema)
     .query(async ({ input }) => {
       noStore();
-      console.log('queryCustomer :',input);
+      console.log("queryCustomer :", input);
       const { userId } = input;
       console.log("userId:", userId);
       try {

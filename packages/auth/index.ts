@@ -5,7 +5,6 @@ import type {
 } from "next";
 import { KyselyAdapter } from "@auth/kysely-adapter";
 import { getServerSession, type NextAuthOptions, type User } from "next-auth";
-
 // EmailProvider is for sending Verification Token by email, so no password
 import EmailProvider from "next-auth/providers/email";
 import GitHubProvider from "next-auth/providers/github";
@@ -39,12 +38,12 @@ export const authOptions: NextAuthOptions = {
     strategy: "jwt",
   },
   pages: {
-  // This will disable the default /api/auth/signin
+    // This will disable the default /api/auth/signin
     signIn: "/login",
-//    signOut: "/auth/signout",
-//     error: '/auth/error',
-//    verifyRequest: '/auth/verify-request',
-//     newUser: '/auth/new-user'
+    //    signOut: "/auth/signout",
+    //     error: '/auth/error',
+    //    verifyRequest: '/auth/verify-request',
+    //     newUser: '/auth/new-user'
   },
 
   // @todo need review as maybe something is missing here
@@ -58,13 +57,12 @@ export const authOptions: NextAuthOptions = {
     GitHubProvider({
       clientId: env.GITHUB_CLIENT_ID!,
       clientSecret: env.GITHUB_CLIENT_SECRET!,
-      allowDangerousEmailAccountLinking:false, // default value is false, only if we want to trust github'email address and link it with magiclink account
+      allowDangerousEmailAccountLinking: false, // default value is false, only if we want to trust github'email address and link it with magiclink account
     }),
 
     EmailProvider({
       sendVerificationRequest: async ({ identifier, url }) => {
-
-        console.log('EmailProvider Log:', url);
+        console.log("EmailProvider Log:", url);
         const user = await db
           .selectFrom("User")
           .select(["name", "emailVerified"])
@@ -96,10 +94,7 @@ export const authOptions: NextAuthOptions = {
           console.log(error);
         }
       },
-
-
     }),
-
   ],
   callbacks: {
     session({ token, session }) {
@@ -117,7 +112,7 @@ export const authOptions: NextAuthOptions = {
     async jwt({ token, user }) {
       const email = token?.email ?? "";
 
-  //    console.log('jwt Log');
+      //    console.log('jwt Log');
       const dbUser = await db
         .selectFrom("User")
         .where("email", "=", email)

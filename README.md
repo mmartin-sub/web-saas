@@ -19,16 +19,21 @@ On top of the fork:
 - install i18next-scanner/i18next-scanner-typescript (i.e. `bun run 18next:scanner`)
 
 ## Install
+
 ### for Dev
+
 ```
 bun db:push
 bun run build
 bun dev
 ```
+
 ### for prod
+
 ```
 bun db:push:prod
 ```
+
 ## Setup
 
 - i18n [config](apps/nextjs/src/config/i18n-config.ts)
@@ -69,23 +74,28 @@ bun db:push:prod
 - [ ] add RSS for the (blog posts)[https://javascript.plainenglish.io/generate-an-rss-feed-for-your-next-js-website-ce921e2d04c6], other options from [https://news.ycombinator.com/item?id=41499905]
 
 ### UI
+
 - [ ] Review how (shadcn)[https://ui.shadcn.com/docs/] is installed as it seems the code was copied without installing properly the lib; `bunx --bun shadcn-ui@latest add alert` is not working as expected.
 - [ ] Review (RapidPages)[https://designer.rapidpages.com/] for quick mockup and module design
 
 #### Emails
+
 - [ ] refactor the code so the email piece and the templates and puut aside of the authentification module.
 - [ ] Different API - Resend Key / from-email fields/ template could exist for dev and prod
 
 #### Payments
+
 - [ ] Refactor Stripe code to move products and prices from one env to another.
-- [X] Refactor code for capture the pricing information and load them on the web page or internally, so the proper configuration is coming from env
+- [x] Refactor code for capture the pricing information and load them on the web page or internally, so the proper configuration is coming from env
 - [ ] Stripe events source should come form package: https://github.com/kgajera/stripe-event-types and not be embeded directly
 - [ ] Features and marketing information is coming from stripe in english only, it should be translated accordingly.
 - [ ] Create a default variable STRIPE_CURRENCY
 - [ ] Integrate or leverage (Next Store)[https://github.com/yournextstore/yournextstore], this is more for product but maybe stripe backend if better?
 
 #### Authentification
+
 What to review:
+
 - [ ] See youtube video to review what can be done: https://www.youtube.com/watch?v=TLGFTH4s_0Y, see source from: https://github.com/DaliGabriel/NextAuthExample
 - [ ] Review https://zenstack.dev/docs/guides/authentication/next-auth for good approach to use PrismaDialect and Credentials instead. Seems "easy" to implement.
 - [ ] Possibly review the JWT token approach (https://github.com/nextauthjs/next-auth/issues/11295)
@@ -94,16 +104,19 @@ What to review:
 - [ ] Verification link is a bad design, code should be better so user could check the code in one device and keep going with a different. Need to implement this change.
 
 #### Logging capability
+
 - [ ] replace console.log or console.debug within the code with external service for logging purposes. for error messages, need to raise a notification; maybe one maximum per hour/day
 - [ ] Include prisma logging into the main logging subsystem
 
 ### SVG
+
 - [ ] check if needed to add attributes:
-    - aria-hidden="true"
-    - focusable="false"
+  - aria-hidden="true"
+  - focusable="false"
 - [ ] Replace SVG by ReactComponent using (blog)[https://medium.com/@luanvuonggia/how-to-change-the-color-of-svg-image-in-reactjs-689333cf76eb]
 
 #### Review web sites
+
 - [ ] Validate Production-ready scores in (Lighthouse)[https://web.dev/measure/] and (PageSpeed Insights reports)[https://pagespeed.web.dev/].
 - [ ] Review 404 pages based on exmaple from: https://floatui.com/components/404-pages
 

@@ -1,16 +1,16 @@
 /* eslint-disable @typescript-eslint/no-explicit-any, @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access */
 
-import { notFound } from "next/navigation";
 import { Suspense } from "react";
-import { getMarketingConfig } from "~/config/ui/marketing";
+import { notFound } from "next/navigation";
 
 import { getCurrentUser } from "@saasfly/auth";
 
-import { NavBar } from "~/components/navbar";
 import { Mdx } from "~/components/content/mdx-components";
 import { DocsPageHeader } from "~/components/docs/page-header";
+import { NavBar } from "~/components/navbar";
 import { PagesPager } from "~/components/pages/pager";
 import { SiteFooter } from "~/components/site-footer";
+import { getMarketingConfig } from "~/config/ui/marketing";
 import { allPages } from ".contentlayer/generated";
 
 import "~/styles/mdx.css";
@@ -91,7 +91,7 @@ export default async function PagePage({ params }: PagePageProps) {
 
   return (
     <div className="flex min-h-screen flex-col space-y-6">
-            <Suspense fallback="...">
+      <Suspense fallback="...">
         <NavBar
           items={
             (await getMarketingConfig({ params: { lang: `${lang}` } })).mainNav

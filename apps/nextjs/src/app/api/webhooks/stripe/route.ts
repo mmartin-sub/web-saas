@@ -20,7 +20,7 @@ const handler = async (req: NextRequest) => {
   } catch (error) {
     const message = error instanceof Error ? error.message : "Unknown error";
     console.log(`❌ Error when handling Stripe Event: ${message}`);
-    console.log('Event: ', payload);
+    console.log("Event: ", payload);
     return NextResponse.json({ error: message }, { status: 400 });
   }
 };

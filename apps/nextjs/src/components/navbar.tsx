@@ -9,10 +9,10 @@ import { Button, buttonVariants } from "@saasfly/ui/button";
 import { LocaleChange } from "~/components/locale-change";
 import useScroll from "~/hooks/use-scroll";
 import { useSigninModal } from "~/hooks/use-signin-modal";
+import { Dictionary } from "~/lib/get-dictionary";
 import type { MainNavItem } from "~/types";
 import { MainNav } from "./main-nav";
 import { UserAccountNav } from "./user-account-nav";
-import { Dictionary} from "~/lib/get-dictionary";
 
 interface NavBarProps {
   user: Pick<User, "name" | "email" | "image"> | undefined;

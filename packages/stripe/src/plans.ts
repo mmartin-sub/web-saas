@@ -1,36 +1,34 @@
 import { SubscriptionPlan } from "@saasfly/db";
 
-import { env } from "./env.mjs";
-
+import pricingDataDev from "./../../api/src/router/stripe-pricing.dev.json";
 // const priceDataMap: Record<string, SubscriptionPlan[]> = {};
 
-
 import pricingDataProd from "./../../api/src/router/stripe-pricing.prod.json";
-import pricingDataDev from "./../../api/src/router/stripe-pricing.dev.json";
+import { env } from "./env.mjs";
 
-let priceDataMap: typeof pricingDataProd ; // | typeof pricingDataDev;
+let priceDataMap: typeof pricingDataProd; // | typeof pricingDataDev;
 
 if (process.env.NODE_ENV === "development") {
   priceDataMap = pricingDataDev;
-}
-else
-{
+} else {
   priceDataMap = pricingDataProd;
 }
 
 //import priceDataMap from "./../../api/src/router/stripe-pricing.prod.json";
 
 // We load the 'en' default one to get the mapping
-const transformedPlans = priceDataMap.en.reduce((acc, plan) => {
-  const planType = plan.id.toUpperCase() as PlanType;
+const transformedPlans = priceDataMap.en.reduce(
+  (acc, plan) => {
+    const planType = plan.id.toUpperCase() as PlanType;
 
-  if (plan.stripeIds.monthly) {
-    acc[plan.stripeIds.monthly] = planType;
-    acc[plan.stripeIds.yearly] = planType;
-  }
-  return acc;
-}, {} as Record<string, PlanType>);
-
+    if (plan.stripeIds.monthly) {
+      acc[plan.stripeIds.monthly] = planType;
+      acc[plan.stripeIds.yearly] = planType;
+    }
+    return acc;
+  },
+  {} as Record<string, PlanType>,
+);
 
 export const PLANS: Record<
   string,
