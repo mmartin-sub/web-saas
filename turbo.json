@@ -1,5 +1,5 @@
 {
-  "$schema": "https://turborepo.org/schema.v1.json",
+  "$schema": "https://turborepo.org/schema.json",
   "globalDependencies": ["**/.env", "**/.env.*local", "tsconfig.json"],
   "globalEnv": ["PACKAGE_VERSION", "NODE_ENV"],
   "globalPassThroughEnv": [
@@ -47,7 +47,7 @@
     },
     "format": {
       "outputs": ["node_modules/.cache/.prettiercache"],
-      "outputMode": "new-only"
+      "outputLogs": "new-only"
     },
     "lint": {
       "dependsOn": ["^topo"],
