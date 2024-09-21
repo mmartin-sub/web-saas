@@ -54,23 +54,23 @@
   "devDependencies": {
     "@crowdin/cli": "^4.1.2",
     "@netlify/plugin-lighthouse": "^6.0.0",
-    "@netlify/plugin-nextjs": "^5.7.1",
+    "@netlify/plugin-nextjs": "^5.7.2",
     "@prisma/client": "^5.19.1",
-    "@tanstack/eslint-plugin-query": "^5.53.0",
+    "@tanstack/eslint-plugin-query": "^5.57.1",
     "@turbo/gen": "1.13.4",
     "check-dependency-version-consistency": "4.1.0",
-    "eslint-config-turbo": "^2.1.1",
+    "eslint-config-turbo": "^2.1.2",
     "i18next-scanner": "^4.5.0",
     "i18next-scanner-typescript": "^1.2.1",
     "kysely-ctl": "^0.9.0",
-    "netlify-cli": "^17.35.0",
+    "netlify-cli": "^17.36.2",
     "next-sitemap": "^4.2.3",
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.6",
     "tailwind-config-viewer": "^2.0.4",
     "turbo": "1.13.4",
     "typescript": "5.5.4",
-    "vercel": "^37.4.0"
+    "vercel": "^37.5.3"
   },
   "engines": {
     "node": ">=20.0.0"
