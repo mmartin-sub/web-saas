@@ -9,13 +9,13 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@ianvs/prettier-plugin-sort-imports": "4.3.1",
-    "prettier": "^3.3.3",
-    "prettier-plugin-tailwindcss": "^0.6.6"
+    "@ianvs/prettier-plugin-sort-imports": "4.4.0",
+    "prettier": "^3.4.1",
+    "prettier-plugin-tailwindcss": "^0.6.9"
   },
   "devDependencies": {
     "@saasfly/typescript-config": "workspace:*",
-    "typescript": "5.6.2"
+    "typescript": "5.7.2"
   },
   "prettier": "@saasfly/prettier-config"
 }

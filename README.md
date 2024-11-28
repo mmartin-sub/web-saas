@@ -14,7 +14,7 @@ On top of the fork:
 
 ## Recommendations
 
-- Install [Stripe Cli client](https://docs.stripe.com/stripe-cli) and [completion](https://docs.stripe.com/stripe-cli/autocomplete)
+- Install [Stripe CLI client](https://docs.stripe.com/stripe-cli) and [completion](https://docs.stripe.com/stripe-cli/autocomplete)
 - in github, setup some secret (see workflows)
 - install i18next-scanner/i18next-scanner-typescript (i.e. `bun run 18next:scanner`)
 
@@ -47,7 +47,7 @@ bun db:push:prod
 - [ ] Integrate Cloudinary/Imgix or other image optimizer
 - [ ] `bun run crowdin` not using the .env.local data while it seems there. at least crowdin is confused; maybe it is an EXPORT issue?
 - [ ] Automate and optimize the translation process (using i18next-scanner or [i18n-js](https://github.com/fnando/i18n-js))
-- [ ] Script to deploy dev, stage and prod with proper stripe connexion
+- [ ] Script to deploy dev, stage and prod with proper stripe connection
 - [ ] Setup name of the company, website and email from dict so it is easier to deploy to multiple domains (i.e. using more siteConfig.url)
 - [ ] Review cors setup
 - [ ] Remove k8s references
@@ -65,10 +65,10 @@ bun db:push:prod
 - [ ] Propose Resend and other provider through (nodemailer)[https://community.nodemailer.com]
 - [ ] Add a GDPR banner such as : We use tracking cookies to understand how you use the product and help us improve it! Please accept cookies to help us improve. if cookie is sent for tracking (not the case today)
 - [ ] setup test scenario as per [https://authjs.dev/guides/testing] or Cypress
-- [ ] Review the color using the browser extennsion from (Designer GUI)[https://www.designgui.io/]
+- [ ] Review the color using the browser extension from (Designer GUI)[https://www.designgui.io/]
 - [ ] Review best practices from https://www.youtube.com/@WebDevEducation/featured
 - [ ] Create a env.d.ts/env.mjs that support interface ProcessEnv and complete missing ones; review (T3 env)[https://env.t3.gg/docs/core]
-- [ ] Split the DB connection url between the authentification, session and other activities (different schema/user credentials at the minimum). The best would be to move some production activities to a different url such as: api.example.com
+- [ ] Split the DB connection url between the authentication, session and other activities (different schema/user credentials at the minimum). The best would be to move some production activities to a different url such as: api.example.com
 - [ ] Need to define a signOut page and workflow for logout - handleSignOut
 - [ ] Review the i18n integration and leverage next or React components, see Trans options within:
 - [ ] add RSS for the (blog posts)[https://javascript.plainenglish.io/generate-an-rss-feed-for-your-next-js-website-ce921e2d04c6], other options from [https://news.ycombinator.com/item?id=41499905]
@@ -80,27 +80,27 @@ bun db:push:prod
 
 #### Emails
 
-- [ ] refactor the code so the email piece and the templates and puut aside of the authentification module.
+- [ ] refactor the code so the email piece and the templates and put aside of the authentication module.
 - [ ] Different API - Resend Key / from-email fields/ template could exist for dev and prod
 
 #### Payments
 
 - [ ] Refactor Stripe code to move products and prices from one env to another.
 - [x] Refactor code for capture the pricing information and load them on the web page or internally, so the proper configuration is coming from env
-- [ ] Stripe events source should come form package: https://github.com/kgajera/stripe-event-types and not be embeded directly
+- [ ] Stripe events source should come form package: https://github.com/kgajera/stripe-event-types and not be embedded directly
 - [ ] Features and marketing information is coming from stripe in english only, it should be translated accordingly.
 - [ ] Create a default variable STRIPE_CURRENCY
 - [ ] Integrate or leverage (Next Store)[https://github.com/yournextstore/yournextstore], this is more for product but maybe stripe backend if better?
 
-#### Authentification
+#### Authentication
 
 What to review:
 
 - [ ] See youtube video to review what can be done: https://www.youtube.com/watch?v=TLGFTH4s_0Y, see source from: https://github.com/DaliGabriel/NextAuthExample
 - [ ] Review https://zenstack.dev/docs/guides/authentication/next-auth for good approach to use PrismaDialect and Credentials instead. Seems "easy" to implement.
 - [ ] Possibly review the JWT token approach (https://github.com/nextauthjs/next-auth/issues/11295)
-- [ ] If email service of DB service is delayed, details should be logged and users advised to wait as "the side is under scheduled maintenance and further details for the authentification migth be delayed"
-- [ ] Implement Authentification with login/passswword, see youtube https://www.youtube.com/watch?v=v6TPcU23wP8 and: https://github.com/github/vscode-github-actions/issues/222
+- [ ] If email service of DB service is delayed, details should be logged and users advised to wait as "the side is under scheduled maintenance and further details for the authentication might be delayed"
+- [ ] Implement authentication with login/password, see youtube https://www.youtube.com/watch?v=v6TPcU23wP8 and: https://github.com/github/vscode-github-actions/issues/222
 - [ ] Verification link is a bad design, code should be better so user could check the code in one device and keep going with a different. Need to implement this change.
 
 #### Logging capability
@@ -118,7 +118,7 @@ What to review:
 #### Review web sites
 
 - [ ] Validate Production-ready scores in (Lighthouse)[https://web.dev/measure/] and (PageSpeed Insights reports)[https://pagespeed.web.dev/].
-- [ ] Review 404 pages based on exmaple from: https://floatui.com/components/404-pages
+- [ ] Review 404 pages based on example from: https://floatui.com/components/404-pages
 
 ## Known issues
 
@@ -126,8 +126,8 @@ What to review:
 - [ ] If Resend is sending an error, it is not cached
 - [x] <p> cannot be a descendant of <p> from TypewriterEffectSmooths/TypewriterEffectImpl animation; the code is different to the source code for this component.
 - [ ] upgrade missing dependencies (see ncu -ws) - turbo
-- [ ] in package/stripe (packages/api/src/router/stripe.ts) access to json should be in different place and coming frokk prodä/dev approach
-- [ ] there are some dict.common! for exmple in the code, not sure why ! is needed
+- [ ] in package/stripe (packages/api/src/router/stripe.ts) access to json should be in different place and coming from prod/dev approach
+- [ ] there are some dict.common! for example in the code, not sure why ! is needed
 - [ ] Create an account (register page) should have sign-up button, not Login with email
 - [ ] Github auth was not working, code has been removed
 - [ ] (Link preview)[https://linkpreview.xyz/] reports preview of web site with logo not centered properly

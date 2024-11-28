@@ -11,7 +11,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@auth/kysely-adapter": "1.5.0",
+    "@auth/kysely-adapter": "1.7.4",
     "@saasfly/db": "workspace:*",
     "@t3-oss/env-nextjs": "0.11.1",
     "next": "14.2.13",
@@ -24,9 +24,9 @@
     "@saasfly/eslint-config": "workspace:*",
     "@saasfly/prettier-config": "workspace:*",
     "@saasfly/typescript-config": "workspace:*",
-    "eslint": "9.11.0",
-    "prettier": "^3.3.3",
-    "typescript": "5.6.2"
+    "eslint": "9.15.0",
+    "prettier": "^3.4.1",
+    "typescript": "5.7.2"
   },
   "eslintConfig": {
     "root": true,
